@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="form.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Already a user!</div>
+        <div class="title signup">Register here</div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked />
+          <input type="radio" name="slide" id="signup" />
+          <label for="login" class="slide login">Login</label>
+          <label for="signup" class="slide signup">Signup</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <form
+            
+            action="#"
+            class="login"
+            id="form"
+          >
+            <div class="field">
+              <input
+                type="email"
+                placeholder="mohamed2202505@miuegypt.edu.eg"
+                id="email"
+              />
+              <small id="smal" style="visibility: hidden">Error message</small>
+            </div>
+
+            <div class="field">
+              
+              <input type="password" placeholder="Password" id="password" />
+              <i  id="licon" class="fa-regular fa-eye"></i>
+              <small id="smalll" style="visibility: hidden"
+                >Error message</small
+              >
+            </div>
+            <br />
+            <div class="pass-link">
+              <a href="forgetpass.html">Forget password?</a>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Login" />
+            </div>
+            <div class="signup-link">
+              Not a member? <a href="">register now!</a>
+            </div>
+          </form>
+          <form id="signup" action="#" class="signup" name="signup"  onsubmit= "return validate()">
+            <div class="field">
+              <input type="email" placeholder="mohamed2202505@miuegypt.edu.eg"  id="emails" name="emails" />
+              <small id="esmal" style="visibility: hidden">Error message</small>
+            </div>
+            <div class="field">
+              
+              <input type="password" placeholder="Password"  id="passwords" />
+              <i id="sicon" class="fa-regular fa-eye"></i>
+              <small id="psmalll" style="visibility: hidden">Error message</small>
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Confirm password" name="password"  id="confirmpassword"/>
+              <i id="cicon" class="fa-regular fa-eye"></i>
+              <small id="smalconf" style="visibility:hidden">Error message</small>
+            </div>
+            <div class="field">
+              <input type="text" placeholder="what is the name of your pet?" id="security" />
+              <small id="ssmal" style="visibility: hidden;">Error message</small>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Signup" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="form.js"></script>
+  </body>
+</html>
