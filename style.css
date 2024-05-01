@@ -416,58 +416,76 @@ h2 {
     padding: 8px 16px;
 } */
 /* ------------------------------------------------------------ */
-/*slide show css*/
-@keyframes bounce_animation {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-.header {
-    color: green;
-    text-shadow: 0 0 10px green; /* Adjusted text shadow */
-    padding: 30px;
-    animation: bounce_animation 1s infinite;
-    margin: 20px auto; /* Adjusted margin for vertical centering */
-    text-align: center; /* Center the text horizontally */
-}
-
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px;
-}
-.slider-frame {
-    overflow: hidden;
-    height: 300px; /* Adjusted height for smaller photos */
-    width: 1400px; /* Adjusted width for smaller photos */
-    margin: 20px auto; /* Adjusted margin */
-    position: relative;
-}
-
-.slide-images {
+ /* categiries section css */
+ h1{
     display: flex;
-    width: max-content;
-    height: 100%;
-    animation: slide_animation 20s infinite alternate;
+    justify-content: center;
+    text-align: center;
+    font-size: xx-large;
+    color: #0d4b23;
+    margin-top: 40px;
+    text-shadow: #fff4d5;
 }
 
-.img-container {
-    flex: 0 0 600px; /* Adjusted width for smaller photos */
-    height: 100%;
+
+
+.icon {
+    display: inline-block; /* Ensure the icon behaves as an inline block */
+    width: 50px; /* Set the width of the icon */
+    height: 30px; /* Set the height of the icon */
+    background-color:green; /* Background color of the circle */
+    color:white; /* Color of the icon */
+    text-align: center; /* Center the icon horizontally */
+    line-height: 30px; /* Center the icon vertically */
+    border-radius: 100%; /* Make the icon appear as a circle */
+    margin-left: 10px; /* Add spacing between the text and icon */
 }
 
-.img-container img {
+.left-icon {
+    float: left; /* Float the left icon to the left */
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: space-around; /* Distribute the cards evenly */
+}
+
+.card {
+    position: relative; /* Relative positioning for absolute elements */
+    width: 280px;
+    height: 340px;
+    margin: 0px; /* Decreased margin */
+    margin-top: 100px;
+    border: 10px solid rgba(119, 192, 134, 0.8);
+    border-radius: 40px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
+
 }
 
-@keyframes slide_animation {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-2400px); } /* Adjusted distance for multiple images */
+.word {
+    position: absolute; /* Absolute positioning */
+    top: 10px; /* Adjust as needed */
+    left: 50%; /* Position at the center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+    padding: 5px 10px; /* Adjust padding as needed */
+    border-radius: 5px;
+    display: none; /* Initially hide the words */
+    z-index: 1; /* Ensure the word appears above the image */
 }
-/*slide show css*/
+
+.card:hover .word {
+    display: block; /* Show the words on hover */
+}
