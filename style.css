@@ -416,3 +416,58 @@ h2 {
     padding: 8px 16px;
 } */
 /* ------------------------------------------------------------ */
+/*slide show css*/
+@keyframes bounce_animation {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.header {
+    color: green;
+    text-shadow: 0 0 10px green; /* Adjusted text shadow */
+    padding: 30px;
+    animation: bounce_animation 1s infinite;
+    margin: 20px auto; /* Adjusted margin for vertical centering */
+    text-align: center; /* Center the text horizontally */
+}
+
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+.slider-frame {
+    overflow: hidden;
+    height: 300px; /* Adjusted height for smaller photos */
+    width: 1400px; /* Adjusted width for smaller photos */
+    margin: 20px auto; /* Adjusted margin */
+    position: relative;
+}
+
+.slide-images {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    animation: slide_animation 20s infinite alternate;
+}
+
+.img-container {
+    flex: 0 0 600px; /* Adjusted width for smaller photos */
+    height: 100%;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes slide_animation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-2400px); } /* Adjusted distance for multiple images */
+}
+/*slide show css*/
