@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    z-index: 888;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 50px;
+}
+
+header:hover {
+    background-color: #078435;
+}
+
+header i {
+    color: rgb(141, 198, 125);
+    font-size: 40px;
+    padding: 5px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 25px;
+    padding: 15px;
+}
+
+a:hover {
+    color: white;
+}
+
+.ingrediants1 {
+    padding: 100px 80px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Grouping similar selectors together */
+.biscuit, .nuts, .milk, .butter, .flour, .fruits, .sugar, .cream, .chocolate, .whip-cream, .coffe, .baking-soda, .eggs, .vanilla, .cocoa, .cinnemon,
+.icecream,
+.maplesyrup,
+.honey,
+.yogurt,
+.carrots {
+    background: none;
+    background-color: bisque;
+    border: none;
+    border-radius: 50%;
+    margin: 40px;
+}
+
+/* Grouping similar hover effects */
+.biscuit:hover, .nuts:hover, .milk:hover, .butter:hover, .flour:hover, .fruits:hover, .sugar:hover, .cream:hover, .chocolate:hover, .whip-cream:hover, .coffe:hover, .baking-soda:hover, .eggs:hover, .vanilla:hover, .cocoa:hover, .cinnemon:hover,
+.icecream:hover,
+.maplesyrup:hover,
+.honey:hover,
+.yogurt:hover,
+.carrots:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+}
+
+/* Grouping similar image styles */
+.biscuit img, .nuts img, .milk img, .butter img, .flour img, .fruits img, .sugar img, .cream img, .chocolate img, .whip-cream img, .coffe img, .baking-soda img, .eggs img, .vanilla img, .cocoa img, .cinnemon img,
+.icecream img,
+.maplesyrup img,
+.honey img,
+.yogurt img,
+.carrots img {
+    display: inline-block;
+    position: relative;
+    align-items: center;
+    padding: 0;
+    margin: 15px;
+    width: 70px;
+    height: 70px;
+}
+
+
+h2 {
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.card-container {
+    /* background-color: #f4f4f4; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.card {
+    width: 325px;
+    background-color: #f4f4f4;
+    /* border-radius: 10px; */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+/* .card-content p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.card-button {
+    display: inline-block;
+    background-color: #078435;
+    color: #fff;
+    text-transform: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+} */
