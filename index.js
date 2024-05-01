@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
         seeMoreButton.addEventListener('click', function() {
             // Toggle the 'active' class on the container
             containerElement.classList.toggle('active');
-
             // Update the button text based on the current state
             var isActive = containerElement.classList.contains('active');
             seeMoreButton.textContent = isActive ? 'View Less' : 'View More';
@@ -42,24 +41,4 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Could not find the .seemore button or .container element.');
     }
-});
-document.addEventListener('DOMContentLoaded', function() {
-    var myImage = document.getElementById('ChickenImages');
-    myImage.addEventListener('click', function() {
-        var currentSrc = myImage.getAttribute('src');
-        var alternateSrc = 'ChickStirFry1.jpeg';
-        if (currentSrc === 'ChickStirFry.jpg') {
-            myImage.style.opacity = 0;
-            setTimeout(function() {
-                myImage.setAttribute('src', alternateSrc);
-                myImage.style.opacity = 1;
-            }, 500);
-        } else {
-            myImage.style.opacity = 0;
-            setTimeout(function() {
-                myImage.setAttribute('src', 'ChickStirFry.jpg');
-                myImage.style.opacity = 1; 
-            }, 500); 
-        }
-    });
 });
