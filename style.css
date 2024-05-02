@@ -51,7 +51,7 @@
 /* ----------------------------------------------- */
 /* style of home page and navigation bar */
 .home{
-    background-image: url(WhatsApp\ Image\ 2024-04-28\ at\ 2.00.20\ AM.jpeg);
+    background-image: url(home.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -82,6 +82,7 @@ nav{
     align-items: center;
     text-decoration: none;
 }
+
 .header i{
     font-size: 35px;
     color: green;
@@ -135,10 +136,186 @@ nav{
     background-color: #046929;
     transform: scale(1.1,1.1);
 }
+/* ----------------------------------------------- */
+
+/* Design scroll bar */
+::-webkit-scrollbar {
+    width: 15px; 
+}
+
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #04b115; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #066a09;
+}
+
 /* ------------------------------------------------------------ */
+ 
+/* categiries section css */
+.categories-section .h1-plate{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: xx-large;
+    color: #0d4b23;
+   transform: translateY(85px);
+    text-shadow: #fff4d5;
+} 
+
+.icon {
+    display: flex;
+    justify-content: center;
+   font-size: 25px; 
+    background-color:green; 
+    color:rgb(252, 252, 252); 
+   align-items: center;
+    border-radius: 100%;
+    margin-left: 10px; 
+}
+
+.card-container1 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card1 {
+    position: relative; 
+    width: 400px;
+    height: 390px;
+    margin-top: 100px;
+    border: 10px solid rgba(119, 192, 134, 0.8);
+    border-radius: 40px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.card1:hover {
+    transform: scale(1.1);
+}
+
+.card1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.word1 {
+    position: absolute; 
+    top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 5px 10px; 
+    border-radius: 5px;
+    display: none; 
+    z-index: 1; 
+}
+
+.card1:hover .word1 {
+    display: block; 
+}
+.categories-section{
+    background-color:rgb(243, 246, 249);
+    height: 100vh;
+}
+
+/* ------------------------------------------------ */
+
+/* style about section */
+.about{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+.image{
+    margin-right: 100px;
+}
+.image img{
+    width: 400px;
+    margin-top: 70px;
+    border-radius: 30px;
+}
+.paragraph{
+    margin-top: 80px;
+    margin-left: 40px;
+}
+.paragraph h1{
+    font-size: 50px;
+}
+.paragraph .logoo{
+    color: #078435;
+    font-size: 65px;
+}
+.paragraph h2{
+    margin-top: 20px;
+    width: 50%;
+    font-size: 25px;
+}
+/* --------------------------------------------------- */
+
+/* design footer */
+
+.footer{
+    background-color: #04b115;
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+}
+.footer .header{
+    display: flex;
+    justify-content: center;
+   
+}
+.footer .header .logoo {
+    color: black;
+}
+.footer .header i {
+    color: black;
+}
+.list li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.list a {
+  padding: 40px;
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  font-weight: 800;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.icons a{
+    text-decoration: none;
+    font-size: 40px;
+    padding-right: 10px;
+    color: black;
+}
+/* ---------------------------------------------------------- */
+
 /* ingredient button styling & main dishes page styling*/
 
-.cards{
+/* .cards{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -295,7 +472,7 @@ h2 {
 /* ------------------------------------------------------------ */
 /*--------------------dessert page css---------------------------------*/
 
-.ingrediants1 {
+/* .ingrediants1 {
     padding: 100px 80px;
 }
 
@@ -314,7 +491,7 @@ h1 {
 }
 
 /* Grouping similar selectors together */
-.biscuit, .nuts, .milk, .butter, .flour, .fruits, .sugar, .cream, .chocolate, .whip-cream, .coffe, .baking-soda, .eggs, .vanilla, .cocoa, .cinnemon,
+/* .biscuit, .nuts, .milk, .butter, .flour, .fruits, .sugar, .cream, .chocolate, .whip-cream, .coffe, .baking-soda, .eggs, .vanilla, .cocoa, .cinnemon,
 .icecream,
 .maplesyrup,
 .honey,
@@ -325,10 +502,10 @@ h1 {
     border: none;
     border-radius: 50%;
     margin: 40px;
-}
+} */
 
 /* Grouping similar hover effects */
-.biscuit:hover, .nuts:hover, .milk:hover, .butter:hover, .flour:hover, .fruits:hover, .sugar:hover, .cream:hover, .chocolate:hover, .whip-cream:hover, .coffe:hover, .baking-soda:hover, .eggs:hover, .vanilla:hover, .cocoa:hover, .cinnemon:hover,
+/* .biscuit:hover, .nuts:hover, .milk:hover, .butter:hover, .flour:hover, .fruits:hover, .sugar:hover, .cream:hover, .chocolate:hover, .whip-cream:hover, .coffe:hover, .baking-soda:hover, .eggs:hover, .vanilla:hover, .cocoa:hover, .cinnemon:hover,
 .icecream:hover,
 .maplesyrup:hover,
 .honey:hover,
@@ -336,10 +513,10 @@ h1 {
 .carrots:hover {
     cursor: pointer;
     transform: scale(1.1, 1.1);
-}
+} */
 
 /* Grouping similar image styles */
-.biscuit img, .nuts img, .milk img, .butter img, .flour img, .fruits img, .sugar img, .cream img, .chocolate img, .whip-cream img, .coffe img, .baking-soda img, .eggs img, .vanilla img, .cocoa img, .cinnemon img,
+/* .biscuit img, .nuts img, .milk img, .butter img, .flour img, .fruits img, .sugar img, .cream img, .chocolate img, .whip-cream img, .coffe img, .baking-soda img, .eggs img, .vanilla img, .cocoa img, .cinnemon img,
 .icecream img,
 .maplesyrup img,
 .honey img,
@@ -364,18 +541,18 @@ h2 {
 }
 
 .card-container {
-    /* background-color: #f4f4f4; */
+    
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
     margin-top: 50px;
-}
+} */
 
-.card {
+/* .card {
     width: 325px;
     background-color: #f4f4f4;
-    /* border-radius: 10px; */
+    
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     transition: transform 0.6s ease;
@@ -393,14 +570,14 @@ h2 {
 
 .card-content {
     padding: 20px;
-}
+} */
 
-.card-content h3 {
+/* .card-content h3 {
     text-align: center;
     justify-content: center;
     margin-bottom: 10px;
     font-size: 24px;
-}
+} */
 
 /* .card-content p {
     font-size: 15px;
@@ -416,82 +593,11 @@ h2 {
     padding: 8px 16px;
 } */
 /* ------------------------------------------------------------ */
- /* categiries section css */
- h1{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: xx-large;
-    color: #0d4b23;
-    margin-top: 40px;
-    text-shadow: #fff4d5;
-}
+ 
 
-
-
-.icon {
-    display: inline-block; /* Ensure the icon behaves as an inline block */
-    width: 50px; /* Set the width of the icon */
-    height: 30px; /* Set the height of the icon */
-    background-color:green; /* Background color of the circle */
-    color:white; /* Color of the icon */
-    text-align: center; /* Center the icon horizontally */
-    line-height: 30px; /* Center the icon vertically */
-    border-radius: 100%; /* Make the icon appear as a circle */
-    margin-left: 10px; /* Add spacing between the text and icon */
-}
-
-.left-icon {
-    float: left; /* Float the left icon to the left */
-}
-
-
-.card-container1 {
-    display: flex;
-    justify-content: space-around; /* Distribute the cards evenly */
-}
-
-.card1 {
-    position: relative; /* Relative positioning for absolute elements */
-    width: 280px;
-    height: 340px;
-    margin: 0px; /* Decreased margin */
-    margin-top: 100px;
-    border: 10px solid rgba(119, 192, 134, 0.8);
-    border-radius: 40px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-.card1:hover {
-    transform: scale(1.1);
-}
-
-.card1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-
-}
-
-.word {
-    position: absolute; /* Absolute positioning */
-    top: 10px; /* Adjust as needed */
-    left: 50%; /* Position at the center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
-    padding: 5px 10px; /* Adjust padding as needed */
-    border-radius: 5px;
-    display: none; /* Initially hide the words */
-    z-index: 1; /* Ensure the word appears above the image */
-}
-
-.card1:hover .word1 {
-    display: block; /* Show the words on hover */
-}
 /* styling for appetizer page */
 
-.card {
+/* .card {
     cursor: pointer;
     width: 325px;
     background-color: #fff4d5;
@@ -522,9 +628,9 @@ h2 {
 }
 .ingredient img{
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center the image */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     max-width: 70%;
     max-height: 70%;
     transition: 0.6s ease;
@@ -596,17 +702,17 @@ h2 {
     flex-wrap: wrap;
     gap: 55px;
     margin-top: 50px;
-}
+} */
 
-.card {
+/* .card {
     cursor: pointer;
-    width: 300px; /* Set a fixed width for each card */
+    width: 300px; 
     background-color: #fff4d5;
     border-radius: 40px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     transition: transform 0.6s ease;
-    margin-bottom: 55px; /* Add margin to create space between rows */
+    margin-bottom: 55px; 
 }
 
 .card:hover {
@@ -643,4 +749,4 @@ h2 {
     align-items: center;
     justify-content: center;
 
-}
+}  */
