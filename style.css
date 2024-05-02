@@ -472,7 +472,7 @@ h2 {
 /* ------------------------------------------------------------ */
 /*--------------------dessert page css---------------------------------*/
 
-.cards{
+/* .cards{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -518,9 +518,9 @@ h1 {
 
 .ingrediants img {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center the image */
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
     max-width: 70%;
     max-height: 70%;
     transition: 0.6s ease;
@@ -606,31 +606,10 @@ h2 {
     height: auto;
     object-fit: cover;
     border-radius: 40px;
-}
-
-/* .card-content {
-    padding: 20px;
-}
-
-.card-content h3 {
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    font-size: 24px;
-    color: black;
-}
-
-.card-button {
-    display: inline-block;
-    background-color: #078435;
-    color: #fff;
-    text-transform: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-    text-decoration: none; 
-}  */
+} */
 
 
+/* 
 .card-content {
     padding: 20px;
 }
@@ -654,7 +633,7 @@ h2 {
     align-items: center;
     justify-content: center;
 
-}
+} */
 /* ------------------------------------------------------------ */
  
 
