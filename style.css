@@ -315,7 +315,7 @@ nav{
 
 /* ingredient button styling & main dishes page styling*/
 
-.cards{
+/* .cards{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -472,7 +472,7 @@ h2 {
 /* ------------------------------------------------------------ */
 /*--------------------dessert page css---------------------------------*/
 
- .cards{
+ /* .cards{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -609,7 +609,7 @@ h2 {
 } */
 
 
- 
+/*  
 .card-content {
     padding: 20px;
 }
@@ -633,13 +633,13 @@ h2 {
     align-items: center;
     justify-content: center;
 
-} 
+}   */
 /* ------------------------------------------------------------ */
  
 
 /* styling for appetizer page */
 
- .card {
+ /* .card {
     cursor: pointer;
     width: 325px;
     background-color: #fff4d5;
@@ -746,7 +746,7 @@ h2 {
     margin-top: 50px;
 } */
 
- .card {
+ /* .card {
     cursor: pointer;
     width: 300px; 
     background-color: #fff4d5;
@@ -792,9 +792,10 @@ h2 {
     justify-content: center;
 
 
-}
+} */ 
 /* ceaser salad recipee */
-body {
+
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
@@ -864,11 +865,11 @@ h11{
 }
 .container {
     display: flex;
-}
+} */
 
-.ingredients {
+/* .ingredients {
     flex: 1;
-    padding-right: 20px; /* Adjust spacing between slider and ingredients */
+    padding-right: 20px; 
 }
 .RecipeIngredients{
     font-size: larger;
@@ -897,14 +898,14 @@ padding-top: 2px;
     padding-top: 20px;
     width: fit-content;
     display: block;
-}
+} */
 
-.slider-frame {
+/* .slider-frame {
     overflow: hidden;
-    height: 300px; /* Adjusted height for smaller photos */
-    width: 600px; /* Adjusted width for smaller photos */
+    height: 300px; 
+    width: 600px; 
     position: relative;
-    margin-left: auto; /* Push the slider to the right */
+    margin-left: auto; 
 }
 
 .slide-images {
@@ -916,7 +917,7 @@ padding-top: 2px;
 
 
 .image-container {
-    position: absolute; /* Changed to fixed */
+    position: absolute; 
     top: 30%; 
     right: 20px; 
     transform: translateY(-20%);
@@ -932,10 +933,10 @@ padding-top: 2px;
     border-radius: 40px;
     height: auto;
     transition:0.3s ease;
-}
+} */
 
 
-.overlay {
+/* .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -946,16 +947,18 @@ padding-top: 2px;
     align-items: center;
     color: #fff;
     font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5); /* Example background color */
+    background-color: rgba(0, 0, 0, 0.5); 
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .overlay:hover {
     opacity: 1;
-}
+} */
+
 /* greek salad recipee */
-body {
+
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
@@ -1025,19 +1028,19 @@ h1{
 }
 .container {
     display: flex;
-}
+} */
 
-.ingredients {
+/* .ingredients {
     flex: 1;
-    padding-right: 20px; /* Adjust spacing between slider and ingredients */
+    padding-right: 20px; 
 }
 
 .slider-frame {
     overflow: hidden;
-    height: 300px; /* Adjusted height for smaller photos */
-    width: 600px; /* Adjusted width for smaller photos */
+    height: 300px; 
+    width: 600px; 
     position: relative;
-    margin-left: auto; /* Push the slider to the right */
+    margin-left: auto; 
 }
 
 .slide-images {
@@ -1049,7 +1052,7 @@ h1{
 
 
 .image-container {
-    position: absolute; /* Changed to fixed */
+    position: absolute; 
     top: 30%; 
     right: 20px; 
     transform: translateY(-20%);
@@ -1078,16 +1081,16 @@ h1{
     align-items: center;
     color: #fff;
     font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5); /* Example background color */
+    background-color: rgba(0, 0, 0, 0.5); 
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .overlay:hover {
     opacity: 1;
-}
+} */
 /* Shrimps salad recipee */
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
@@ -1157,19 +1160,19 @@ h1{
 }
 .container {
     display: flex;
-}
+} */
 
-.ingredients {
+/* .ingredients {
     flex: 1;
-    padding-right: 20px; /* Adjust spacing between slider and ingredients */
+    padding-right: 20px; 
 }
 
 .slider-frame {
     overflow: hidden;
-    height: 300px; /* Adjusted height for smaller photos */
-    width: 600px; /* Adjusted width for smaller photos */
+    height: 300px;
+    width: 600px; 
     position: relative;
-    margin-left: auto; /* Push the slider to the right */
+    margin-left: auto; 
 }
 
 .slide-images {
@@ -1181,7 +1184,7 @@ h1{
 
 
 .image-container {
-    position: absolute; /* Changed to fixed */
+    position: absolute; 
     top: 30%; 
     right: 20px; 
     transform: translateY(-20%);
@@ -1210,11 +1213,11 @@ h1{
     align-items: center;
     color: #fff;
     font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5); /* Example background color */
+    background-color: rgba(0, 0, 0, 0.5); 
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .overlay:hover {
     opacity: 1;
-}
+}  */
