@@ -4,7 +4,7 @@ var form3=document.getElementById("forgetpassform");
         e.preventDefault(); 
         var Valid = vali();
         if (Valid) {
-          window.location.href = "nav.html";
+          window.location.href = "index.html";
         }
       });
 
