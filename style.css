@@ -291,7 +291,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 4px;
 }
 .list a {
   padding: 40px;
@@ -300,17 +300,25 @@ nav{
   font-size: 25px;
   font-weight: 800;
 }
+.list a:hover{
+    transform: scale(1.2);
+}
 .icons{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 .icons a{
     text-decoration: none;
     font-size: 40px;
     padding-right: 10px;
+    margin-top: 20px;
     color: black;
 }
+.icons a:hover{
+    transform: scale(1.2);
+}
+
 /* ---------------------------------------------------------- */
 
 /* ingredient button styling & main dishes page styling*/
@@ -1667,7 +1675,7 @@ padding-top: 2px;
 
 /* ------------------------------------------------------------ */
 /* ........................................shrimp recipee inspiration appetizer.......................... */
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
@@ -1741,15 +1749,15 @@ h1{
 
 .ingredients {
     flex: 1;
-    padding-right: 20px; /* Adjust spacing between slider and ingredients */
+    padding-right: 20px; 
 }
 
 .slider-frame {
     overflow: hidden;
-    height: 300px; /* Adjusted height for smaller photos */
-    width: 600px; /* Adjusted width for smaller photos */
+    height: 300px;
+    width: 600px; 
     position: relative;
-    margin-left: auto; /* Push the slider to the right */
+    margin-left: auto; 
 }
 
 .slide-images {
@@ -1761,7 +1769,7 @@ h1{
 
 
 .image-container {
-    position: absolute; /* Changed to fixed */
+    position: absolute; 
     top: 30%; 
     right: 20px; 
     transform: translateY(-20%);
@@ -1790,16 +1798,16 @@ h1{
     align-items: center;
     color: #fff;
     font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5); /* Example background color */
+    background-color: rgba(0, 0, 0, 0.5); 
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .overlay:hover {
     opacity: 1;
-}
+} */
 /* .......................................ceaser salad inspiration recipee appetizer................... */
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
@@ -1873,15 +1881,15 @@ h1{
 
 .ingredients {
     flex: 1;
-    padding-right: 20px; /* Adjust spacing between slider and ingredients */
+    padding-right: 20px; 
 }
 
 .slider-frame {
     overflow: hidden;
-    height: 300px; /* Adjusted height for smaller photos */
-    width: 600px; /* Adjusted width for smaller photos */
+    height: 300px; 
+    width: 600px; 
     position: relative;
-    margin-left: auto; /* Push the slider to the right */
+    margin-left: auto; 
 }
 
 .slide-images {
@@ -1893,7 +1901,7 @@ h1{
 
 
 .image-container {
-    position: absolute; /* Changed to fixed */
+    position: absolute; 
     top: 30%; 
     right: 20px; 
     transform: translateY(-20%);
@@ -1922,16 +1930,16 @@ h1{
     align-items: center;
     color: #fff;
     font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5); /* Example background color */
+    background-color: rgba(0, 0, 0, 0.5); 
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .overlay:hover {
     opacity: 1;
-}
+} */
 /* ..................................................greek salad inspiration appetizer recipee.................. */
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
@@ -2005,15 +2013,15 @@ h1{
 
 .ingredients {
     flex: 1;
-    padding-right: 20px; /* Adjust spacing between slider and ingredients */
+    padding-right: 20px; 
 }
 
 .slider-frame {
     overflow: hidden;
-    height: 300px; /* Adjusted height for smaller photos */
-    width: 600px; /* Adjusted width for smaller photos */
+    height: 300px; 
+    width: 600px; 
     position: relative;
-    margin-left: auto; /* Push the slider to the right */
+    margin-left: auto; 
 }
 
 .slide-images {
@@ -2025,7 +2033,7 @@ h1{
 
 
 .image-container {
-    position: absolute; /* Changed to fixed */
+    position: absolute; 
     top: 30%; 
     right: 20px; 
     transform: translateY(-20%);
@@ -2054,16 +2062,16 @@ h1{
     align-items: center;
     color: #fff;
     font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5); /* Example background color */
+    background-color: rgba(0, 0, 0, 0.5); 
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .overlay:hover {
     opacity: 1;
-}
+} */
 /* ......................................................const recipee pages for appetizer................. */
-.card-container {
+/* .card-container {
 
     display: flex;
     justify-content: center;
@@ -2123,12 +2131,12 @@ h1{
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-}
+} */
 /* body{
     background-color: #fff4d5;
 
 } */
-.home{
+/* .home{
     background-color: #fff4d5;
     background-position: center;
     background-repeat: no-repeat;
@@ -2185,9 +2193,9 @@ nav{
     background-color: #046929;
     color: white;
     border-radius: 50px;
-}
+} */
 /* .......................................brushetta const recipee1................................ */
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
@@ -2261,7 +2269,7 @@ h11{
 
 .ingredients {
     flex: 1;
-    padding-right: 20px; /* Adjust spacing between slider and ingredients */
+    padding-right: 20px;
 }
 .RecipeIngredients{
     font-size: larger;
@@ -2294,10 +2302,10 @@ padding-top: 2px;
 
 .slider-frame {
     overflow: hidden;
-    height: 300px; /* Adjusted height for smaller photos */
-    width: 600px; /* Adjusted width for smaller photos */
+    height: 300px; 
+    width: 600px; 
     position: relative;
-    margin-left: auto; /* Push the slider to the right */
+    margin-left: auto; 
 }
 
 .slide-images {
@@ -2309,7 +2317,7 @@ padding-top: 2px;
 
 
 .image-container {
-    position: absolute; /* Changed to fixed */
+    position: absolute; 
     top: 30%; 
     right: 20px; 
     transform: translateY(-20%);
@@ -2339,16 +2347,16 @@ padding-top: 2px;
     align-items: center;
     color: #fff;
     font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5); /* Example background color */
+    background-color: rgba(0, 0, 0, 0.5); 
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .overlay:hover {
     opacity: 1;
-}
+} */
 /* ...........................................french fries const recipee2 appetizer....................... */
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
@@ -2422,7 +2430,7 @@ h11{
 
 .ingredients {
     flex: 1;
-    padding-right: 20px; /* Adjust spacing between slider and ingredients */
+    padding-right: 20px; 
 }
 .RecipeIngredients{
     font-size: larger;
@@ -2455,10 +2463,10 @@ padding-top: 2px;
 
 .slider-frame {
     overflow: hidden;
-    height: 300px; /* Adjusted height for smaller photos */
-    width: 600px; /* Adjusted width for smaller photos */
+    height: 300px; 
+    width: 600px; 
     position: relative;
-    margin-left: auto; /* Push the slider to the right */
+    margin-left: auto; 
 }
 
 .slide-images {
@@ -2470,7 +2478,7 @@ padding-top: 2px;
 
 
 .image-container {
-    position: absolute; /* Changed to fixed */
+    position: absolute; 
     top: 30%; 
     right: 20px; 
     transform: translateY(-20%);
@@ -2500,11 +2508,11 @@ padding-top: 2px;
     align-items: center;
     color: #fff;
     font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5); /* Example background color */
+    background-color: rgba(0, 0, 0, 0.5); 
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .overlay:hover {
     opacity: 1;
-}
+} */
