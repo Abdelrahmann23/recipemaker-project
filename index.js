@@ -430,3 +430,33 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+//................................................french fries recipee appetizer.........................................
+document.addEventListener("DOMContentLoaded", function() {
+  const imageContainer = document.querySelector(".image-container");
+  const overlay = document.querySelector(".overlay");
+  const image = document.querySelector(".image-container img");
+
+  overlay.addEventListener("click", function() {
+      // Toggle between two images
+      if (image.src.includes("C:\\Users\\Habiba\\Desktop\\Main Dish\\fries.jpg")) {
+          image.src = "ceaser.jpg";
+      } else {
+          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\fries.jpg";
+      }
+  });
+});
+//..............................................bruschetttaa recipee appetizer..................................
+document.addEventListener("DOMContentLoaded", function() {
+  const imageContainer = document.querySelector(".image-container");
+  const overlay = document.querySelector(".overlay");
+  const image = document.querySelector(".image-container img");
+
+  overlay.addEventListener("click", function() {
+      // Toggle between two images
+      if (image.src.includes("ceaser%20ing.jpg")) {
+          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\greeeeeek,jpg.jpg";
+      } else {
+          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\greeeeeek,jpg.jpg";
+      }
+  });
+});
