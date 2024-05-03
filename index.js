@@ -385,3 +385,48 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 /* ------------------------------------------------------------ */
+// ....................................................ceaser salad inspiration recipee1 js............................
+document.addEventListener("DOMContentLoaded", function() {
+  const imageContainer = document.querySelector(".image-container");
+  const overlay = document.querySelector(".overlay");
+  const image = document.querySelector(".image-container img");
+
+  overlay.addEventListener("click", function() {
+      // Toggle between two images
+      if (image.src.includes("ceaser%20ing.jpg")) {
+          image.src = "ceaser.jpg";
+      } else {
+          image.src = "ceaser%20ing.jpg";
+      }
+  });
+});
+//............................................................shrimp inspiration recipee2 js.........................
+document.addEventListener("DOMContentLoaded", function() {
+  const imageContainer = document.querySelector(".image-container");
+  const overlay = document.querySelector(".overlay");
+  const image = document.querySelector(".image-container img");
+
+  overlay.addEventListener("click", function() {
+      // Toggle between two images
+      if (image.src.includes("shrimps1.jpg")) {
+          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\shrimpsss.jpg";
+      } else {
+          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\shrimps1.jpg";
+      }
+  });
+});
+//........................................................greek salad inspiration recipee3 js.....................
+document.addEventListener("DOMContentLoaded", function() {
+  const imageContainer = document.querySelector(".image-container");
+  const overlay = document.querySelector(".overlay");
+  const image = document.querySelector(".image-container img");
+
+  overlay.addEventListener("click", function() {
+      // Toggle between two images
+      if (image.src.includes("ceaser%20ing.jpg")) {
+          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\greeeeeek,jpg.jpg";
+      } else {
+          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\greeeeeek,jpg.jpg";
+      }
+  });
+});
