@@ -362,3 +362,26 @@ btn2.addEventListener("click", () => {
         return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
       }
       
+/* ------------------------------------------------------------ */
+/* Chicken stir fry picture (to be edited)*/
+document.addEventListener('DOMContentLoaded', function() {
+  var myImage = document.getElementById('ChickenImages');
+  myImage.addEventListener('click', function() {
+      var currentSrc = myImage.getAttribute('src');
+      var alternateSrc = 'ChickStirFry1.jpeg';
+      if (currentSrc === 'ChickStirFry.jpg') {
+          myImage.style.opacity = 0;
+          setTimeout(function() {
+              myImage.setAttribute('src', alternateSrc);
+              myImage.style.opacity = 1;
+          }, 500);
+      } else {
+          myImage.style.opacity = 0;
+          setTimeout(function() {
+              myImage.setAttribute('src', 'ChickStirFry.jpg');
+              myImage.style.opacity = 1; 
+          }, 500); 
+      }
+  });
+});
+/* ------------------------------------------------------------ */

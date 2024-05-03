@@ -1600,3 +1600,69 @@ padding-top: 2px;
 /* ------------------------------------------------------------ */
 
 
+/* ------------------------------------------------------------ */
+/* Chicken stir fry recipe (to be edited)*/
+
+#ch{
+    padding: 50px;
+    display: inline-flex;
+}
+
+#ChickenIng{
+    padding: 30px;
+    font-size: larger;
+    color: #0d4b23;
+    font-weight: 500;
+    list-style-type: square;
+}
+
+.rightsection{
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    align-content:flex-end;
+}
+
+#ChickenImages{
+    width: 50%;
+    transform: translate(450px,-30px);
+    border: #0d4b23;
+    border-style: solid;
+    border-radius: 40px;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#ch h3{
+    font-size: larger;
+    font-weight: 700;
+    color: #0d4b23;
+}
+
+#chickenprep{
+    padding: 30px;
+    font-size: larger;
+    color: #0d4b23;
+    font-weight: 500;
+}
+
+#chickenprep li{
+    padding: 5px;
+}
+
+.card-button {
+    display: inline-block;
+    background-color: #078435;
+    color: #fff;
+    text-transform: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    text-decoration: none; 
+}
+
+.recipechicken{
+    position: relative;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------ */
