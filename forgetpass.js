@@ -2,10 +2,7 @@ var form3=document.getElementById("forgetpassform");
 
       form3.addEventListener('submit', e => {
         e.preventDefault(); 
-        var Valid = vali();
-        if (Valid) {
-          window.location.href = "index.html";
-        }
+      vali();
       });
 
      function vali(){
@@ -33,7 +30,7 @@ var form3=document.getElementById("forgetpassform");
     if(( arr) == true) {
       return false;
    } else {
-       
+       location.href="index.html";
        return true;
    }
      }
@@ -53,4 +50,3 @@ var form3=document.getElementById("forgetpassform");
       function isEmaill(email) {
         return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
       }
-      
