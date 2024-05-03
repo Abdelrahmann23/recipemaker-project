@@ -1223,8 +1223,9 @@ h1{
 }  */
 
 
-
+/* ------------------------------------------------------------ */
 /* form css */
+
 html,body{
     display: grid;
     height: 100%;
@@ -1460,3 +1461,87 @@ html,body{
     font-size: 18px;
     color: #999;
   }
+/* ------------------------------------------------------------ */
+/* ------------------------ all desserts recipes' and ingrediants ---------------------------- */
+h1{
+    box-shadow:(10,10);
+}
+
+
+.image-container {
+    position: absolute; 
+    top: 30%; 
+    right: 20px; 
+    transform: translateY(-20%);
+    
+    height: 300px;
+    padding: 10px;
+    background-color: rgba(129, 159, 135, 0.8); 
+    border-radius: 40px;
+   
+
+}
+.image-container img {
+    width: 220px;
+    border-radius: 40px;
+    height: 300px;
+    transition: 0.3s ease;
+    
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: #fff; */
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius:40px ;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+
+.recipeIngredients{
+    font-size: larger;
+    color: #16552c;
+    list-style-type:square;
+    font-weight: 500;
+}
+.recipeBold{
+    color: #033717;
+}
+.recipePreparation{
+    color: #16552c;
+    padding-bottom: 30px;
+    font-weight: 500;
+}
+.recipePreparation li{
+padding-top: 2px;
+}
+/* .line{
+    color: #082703;
+} */
+#recipeBoldName{
+    font-weight: bold;
+    font-size:40px;
+    color: #0c351c;
+    padding-top: 20px;
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+    display: block;
+}
+/* ------------------------------------------------------------ */
+
+
