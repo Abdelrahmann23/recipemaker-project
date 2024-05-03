@@ -1226,7 +1226,7 @@ h1{
 /* ------------------------------------------------------------ */
 /* form css */
 
-html,body{
+/*html,body{
     display: grid;
     height: 100%;
     width: 100%;
@@ -1601,7 +1601,7 @@ padding-top: 2px;
 
 
 /* ------------------------------------------------------------ */
-/* Chicken stir fry recipe (to be edited)*/
+/* Chicken stir fry recipe (to be edited)
 
 #ch{
     padding: 50px;
@@ -1666,3 +1666,399 @@ padding-top: 2px;
 }
 
 /* ------------------------------------------------------------ */
+/* ........................................shrimp recipee inspiration appetizer.......................... */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff4d5;
+}
+.home{
+    background-color: #fff4d5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    
+}
+.homepage{
+    
+    transform: translateY(100px);
+
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(255, 255, 255,0,0.703);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    width: 100%;
+    padding-top: 10px;
+
+}
+.header{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.header i{
+    font-size: 35px;
+    color: green;
+}
+.header .logoo{
+    font-size: 30px;
+    color: green;
+}
+.header h3{
+    color: black;
+    font-size: 25px;
+}
+.nav a{
+    text-decoration: none;
+    color: #078435;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 30px;
+    padding: 10px;
+    transition: all 0.1s ease;
+}
+.nav a:hover{
+    border: none;
+    background-color: #046929;
+    color: white;
+    border-radius:50px;
+}
+h1{
+    box-shadow:(10,10);
+}
+.container {
+    display: flex;
+}
+
+.ingredients {
+    flex: 1;
+    padding-right: 20px; /* Adjust spacing between slider and ingredients */
+}
+
+.slider-frame {
+    overflow: hidden;
+    height: 300px; /* Adjusted height for smaller photos */
+    width: 600px; /* Adjusted width for smaller photos */
+    position: relative;
+    margin-left: auto; /* Push the slider to the right */
+}
+
+.slide-images {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    animation: slide_animation 20s infinite alternate;
+}
+
+
+.image-container {
+    position: absolute; /* Changed to fixed */
+    top: 30%; 
+    right: 20px; 
+    transform: translateY(-20%);
+    width: 260px; 
+    height: auto;
+    padding: 10px;
+    background-color: rgba(129, 159, 135, 0.8); 
+    border-radius: 40px;
+
+}
+.image-container img {
+    max-width: 100%;
+    border-radius: 40px;
+    height: auto;
+    transition:0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5); /* Example background color */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+/* .......................................ceaser salad inspiration recipee appetizer................... */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff4d5;
+}
+.home{
+    background-color: #fff4d5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    
+}
+.homepage{
+    
+    transform: translateY(100px);
+
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(255, 255, 255,0,0.703);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    width: 100%;
+    padding-top: 10px;
+
+}
+.header{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.header i{
+    font-size: 35px;
+    color: green;
+}
+.header .logoo{
+    font-size: 30px;
+    color: green;
+}
+.header h3{
+    color: black;
+    font-size: 25px;
+}
+.nav a{
+    text-decoration: none;
+    color: #078435;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 30px;
+    padding: 10px;
+    transition: all 0.1s ease;
+}
+.nav a:hover{
+    border: none;
+    background-color: #046929;
+    color: white;
+    border-radius:50px;
+}
+h1{
+    box-shadow:(10,10);
+}
+.container {
+    display: flex;
+}
+
+.ingredients {
+    flex: 1;
+    padding-right: 20px; /* Adjust spacing between slider and ingredients */
+}
+
+.slider-frame {
+    overflow: hidden;
+    height: 300px; /* Adjusted height for smaller photos */
+    width: 600px; /* Adjusted width for smaller photos */
+    position: relative;
+    margin-left: auto; /* Push the slider to the right */
+}
+
+.slide-images {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    animation: slide_animation 20s infinite alternate;
+}
+
+
+.image-container {
+    position: absolute; /* Changed to fixed */
+    top: 30%; 
+    right: 20px; 
+    transform: translateY(-20%);
+    width: 260px; 
+    height: auto;
+    padding: 10px;
+    background-color: rgba(129, 159, 135, 0.8); 
+    border-radius: 40px;
+
+}
+.image-container img {
+    max-width: 100%;
+    border-radius: 40px;
+    height: auto;
+    transition:0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5); /* Example background color */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+/* ..................................................greek salad inspiration appetizer recipee.................. */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff4d5;
+}
+.home{
+    background-color: #fff4d5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    
+}
+.homepage{
+    
+    transform: translateY(100px);
+
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(255, 255, 255,0,0.703);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    width: 100%;
+    padding-top: 10px;
+
+}
+.header{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.header i{
+    font-size: 35px;
+    color: green;
+}
+.header .logoo{
+    font-size: 30px;
+    color: green;
+}
+.header h3{
+    color: black;
+    font-size: 25px;
+}
+.nav a{
+    text-decoration: none;
+    color: #078435;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 30px;
+    padding: 10px;
+    transition: all 0.1s ease;
+}
+.nav a:hover{
+    border: none;
+    background-color: #046929;
+    color: white;
+    border-radius:50px;
+}
+h1{
+    box-shadow:(10,10);
+}
+.container {
+    display: flex;
+}
+
+.ingredients {
+    flex: 1;
+    padding-right: 20px; /* Adjust spacing between slider and ingredients */
+}
+
+.slider-frame {
+    overflow: hidden;
+    height: 300px; /* Adjusted height for smaller photos */
+    width: 600px; /* Adjusted width for smaller photos */
+    position: relative;
+    margin-left: auto; /* Push the slider to the right */
+}
+
+.slide-images {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    animation: slide_animation 20s infinite alternate;
+}
+
+
+.image-container {
+    position: absolute; /* Changed to fixed */
+    top: 30%; 
+    right: 20px; 
+    transform: translateY(-20%);
+    width: 260px; 
+    height: auto;
+    padding: 10px;
+    background-color: rgba(129, 159, 135, 0.8); 
+    border-radius: 40px;
+
+}
+.image-container img {
+    max-width: 100%;
+    border-radius: 40px;
+    height: auto;
+    transition:0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5); /* Example background color */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
