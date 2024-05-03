@@ -2062,3 +2062,128 @@ h1{
 .overlay:hover {
     opacity: 1;
 }
+/* ......................................................const recipee pages for appetizer................. */
+.card-container {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.card {
+    cursor: pointer;
+    width: 300px;
+    background-color: #fff4d5;
+    border-radius: 40px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #0d4b23;
+}
+
+.card-button {
+    display: flex;
+    background-color: #078435;
+    color: #fff;
+    text-transform: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    text-decoration: none; 
+    align-items: center;
+    justify-content: center;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/* body{
+    background-color: #fff4d5;
+
+} */
+.home{
+    background-color: #fff4d5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    
+}
+.homepage{
+    
+    transform: translateY(100px);
+
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(255, 255, 255,0,0.703);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    width: 100%;
+
+}
+.header{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.header i{
+    font-size: 35px;
+    color: green;
+}
+.header .logoo{
+    font-size: 30px;
+    color: green;
+}
+.header h3{
+    color: black;
+    font-size: 25px;
+}
+.nav a{
+    text-decoration: none;
+    color: #078435;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 30px;
+    padding: 10px;
+    transition: all 0.1s ease;
+}
+.nav a:hover{
+    border: none;
+    background-color: #046929;
+    color: white;
+    border-radius: 50px;
+}
+/* .......................................brushetta const recipee1................................ */
