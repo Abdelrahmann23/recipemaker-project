@@ -1612,71 +1612,79 @@ padding-top: 2px;
 
 
 /* ------------------------------------------------------------ */
-/* Chicken stir fry recipe (to be edited)
+/*Chicken stir fry recipe (to be edited)*/
 
-#ch{
-    padding: 50px;
-    display: inline-flex;
-}
 
-#ChickenIng{
-    padding: 30px;
+.RecipeIngredients{
     font-size: larger;
-    color: #0d4b23;
+    color: #16552c;
+    list-style-type:square;
     font-weight: 500;
-    list-style-type: square;
+}
+.RecipeBold{
+    color: #033717;
+}
+.RecipePreparation{
+    color: #16552c;
+    padding-bottom: 30px;
+    font-weight: 500;
+}
+.RecipePreparation li{
+padding-top: 2px;
+}
+.line{
+    color: #082703;
+}
+.RecipeBoldName{
+    font-weight: bold;
+    font-size:40px;
+    color: #0c351c;
+    padding-top: 20px;
+    width: fit-content;
+    display: block;
 }
 
-.rightsection{
-    position: absolute;
-    top: 50px;
-    left: 250px;
-    align-content:flex-end;
-}
-
-#ChickenImages{
-    width: 50%;
-    transform: translate(450px,-30px);
-    border: #0d4b23;
-    border-style: solid;
+#ChickenStir {
+    position: absolute; /* Changed to fixed */
+    top: 30%; 
+    right: 20px; 
+    transform: translateY(-20%);
+    width: 260px; 
+    height: auto;
+    padding: 10px;
+    background-color: rgba(129, 159, 135, 0.8); 
     border-radius: 40px;
-    transition: opacity 0.2s ease-in-out;
     cursor: pointer;
 }
 
-#ch h3{
-    font-size: larger;
-    font-weight: 700;
-    color: #0d4b23;
+.image-container img {
+    max-width: 100%;
+    border-radius: 40px;
+    height: auto;
+    transition: 0.3s ease;
 }
 
-#chickenprep{
-    padding: 30px;
-    font-size: larger;
-    color: #0d4b23;
-    font-weight: 500;
-}
-
-#chickenprep li{
-    padding: 5px;
-}
-
-.card-button {
-    display: inline-block;
-    background-color: #078435;
-    color: #fff;
-    text-transform: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-    text-decoration: none; 
-}
-
-.recipechicken{
-    position: relative;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    color: #fff;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5); /* Example background color */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius:40px ;
 }
 
-/* ------------------------------------------------------------ */
+.overlay:hover {
+    opacity: 1;
+}
+/* ------------------------------------------------------------
 /* ........................................shrimp recipee inspiration appetizer.......................... */
 /* body {
     font-family: Arial, sans-serif;
