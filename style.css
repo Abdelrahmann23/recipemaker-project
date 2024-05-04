@@ -2519,3 +2519,143 @@ padding-top: 2px;
 .overlay:hover {
     opacity: 1;
 } */
+
+/* ...........................................admin home page ....................... */
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+   .home{
+      background-image: url(background1.jpeg) ;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      background-attachment: fixed;
+    
+      
+  }
+  
+  nav{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 70px;
+      -webkit-backdrop-filter: blur(30px);
+      backdrop-filter: blur(30px);
+      width: 100%;
+      position: fixed;
+      z-index: 10;
+     
+    }
+    .header{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    .header i{
+        font-size: 35px;
+        color: green;
+    }
+    .header .logoo{
+        font-size: 30px;
+        color: green;
+    }
+    .header h3{
+        color: black;
+        font-size: 25px;
+    }
+    .nav a{
+        text-decoration: none;
+        color: #078435;
+        font-size: 25px;
+        font-weight: 700;
+        margin: 30px;
+        padding: 10px;
+        transition: all 0.1s ease;
+    }
+    .nav a:hover{
+        border: none;
+        background-color: #046929;
+        color: white;
+        border-radius: 50px;
+    }
+    
+    .nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      
+      .navbar li {
+        float: left;
+      }
+      
+      .navbar li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+      
+   
+      .navbar li a:hover {
+        border: none;
+        background-color: #046929;
+        color: white;
+        border-radius: 50px;
+      }
+      
+     
+      .dropdown {
+        display: inline-block;
+        
+      }
+      
+    
+      .dropbtn {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 0px;
+        text-decoration: none;
+      }
+      
+      
+      .dropdown-content {
+        display: none;
+        border-radius: 25px;
+        position: absolute;
+        background-color: rgb(207, 220, 141);
+        width: 200px;
+       max-height: 200px;
+       overflow-x: auto; 
+        z-index: 1;
+      }
+      
+   
+      .dropdown-content a {
+        color: white;
+        margin: 5px;
+        padding: 5px;
+        display: block;
+        text-align: left;
+      }
+      
+     
+      .dropdown-content a:hover {
+        background-color: #046929;
+      }
+      
+     
+      .dropdown:hover .dropdown-content {
+        display: inline-block;
+      }   */
+   
+    
+/* ............................................................... */
