@@ -388,28 +388,28 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 /*BeefVegCurry recipe pic*/
-
 document.addEventListener("DOMContentLoaded", function() {
-    const imageContainer = document.querySelector(".image-container");
-    const overlay = document.querySelector(".overlay");
-    const image = document.querySelector(".image-container img");
+  const imageContainer = document.querySelector(".image-container");
+  const overlay = document.querySelector(".overlay");
+  const image = document.querySelector(".image-container img");
 
-    overlay.addEventListener("click", function() {
-        // Toggle between two images
-        if (image.src.includes("BeefVegCurryIng1.jpeg")) {
-            image.style.opacity=0;
-            setTimeout(function(){
-                image.src = "BeefVegCurry.jpg";
-                image.style.opacity=1;
-            },200);
-        } else if(image.src.includes("BeefVegCurry.jpg")){
-            image.style.opacity=0;
-            setTimeout(function(){
-                image.src = "BeefVegCurryIng1.jpeg";   
-                image.style.opacity=1;
-            },200);
-        }
-    });
+  overlay.addEventListener("click", function() {
+      // Toggle between two images
+      if (image.src.includes("BeefVegCurryIng1.jpeg")) {
+          image.style.opacity=0;
+          setTimeout(function(){
+              image.src = "BeefVegCurry.jpg";
+              image.style.opacity=1;
+          },200);
+      } else if(image.src.includes("BeefVegCurry.jpg")){
+          image.style.opacity=0;
+          setTimeout(function(){
+              image.src = "BeefVegCurryIng1.jpeg";   
+              image.style.opacity=1;
+          },200);
+      }
+  });
+});
     /*Stuffed shells recipe pic*/
     document.addEventListener("DOMContentLoaded", function() {
     const imageContainer = document.querySelector(".image-container");
