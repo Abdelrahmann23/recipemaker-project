@@ -1612,7 +1612,7 @@ padding-top: 2px;
 
 
 /* ------------------------------------------------------------ */
-/*Chicken stir fry recipe (to be edited)*/
+/*Chicken stir fry recipe (to be edited)
 
 
 .RecipeIngredients{
@@ -1645,7 +1645,7 @@ padding-top: 2px;
 }
 
 #ChickenStir {
-    position: absolute; /* Changed to fixed */
+    position: absolute; 
     top: 30%; 
     right: 20px; 
     transform: translateY(-20%);
@@ -1675,7 +1675,7 @@ padding-top: 2px;
     align-items: center;
     color: #fff;
     font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5); /* Example background color */
+    background-color: rgba(0, 0, 0, 0.5); 
     opacity: 0;
     transition: opacity 0.3s ease;
     border-radius:40px ;
@@ -1683,7 +1683,7 @@ padding-top: 2px;
 
 .overlay:hover {
     opacity: 1;
-}
+}*/
 /* ------------------------------------------------------------
 /* ........................................shrimp recipee inspiration appetizer.......................... */
 /* body {
