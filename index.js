@@ -400,6 +400,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+/* ------------------------------------------------------------ */
 //............................................................shrimp inspiration recipee2 js.........................
 document.addEventListener("DOMContentLoaded", function() {
   const imageContainer = document.querySelector(".image-container");
@@ -415,6 +416,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+/* ------------------------------------------------------------ */
 //........................................................greek salad inspiration recipee3 js.....................
 document.addEventListener("DOMContentLoaded", function() {
   const imageContainer = document.querySelector(".image-container");
@@ -430,7 +432,9 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+/* ------------------------------------------------------------ */
 //................................................french fries recipee appetizer.........................................
+
 document.addEventListener("DOMContentLoaded", function() {
   const imageContainer = document.querySelector(".image-container");
   const overlay = document.querySelector(".overlay");
@@ -445,7 +449,9 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+/* ------------------------------------------------------------ */
 //..............................................bruschetttaa recipee appetizer..................................
+
 document.addEventListener("DOMContentLoaded", function() {
   const imageContainer = document.querySelector(".image-container");
   const overlay = document.querySelector(".overlay");
@@ -460,3 +466,134 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+/* ------------------------------------------------------------ */
+/* ------------------molten cake recipe---------------------------- */
+document.addEventListener("DOMContentLoaded", function() {
+  const imageContainer = document.querySelector(".image-container");
+  const overlay = document.querySelector(".overlay");
+  const image = document.querySelector(".image-container img");
+
+  overlay.addEventListener("click", function() {
+      // Toggle between two images
+      if (image.src.includes("Chocolate-Lava-Cake-Ingredients.jpg")) {
+          image.style.opacity=0;
+          setTimeout(function(){
+              image.src="Molten Lava Cake for Two [Video].jpg"
+              // image.src = "";
+              image.style.opacity=1;
+          },200);
+      } else {
+          image.style.opacity=0;
+          setTimeout(function(){
+              image.src = "Chocolate-Lava-Cake-Ingredients.jpg";   
+              image.style.opacity=1;
+          },200);
+      }
+  });
+});
+
+/* ------------------------------------------------------------ */
+/* ------------------------cream brule------------------------ */
+document.addEventListener("DOMContentLoaded", function() {
+  const imageContainer = document.querySelector(".image-container");
+  const overlay = document.querySelector(".overlay");
+  const image = document.querySelector(".image-container img");
+
+  overlay.addEventListener("click", function() {
+      // Toggle between two images
+      if (image.src.includes("creme-brulee-ingredients-.jpg")) {
+          image.style.opacity=0;
+          setTimeout(function(){
+              image.src="Creme-Brulee-Recipe.jpg"
+              // image.src = "";
+              image.style.opacity=1;
+          },200);
+      } else {
+          image.style.opacity=0;
+          setTimeout(function(){
+              image.src = "creme-brulee-ingredients-.jpg";   
+              image.style.opacity=1;
+          },200);
+      }
+  });
+});
+
+/* ------------------------------------------------------------ */
+/* ------------------------tiramisu------------------------ */
+document.addEventListener("DOMContentLoaded", function() {
+  const imageContainer = document.querySelector(".image-container");
+  const overlay = document.querySelector(".overlay");
+  const image = document.querySelector(".image-container img");
+
+  overlay.addEventListener("click", function() {
+      // Toggle between two images
+      if (image.src.includes("Tiramisu-Ingredients-for-Tiramisu.jpg")) {
+          image.style.opacity=0;
+          setTimeout(function(){
+              image.src="homemade-tiramisu-2.jpg"
+              // image.src = "";
+              image.style.opacity=1;
+          },200);
+      } else {
+          image.style.opacity=0;
+          setTimeout(function(){
+              image.src = "Tiramisu-Ingredients-for-Tiramisu.jpg";   
+              image.style.opacity=1;
+          },200);
+      }
+  });
+});
+/* ------------------------------------------------------------ */
+/* ------------------------cheese cake------------------------ */
+document.addEventListener("DOMContentLoaded", function() {
+  const imageContainer = document.querySelector(".image-container");
+  const overlay = document.querySelector(".overlay");
+  const image = document.querySelector(".image-container img");
+
+  overlay.addEventListener("click", function() {
+      // Toggle between two images
+      if (image.src.includes("creamy-baked-cheesecake-.jpg")) {
+          image.style.opacity=0;
+          setTimeout(function(){
+              image.src="The Best New York-Style Cheesecake - Baker by Nature.jpg"
+              // image.src = "";
+              image.style.opacity=1;
+          },200);
+      } else {
+          image.style.opacity=0;
+          setTimeout(function(){
+              image.src = "creamy-baked-cheesecake-.jpg";   
+              image.style.opacity=1;
+          },200);
+      }
+  });
+});
+
+/* ------------------------------------------------------------ */
+/* ------------------------cookies------------------------ */
+document.addEventListener("DOMContentLoaded", function() {
+  const imageContainer = document.querySelector(".image-container");
+  const overlay = document.querySelector(".overlay");
+  const image = document.querySelector(".image-container img");
+
+  overlay.addEventListener("click", function() {
+      // Toggle between two images
+      if (image.src.includes("chocolate-chip-cookies-mfs-step.jpg")) {
+          image.style.opacity=0;
+          setTimeout(function(){
+              image.src="BAKERY-STYLE-CHOCOLATE-CHIP-COOKIES-9-637x637-1.jpg"
+              // image.src = "";
+              image.style.opacity=1;
+          },200);
+      } else {
+          image.style.opacity=0;
+          setTimeout(function(){
+              image.src = "chocolate-chip-cookies-mfs-step.jpg";   
+              image.style.opacity=1;
+          },200);
+      }
+  });
+});
+/* ------------------------------------------------------------ */
+
+
