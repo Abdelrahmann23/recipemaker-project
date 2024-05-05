@@ -45,330 +45,330 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-const loginText = document.querySelector(".title-text .login");
-      const loginForm = document.querySelector("form.login");
-      const loginBtn = document.querySelector("label.login");
-      const signupBtn = document.querySelector("label.signup");
-      const signupLink = document.querySelector("form .signup-link a");
-      signupBtn.onclick = (()=>{
-        loginForm.style.marginLeft = "-50%";
-        loginText.style.marginLeft = "-50%";
-      });
-      loginBtn.onclick = (()=>{
-        loginForm.style.marginLeft = "0%";
-        loginText.style.marginLeft = "0%";
-      });
-      signupLink.onclick = (()=>{
-        signupBtn.click();
-        return false;
-      });
-      const form = document.getElementById('form');
-      const email = document.getElementById('email');
-      const password = document.getElementById('password');
+// const loginText = document.querySelector(".title-text .login");
+//       const loginForm = document.querySelector("form.login");
+//       const loginBtn = document.querySelector("label.login");
+//       const signupBtn = document.querySelector("label.signup");
+//       const signupLink = document.querySelector("form .signup-link a");
+//       signupBtn.onclick = (()=>{
+//         loginForm.style.marginLeft = "-50%";
+//         loginText.style.marginLeft = "-50%";
+//       });
+//       loginBtn.onclick = (()=>{
+//         loginForm.style.marginLeft = "0%";
+//         loginText.style.marginLeft = "0%";
+//       });
+//       signupLink.onclick = (()=>{
+//         signupBtn.click();
+//         return false;
+//       });
+//       const form = document.getElementById('form');
+//       const email = document.getElementById('email');
+//       const password = document.getElementById('password');
    
-      form.addEventListener('submit', e => {
-        e.preventDefault(); 
-        checkInputs();
+//       form.addEventListener('submit', e => {
+//         e.preventDefault(); 
+//         checkInputs();
        
-      });
+//       });
 
         
       
     
     
-      function checkInputs() {
+      // function checkInputs() {
      
        
         
       
-        const emailValue = email.value.trim();
-        const passwordValue = password.value.trim();
-        var smalll=document.getElementById('smalll');
-        var smal=document.getElementById('smal');
-        var emailErr=passErr =true;
+      //   const emailValue = email.value.trim();
+      //   const passwordValue = password.value.trim();
+      //   var smalll=document.getElementById('smalll');
+      //   var smal=document.getElementById('smal');
+      //   var emailErr=passErr =true;
         
-        if(emailValue === '' ) {
-          setErrorFor(email, 'Email cannot be blank');
-          smal.style.visibility="visible";
+      //   if(emailValue === '' ) {
+      //     setErrorFor(email, 'Email cannot be blank');
+      //     smal.style.visibility="visible";
           
-        } else if (!isEmaill(emailValue)) {
-          smal.style.visibility="visible";
-          setErrorFor(email, 'Not a valid email');
+      //   } else if (!isEmaill(emailValue)) {
+      //     smal.style.visibility="visible";
+      //     setErrorFor(email, 'Not a valid email');
          
 
           
-        } 
-        else {
-          setSuccessFor(email);
-          smal.innerHTML="";
-         emailErr = false;
-        }
+      //   } 
+      //   else {
+      //     setSuccessFor(email);
+      //     smal.innerHTML="";
+      //    emailErr = false;
+      //   }
         
-        if(passwordValue === '') {
-          smalll.style.visibility="visible";
-          setErrorFor(password, 'Password cannot be blank');
-        } 
-        else if(passwordValue.length < 8) {
-          smalll.style.visibility="visible";
-          setErrorFor(password, 'Password must contain at least 8 characters');
+      //   if(passwordValue === '') {
+      //     smalll.style.visibility="visible";
+      //     setErrorFor(password, 'Password cannot be blank');
+      //   } 
+      //   else if(passwordValue.length < 8) {
+      //     smalll.style.visibility="visible";
+      //     setErrorFor(password, 'Password must contain at least 8 characters');
           
-        }
-        else{
-          setSuccessFor(password);
-          smalll.innerHTML="";
-          passErr = false;
-        }
-        if (!(emailErr || passErr)) {
-          if (emailValue === 'mohamed2202505@miuegypt.edu.eg') {
-            // Redirect to a special admin page
-            window.location.href = "forgetpass.html";
-          } else {
-            // Redirect to the normal nav page for other users
-            window.location.href = "nav.html";
-          }
-          return true; // Form is valid
-        }
+      //   }
+      //   else{
+      //     setSuccessFor(password);
+      //     smalll.innerHTML="";
+      //     passErr = false;
+      //   }
+      //   if (!(emailErr || passErr)) {
+      //     if (emailValue === 'mohamed2202505@miuegypt.edu.eg') {
+      //       // Redirect to a special admin page
+      //       window.location.href = "forgetpass.html";
+      //     } else {
+      //       // Redirect to the normal nav page for other users
+      //       window.location.href = "nav.html";
+      //     }
+      //     return true; // Form is valid
+      //   }
       
-        return false; // Form is invalid
+      //   return false; // Form is invalid
         
        
-      }
+      // }
     
-      function setErrorFor(input, message) {
-        const formControl = input.parentElement;
-        const small = formControl.querySelector('small');
-        formControl.className = 'form-control error';
-        small.innerText = message;
-      }
+      // function setErrorFor(input, message) {
+      //   const formControl = input.parentElement;
+      //   const small = formControl.querySelector('small');
+      //   formControl.className = 'form-control error';
+      //   small.innerText = message;
+      // }
       
-      function setSuccessFor(input) {
-        const formControl = input.parentElement;
-        formControl.className = 'form-control success';
-      }
+      // function setSuccessFor(input) {
+      //   const formControl = input.parentElement;
+      //   formControl.className = 'form-control success';
+      // }
         
-      function isEmaill(email) {
-        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-      }
+      // function isEmaill(email) {
+      //   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+      // }
       
       
-      function validate() {
-        const name=document.getElementById('name');
-        const nameerror=document.getElementById('nsmall');
-        const email = document.getElementById('emails');
-        const password = document.getElementById('passwords');
-        const confirmPassword = document.getElementById('confirmpassword');
-        const esmalError = document.getElementById('esmal');
-        const passwordError = document.getElementById('psmalll');
-        const confirmPasswordError = document.getElementById('smalconf');
-        const security=document.getElementById('security');
-        const securityError = document.getElementById('ssmal');
+//       function validate() {
+//         const name=document.getElementById('name');
+//         const nameerror=document.getElementById('nsmall');
+//         const email = document.getElementById('emails');
+//         const password = document.getElementById('passwords');
+//         const confirmPassword = document.getElementById('confirmpassword');
+//         const esmalError = document.getElementById('esmal');
+//         const passwordError = document.getElementById('psmalll');
+//         const confirmPasswordError = document.getElementById('smalconf');
+//         const security=document.getElementById('security');
+//         const securityError = document.getElementById('ssmal');
        
     
       
         
-        let err=prr=crr=srr =nrr= true;
-        if(name.value.trim() === '') {
-          setErrorFor(nameerror,'Name cannot be blank');
+//         let err=prr=crr=srr =nrr= true;
+//         if(name.value.trim() === '') {
+//           setErrorFor(nameerror,'Name cannot be blank');
          
-          nameerror.style.visibility = 'visible';
+//           nameerror.style.visibility = 'visible';
           
-        }
-        else{
-          var regex = /^[a-zA-Z\s]+$/;   
-          if(regex.test(name.value)===false) {
-           setErrorFor(nameerror,'not a valid name');
-            nameerror.style.visibility = 'visible';
-          }
-          else {
-            setSuccessFor(name);
-            nameerror.innerHTML='';
-            nrr = false;
-          }
+//         }
+//         else{
+//           var regex = /^[a-zA-Z\s]+$/;   
+//           if(regex.test(name.value)===false) {
+//            setErrorFor(nameerror,'not a valid name');
+//             nameerror.style.visibility = 'visible';
+//           }
+//           else {
+//             setSuccessFor(name);
+//             nameerror.innerHTML='';
+//             nrr = false;
+//           }
             
   
-        }
+//         }
       
-        if (email.value.trim() === '') {
-          setErrorFor(esmalError,'Email cannot be blank')
-          esmalError.style.visibility = 'visible';
+//         if (email.value.trim() === '') {
+//           setErrorFor(esmalError,'Email cannot be blank')
+//           esmalError.style.visibility = 'visible';
           
-        }
-        else{
-          if (!isEmaill(email.value)) {
-            setErrorFor(esmalError,'not a valid email')
-            esmalError.style.visibility = 'visible';
+//         }
+//         else{
+//           if (!isEmaill(email.value)) {
+//             setErrorFor(esmalError,'not a valid email')
+//             esmalError.style.visibility = 'visible';
             
-          }
-          else {
-            setSuccessFor(email);
-            esmalError.innerHTML='';
-            err = false;
-          }
-        }
+//           }
+//           else {
+//             setSuccessFor(email);
+//             esmalError.innerHTML='';
+//             err = false;
+//           }
+//         }
         
       
-        if (password.value.trim() === '') {
-          setErrorFor(passwordError,'Password cannot be blank');
-          passwordError.style.visibility ='visible';
+//         if (password.value.trim() === '') {
+//           setErrorFor(passwordError,'Password cannot be blank');
+//           passwordError.style.visibility ='visible';
           
-        }
-        else if(password.value.length < 8) {
-          setErrorFor(passwordError,'Password must contain at least 8 characters');
-          passwordError.style.visibility ='visible';
+//         }
+//         else if(password.value.length < 8) {
+//           setErrorFor(passwordError,'Password must contain at least 8 characters');
+//           passwordError.style.visibility ='visible';
           
-        }
-        else {
-          setSuccessFor(password);
-          passwordError.innerHTML='';
-          prr = false;
-        }
+//         }
+//         else {
+//           setSuccessFor(password);
+//           passwordError.innerHTML='';
+//           prr = false;
+//         }
       
-        if (confirmPassword.value.trim() === '') {
-          setErrorFor(confirmPasswordError,'Confirmpassword cannot be blank');
-          confirmPasswordError.style.visibility ='visible';
+//         if (confirmPassword.value.trim() === '') {
+//           setErrorFor(confirmPasswordError,'Confirmpassword cannot be blank');
+//           confirmPasswordError.style.visibility ='visible';
          
-        }
-        else{
-          if (password.value.trim() !== confirmPassword.value.trim()) {
-            setErrorFor(confirmPasswordError,'passwords do not match');
-            confirmPasswordError.style.visibility ='visible';
+//         }
+//         else{
+//           if (password.value.trim() !== confirmPassword.value.trim()) {
+//             setErrorFor(confirmPasswordError,'passwords do not match');
+//             confirmPasswordError.style.visibility ='visible';
             
-          }
-          else {
-            setSuccessFor(confirmPassword);
-            confirmPasswordError.innerHTML='';
-            crr = false;
-          }
-        }
-        if(security.value.trim()==='')
-        {
-          setErrorFor(securityError,'Security question cannot be blank');
-          securityError.style.visibility ='visible';
-        }
-        else{
-          setSuccessFor(security);
-          securityError.innerHTML = '';
-          srr = false;
-        }
+//           }
+//           else {
+//             setSuccessFor(confirmPassword);
+//             confirmPasswordError.innerHTML='';
+//             crr = false;
+//           }
+//         }
+//         if(security.value.trim()==='')
+//         {
+//           setErrorFor(securityError,'Security question cannot be blank');
+//           securityError.style.visibility ='visible';
+//         }
+//         else{
+//           setSuccessFor(security);
+//           securityError.innerHTML = '';
+//           srr = false;
+//         }
        
       
-        if(( err || prr || crr||srr||nrr) == true) {
-          return false;
-       } else {
+//         if(( err || prr || crr||srr||nrr) == true) {
+//           return false;
+//        } else {
            
-           return true;
-       }
+//            return true;
+//        }
       
         
-      }
+//       }
     
-const btn = document.getElementById("licon");
-const passwordEl = document.getElementById("password");
+// const btn = document.getElementById("licon");
+// const passwordEl = document.getElementById("password");
 
-btn.addEventListener("click", () => {
-  if (passwordEl.type === "password") {
-    passwordEl.type = "text";
-    btn.classList.replace("fa-eye", "fa-eye-slash");
-    console.log(btn);
-  } else {
-    passwordEl.type = "password";
-    btn.classList.replace("fa-eye-slash", "fa-eye");
-    console.log(btn);
-  }
-});
+// btn.addEventListener("click", () => {
+//   if (passwordEl.type === "password") {
+//     passwordEl.type = "text";
+//     btn.classList.replace("fa-eye", "fa-eye-slash");
+//     console.log(btn);
+//   } else {
+//     passwordEl.type = "password";
+//     btn.classList.replace("fa-eye-slash", "fa-eye");
+//     console.log(btn);
+//   }
+// });
 
-const btn1 = document.getElementById("sicon");
-const passwordEl1 = document.getElementById("passwords");
+// const btn1 = document.getElementById("sicon");
+// const passwordEl1 = document.getElementById("passwords");
 
-btn1.addEventListener("click", () => {
-  if (passwordEl1.type === "password") {
-    passwordEl1.type = "text";
-    btn1.classList.replace("fa-eye", "fa-eye-slash");
-    console.log(btn1);
-  } else {
-    passwordEl1.type = "password";
-    btn1.classList.replace("fa-eye-slash", "fa-eye");
-    console.log(btn1);
-  }
-});
-const btn2 = document.getElementById("cicon");
-const passwordEl2 = document.getElementById("confirmpassword");
+// btn1.addEventListener("click", () => {
+//   if (passwordEl1.type === "password") {
+//     passwordEl1.type = "text";
+//     btn1.classList.replace("fa-eye", "fa-eye-slash");
+//     console.log(btn1);
+//   } else {
+//     passwordEl1.type = "password";
+//     btn1.classList.replace("fa-eye-slash", "fa-eye");
+//     console.log(btn1);
+//   }
+// });
+// const btn2 = document.getElementById("cicon");
+// const passwordEl2 = document.getElementById("confirmpassword");
 
-btn2.addEventListener("click", () => {
-  if (passwordEl2.type === "password") {
-    passwordEl2.type = "text";
-    btn2.classList.replace("fa-eye", "fa-eye-slash");
-    console.log(btn1);
-  } else {
-    passwordEl2.type = "password";
-    btn2.classList.replace("fa-eye-slash", "fa-eye");
-    console.log(btn1);
-  }
-});
+// btn2.addEventListener("click", () => {
+//   if (passwordEl2.type === "password") {
+//     passwordEl2.type = "text";
+//     btn2.classList.replace("fa-eye", "fa-eye-slash");
+//     console.log(btn1);
+//   } else {
+//     passwordEl2.type = "password";
+//     btn2.classList.replace("fa-eye-slash", "fa-eye");
+//     console.log(btn1);
+//   }
+// });
 
-      var form3=document.getElementById("forgetpassform");
+//       var form3=document.getElementById("forgetpassform");
 
-      form3.addEventListener('submit', e => {
-        e.preventDefault(); 
-        var Valid = vali();
-        if (Valid) {
-          window.location.href = "nav.html";
-        }
-      });
+//       form3.addEventListener('submit', e => {
+//         e.preventDefault(); 
+//         var Valid = vali();
+//         if (Valid) {
+//           window.location.href = "nav.html";
+//         }
+//       });
 
-     function vali(){
-      const ans=document.getElementById('forget');
-      const anserror=document.getElementById('forgeterror');
-      let arr=true;
-      if(ans.value.trim() === '') {
-        setErrorFor(anserror,'security question cannot be blank');
-        anserror.style.visibility = 'visible';
+//      function vali(){
+//       const ans=document.getElementById('forget');
+//       const anserror=document.getElementById('forgeterror');
+//       let arr=true;
+//       if(ans.value.trim() === '') {
+//         setErrorFor(anserror,'security question cannot be blank');
+//         anserror.style.visibility = 'visible';
        
-      }
-      else {
-        var regex = /^[a-zA-Z\s]+$/;                
-        if(regex.test(ans.value) === false) {
-            setErrorFor(anserror,"not a valid name")
-            anserror.style.visibility = 'visible';
+//       }
+//       else {
+//         var regex = /^[a-zA-Z\s]+$/;                
+//         if(regex.test(ans.value) === false) {
+//             setErrorFor(anserror,"not a valid name")
+//             anserror.style.visibility = 'visible';
             
-        } else {
-          setSuccessFor(ans);
-            anserror.innerHTML = '';
-            arr=false;
-        }
-    }
+//         } else {
+//           setSuccessFor(ans);
+//             anserror.innerHTML = '';
+//             arr=false;
+//         }
+//     }
 
-    if(( arr) == true) {
-      return false;
-   } else {
+//     if(( arr) == true) {
+//       return false;
+//    } else {
        
-       return true;
-   }
-     }
+//        return true;
+//    }
+//      }
      
-     function setErrorFor(input, message) {
-        const formControl = input.parentElement;
-        const small = formControl.querySelector('small');
-        formControl.className = 'form-control error';
-        small.innerText = message;
-      }
+//      function setErrorFor(input, message) {
+//         const formControl = input.parentElement;
+//         const small = formControl.querySelector('small');
+//         formControl.className = 'form-control error';
+//         small.innerText = message;
+//       }
       
-      function setSuccessFor(input) {
-        const formControl = input.parentElement;
-        formControl.className = 'form-control success';
-      }
+//       function setSuccessFor(input) {
+//         const formControl = input.parentElement;
+//         formControl.className = 'form-control success';
+//       }
         
-      function isEmaill(email) {
-        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-      }
+//       function isEmaill(email) {
+//         return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+//       }
       
 /* ------------------------------------------------------------ */
 /* Chicken stir fry picture*/
 
 document.addEventListener("DOMContentLoaded", function() {
-  const imageContainer = document.querySelector(".image-container");
-  const overlay = document.querySelector(".overlay");
-  const image = document.querySelector(".image-container img");
+  const imageContainer = document.querySelector(".image-container6");
+  const overlay = document.querySelector(".overlay6");
+  const image = document.querySelector(".image-container6 img");
 
   overlay.addEventListener("click", function() {
       // Toggle between two images
@@ -387,11 +387,14 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+
+//--------------------------------------------------------
+
 /*BeefVegCurry recipe pic*/
 document.addEventListener("DOMContentLoaded", function() {
-  const imageContainer = document.querySelector(".image-container");
-  const overlay = document.querySelector(".overlay");
-  const image = document.querySelector(".image-container img");
+  const imageContainer = document.querySelector(".image-container11");
+  const overlay = document.querySelector(".overlay11");
+  const image = document.querySelector(".image-container11 img");
 
   overlay.addEventListener("click", function() {
       // Toggle between two images
@@ -410,21 +413,26 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
-    /*Stuffed shells recipe pic*/
+
+
+// ------------------------------------------------------
+
+
+//     /*Stuffed shells recipe pic*/
     document.addEventListener("DOMContentLoaded", function() {
-    const imageContainer = document.querySelector(".image-container");
-    const overlay = document.querySelector(".overlay");
-    const image = document.querySelector(".image-container img");
+    const imageContainer = document.querySelector(".image-container12");
+    const overlay = document.querySelector(".overlay12");
+    const image = document.querySelector(".image-container12 img");
 
     overlay.addEventListener("click", function() {
         // Toggle between two images
         if (image.src.includes("StuffedshellsIng.jpeg")) {
             image.style.opacity=0;
             setTimeout(function(){
-                image.src = "StuffedShells.jpg";
+                image.src = "Stuffed Shells.jpg";
                 image.style.opacity=1;
             },200);
-        } else if(image.src.includes("StuffedShells.jpg")){
+        } else if(image.src.includes("Stuffed Shells.jpg")){
             image.style.opacity=0;
             setTimeout(function(){
                 image.src = "StuffedshellsIng.jpeg";   
@@ -436,9 +444,9 @@ document.addEventListener("DOMContentLoaded", function() {
 /* ------------------------------------------------------------ */
 // ....................................................ceaser salad inspiration recipee1 js............................
 document.addEventListener("DOMContentLoaded", function() {
-  const imageContainer = document.querySelector(".image-container");
-  const overlay = document.querySelector(".overlay");
-  const image = document.querySelector(".image-container img");
+  const imageContainer = document.querySelector(".image-container1");
+  const overlay = document.querySelector(".overlay1");
+  const image = document.querySelector(".image-container1 img");
 
   overlay.addEventListener("click", function() {
       // Toggle between two images
@@ -450,51 +458,51 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 /* ------------------------------------------------------------ */
-//............................................................shrimp inspiration recipee2 js.........................
+//.............................shrimp inspiration recipee2 js.........................
 document.addEventListener("DOMContentLoaded", function() {
-  const imageContainer = document.querySelector(".image-container");
-  const overlay = document.querySelector(".overlay");
-  const image = document.querySelector(".image-container img");
+  const imageContainer = document.querySelector(".image-container4");
+  const overlay = document.querySelector(".overlay4");
+  const image = document.querySelector(".image-container4 img");
 
   overlay.addEventListener("click", function() {
       // Toggle between two images
       if (image.src.includes("shrimps1.jpg")) {
-          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\shrimpsss.jpg";
+          image.src = "shrimpp.png";
       } else {
-          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\shrimps1.jpg";
+          image.src = "shrimps1.jpg";
       }
   });
 });
 /* ------------------------------------------------------------ */
-//........................................................greek salad inspiration recipee3 js.....................
+//.......................greek salad inspiration recipee3 js.....................
 document.addEventListener("DOMContentLoaded", function() {
-  const imageContainer = document.querySelector(".image-container");
-  const overlay = document.querySelector(".overlay");
-  const image = document.querySelector(".image-container img");
+  const imageContainer = document.querySelector(".image-container2");
+  const overlay = document.querySelector(".overlay2");
+  const image = document.querySelector(".image-container2 img");
 
   overlay.addEventListener("click", function() {
       // Toggle between two images
-      if (image.src.includes("ceaser%20ing.jpg")) {
-          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\greeeeeek,jpg.jpg";
+      if (image.src.includes("greeksalad.jpg")) {
+          image.src = "greeeeeek,jpg.jpg";
       } else {
-          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\greeeeeek,jpg.jpg";
+          image.src = "greeksalad.jpg";
       }
   });
 });
 /* ------------------------------------------------------------ */
-//................................................french fries recipee appetizer.........................................
+//..............................french fries recipee appetizer.........................................
 
 document.addEventListener("DOMContentLoaded", function() {
-  const imageContainer = document.querySelector(".image-container");
-  const overlay = document.querySelector(".overlay");
-  const image = document.querySelector(".image-container img");
+  const imageContainer = document.querySelector(".image-container3");
+  const overlay = document.querySelector(".overlay3");
+  const image = document.querySelector(".image-container3 img");
 
   overlay.addEventListener("click", function() {
       // Toggle between two images
-      if (image.src.includes("C:\\Users\\Habiba\\Desktop\\Main Dish\\fries.jpg")) {
-          image.src = "ceaser.jpg";
+      if (image.src.includes("french-fries-9.jpg")) {
+          image.src = "fries.jpg";
       } else {
-          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\fries.jpg";
+          image.src = "french-fries-9.jpg";
       }
   });
 });
@@ -502,28 +510,28 @@ document.addEventListener("DOMContentLoaded", function() {
 //..............................................bruschetttaa recipee appetizer..................................
 
 document.addEventListener("DOMContentLoaded", function() {
-  const imageContainer = document.querySelector(".image-container");
-  const overlay = document.querySelector(".overlay");
-  const image = document.querySelector(".image-container img");
+  const imageContainer = document.querySelector(".image-container5");
+  const overlay = document.querySelector(".overlay5");
+  const image = document.querySelector(".image-container5 img");
 
   overlay.addEventListener("click", function() {
       // Toggle between two images
-      if (image.src.includes("ceaser%20ing.jpg")) {
-          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\greeeeeek,jpg.jpg";
+      if (image.src.includes("bruschetaa1.png")) {
+          image.src = "bruschetta.jpg";
       } else {
-          image.src = "C:\\Users\\Habiba\\Desktop\\Main Dish\\greeeeeek,jpg.jpg";
+          image.src = "bruschetaa1.png";
       }
   });
 });
 /* ------------------------------------------------------------ */
 /* ------------------molten cake recipe---------------------------- */
 document.addEventListener("DOMContentLoaded", function() {
-  const imageContainer = document.querySelector(".image-container");
-  const overlay = document.querySelector(".overlay");
-  const image = document.querySelector(".image-container img");
+  const imageContainer = document.querySelector(".image-container8");
+  const overlay = document.querySelector(".overlay8");
+  const image = document.querySelector(".image-container8 img");
 
   overlay.addEventListener("click", function() {
-      // Toggle between two images
+     
       if (image.src.includes("Chocolate-Lava-Cake-Ingredients.jpg")) {
           image.style.opacity=0;
           setTimeout(function(){
@@ -544,12 +552,12 @@ document.addEventListener("DOMContentLoaded", function() {
 /* ------------------------------------------------------------ */
 /* ------------------------cream brule------------------------ */
 document.addEventListener("DOMContentLoaded", function() {
-  const imageContainer = document.querySelector(".image-container");
-  const overlay = document.querySelector(".overlay");
-  const image = document.querySelector(".image-container img");
+  const imageContainer = document.querySelector(".image-container7");
+  const overlay = document.querySelector(".overlay7");
+  const image = document.querySelector(".image-container7 img");
 
   overlay.addEventListener("click", function() {
-      // Toggle between two images
+    
       if (image.src.includes("creme-brulee-ingredients-.jpg")) {
           image.style.opacity=0;
           setTimeout(function(){
@@ -570,9 +578,9 @@ document.addEventListener("DOMContentLoaded", function() {
 /* ------------------------------------------------------------ */
 /* ------------------------tiramisu------------------------ */
 document.addEventListener("DOMContentLoaded", function() {
-  const imageContainer = document.querySelector(".image-container");
-  const overlay = document.querySelector(".overlay");
-  const image = document.querySelector(".image-container img");
+  const imageContainer = document.querySelector(".image-container9");
+  const overlay = document.querySelector(".overlay9");
+  const image = document.querySelector(".image-container9 img");
 
   overlay.addEventListener("click", function() {
       // Toggle between two images
@@ -580,7 +588,7 @@ document.addEventListener("DOMContentLoaded", function() {
           image.style.opacity=0;
           setTimeout(function(){
               image.src="homemade-tiramisu-2.jpg"
-              // image.src = "";
+
               image.style.opacity=1;
           },200);
       } else {
@@ -595,9 +603,9 @@ document.addEventListener("DOMContentLoaded", function() {
 /* ------------------------------------------------------------ */
 /* ------------------------cheese cake------------------------ */
 document.addEventListener("DOMContentLoaded", function() {
-  const imageContainer = document.querySelector(".image-container");
-  const overlay = document.querySelector(".overlay");
-  const image = document.querySelector(".image-container img");
+  const imageContainer = document.querySelector(".image-container10");
+  const overlay = document.querySelector(".overlay10");
+  const image = document.querySelector(".image-container10 img");
 
   overlay.addEventListener("click", function() {
       // Toggle between two images
@@ -605,7 +613,7 @@ document.addEventListener("DOMContentLoaded", function() {
           image.style.opacity=0;
           setTimeout(function(){
               image.src="The Best New York-Style Cheesecake - Baker by Nature.jpg"
-              // image.src = "";
+              
               image.style.opacity=1;
           },200);
       } else {
@@ -621,17 +629,17 @@ document.addEventListener("DOMContentLoaded", function() {
 /* ------------------------------------------------------------ */
 /* ------------------------cookies------------------------ */
 document.addEventListener("DOMContentLoaded", function() {
-  const imageContainer = document.querySelector(".image-container");
-  const overlay = document.querySelector(".overlay");
-  const image = document.querySelector(".image-container img");
+  const imageContainer = document.querySelector(".image-container13");
+  const overlay = document.querySelector(".overlay13");
+  const image = document.querySelector(".image-container13 img");
 
   overlay.addEventListener("click", function() {
-      // Toggle between two images
+     
       if (image.src.includes("chocolate-chip-cookies-mfs-step.jpg")) {
           image.style.opacity=0;
           setTimeout(function(){
               image.src="BAKERY-STYLE-CHOCOLATE-CHIP-COOKIES-9-637x637-1.jpg"
-              // image.src = "";
+          
               image.style.opacity=1;
           },200);
       } else {
@@ -699,7 +707,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-
+// -------------------------------------------
 
 /*delete ingredient*/
 document.addEventListener('DOMContentLoaded', () => {
@@ -779,31 +787,31 @@ document.addEventListener('DOMContentLoaded', () => {
 /* --------------------------------------------------------------- */
 /* -------------------------view ingredinats----------------------- */
 
-const dropdowns = document.querySelectorAll('.dropdown');
-dropdowns.forEach(dropdown => {
-    const select = dropdown.querySelector('.select');
-    const caret = dropdown.querySelector('.caret');
-    const menu = dropdown.querySelector('.menu');
-    const options = dropdown.querySelectorAll('.menu li'); 
-    const selected = dropdown.querySelector('.selected');
+// const dropdowns = document.querySelectorAll('.dropdown');
+// dropdowns.forEach(dropdown => {
+//     const select = dropdown.querySelector('.select');
+//     const caret = dropdown.querySelector('.caret');
+//     const menu = dropdown.querySelector('.menu');
+//     const options = dropdown.querySelectorAll('.menu li'); 
+//     const selected = dropdown.querySelector('.selected');
 
-    select.addEventListener('click', () => {
-        select.classList.toggle('select-clicked');
-        caret.classList.toggle('caret-rotate'); 
-        menu.classList.toggle('menu-open');
-    });
+//     select.addEventListener('click', () => {
+//         select.classList.toggle('select-clicked');
+//         caret.classList.toggle('caret-rotate'); 
+//         menu.classList.toggle('menu-open');
+//     });
 
-    options.forEach(option => { 
-        option.addEventListener('click', (event) => { 
-            selected.innerText = event.target.innerText; 
-            options.forEach(option => { 
-                option.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            select.classList.remove('select-clicked');
-            caret.classList.remove('caret-rotate');
-            menu.classList.remove('menu-open');
-        });
-    });
-});
+//     options.forEach(option => { 
+//         option.addEventListener('click', (event) => { 
+//             selected.innerText = event.target.innerText; 
+//             options.forEach(option => { 
+//                 option.classList.remove('active');
+//             });
+//             event.target.classList.add('active');
+//             select.classList.remove('select-clicked');
+//             caret.classList.remove('caret-rotate');
+//             menu.classList.remove('menu-open');
+//         });
+//     });
+// });
 
