@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="add recipe.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <title>Add Recipe</title>
+</head>
+<body>
+    <section class="home" id="Home">
+        <!-- <div class="welcome">
+            <h1>Welcome Admin</h1>
+        </div> -->
+        <nav>
+            <a href="" class="header">
+                <i class="ri-restaurant-2-fill"></i>
+                <h3><span class="logoo">R</span>ecipe<span class="logoo">M</span>aker</h3>
+            </a>
+            <div class="nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="admin.html" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="dish.html" class="dropbtn">Categories</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropbtn">Add</a>
+                        <div class="dropdown-content">
+                            <a href="sign up.html">Users</a>
+                            <a href="add ingredient.html">Ingrediants</a>
+                            <a href="addd recipe.html">Recipe</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Edit</a>
+                        <div class="dropdown-content">
+                            <a href="sign up.html">Users </a>
+                            <a href="#">Ingrediants</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Delete</a>
+                        <div class="dropdown-content">
+                            <a href="sign up.html">Users </a>
+                            <a href="#">Ingrediants</a>
+                          
+
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">View</a>
+                        <div class="dropdown-content">
+                            <a href="viewUsers.html">Users </a>
+                            <a href="viewIngrediants.html">Ingrediants</a>
+                        </div>
+                    </li>
+                </ul>
+            </div> 
+        </nav> 
+    </section>
+    <div class="registration-container">
+    <div class="registration-form">
+            <h1>New Recipe</h1>
+            <form action="#" method="post"> <!-- Removed the extra form tag and added space after "#" -->
+                 <p>Recipe Name: </p>
+                   <input type="text" id="name" name="name" placeholder="koshary"> 
+                   <p>Ingrediants: </p>
+                   <input type="text" id="name" name="name" placeholder="pasta"> 
+                    <p>Recipe:</p>
+                  <input type="text" id="name" name="name" placeholder="serve it"> 
+                 
+                  <button type="submit" onclick="return validateForm()">add recipe</button> 
+                </form>
+           
+    </div>
+    </div>
+    <script src="add recipe.js"></script>
+    
+</body>
+</html>
