@@ -1449,12 +1449,12 @@ padding-top: 2px;
     height: auto;
     padding: 10px;
     background-color: rgba(129, 159, 135, 0.8); 
-    border-radius: 40px;
+    border-radius: 30px;
 
 }
 .image-container7 img ,.image-container8 img ,.image-container9 img,.image-container10 img,.image-container13 img{
     max-width: 100%;
-    border-radius: 40px;
+    border-radius: 30px;
     height: 300px;
     transition:0.3s ease;
 }
@@ -1470,6 +1470,7 @@ padding-top: 2px;
     justify-content: center;
     align-items: center;
     color: #fff;
+    border-radius: 30px;
     font-size: 18px;
     background-color: rgba(0, 0, 0, 0.5); 
     opacity: 0;
@@ -1580,13 +1581,13 @@ padding-top: 2px;
 
 /* ------------------------------------------------------------ */
 /*Chicken stir fry recipe */
-#chickStirFryIng,#beef,#VegStuffedPasta {
+#chickStirFryIng,#beef,#VegStuffedPasta,#VegetableQuesadillasRecipe {
     font-family: Arial, sans-serif;
     margin: 0;
     padding-left: 23px;
     background-color: #fff4d5;
 }
-.home6,.home7,.home12{
+.home6,.home7,.home12,.home14{
     background-color: #fff4d5;
     background-position: center;
     background-repeat: no-repeat;
@@ -1626,7 +1627,7 @@ padding-top: 2px;
     margin-top: 20px;
 }
 
-.image-container6,.image-container11,.image-container12 {
+.image-container6,.image-container11,.image-container12,.image-container14 {
     position: absolute; 
     top: 20%; 
     right: 40px; 
@@ -1640,14 +1641,14 @@ padding-top: 2px;
 }
 
 
-.image-container6 img,.image-container11 img,.image-container12 img {
+.image-container6 img,.image-container11 img,.image-container12 img,.image-container14 img {
     max-width: 100%;
     border-radius: 40px;
     height: auto;
     transition: 0.3s ease;
 }
 
-.overlay6,.overlay11,.overlay12 {
+.overlay6,.overlay11,.overlay12,.overlay14 {
     position: absolute;
     top: 0;
     left: 0;
@@ -1664,7 +1665,7 @@ padding-top: 2px;
     border-radius:40px ;
 }
 
-.overlay6:hover,.overlay11:hover,.overlay12:hover {
+.overlay6:hover,.overlay11:hover,.overlay12:hover,.overlay14:hover {
     opacity: 1;
 } 
 /* ------------------------------------------------------------
@@ -1726,7 +1727,7 @@ padding-top: 2px;
 }
 
 
-#homee{
+#homee,#MainDishesPage{
     background-color: #fff4d5;
     background-position: center;
     background-repeat: no-repeat;
@@ -1736,6 +1737,14 @@ padding-top: 2px;
     background-attachment: fixed;
 }
 
+#RecipesFound{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: xx-large;
+  color: #0d4b23;
+  padding-top: 40px;
+}
 /* .......................................brushetta const recipee1................................ */
 #bruschetta {
     font-family: Arial, sans-serif;
