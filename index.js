@@ -869,3 +869,20 @@ function validateForm2() {
   alert("Recipe added successfully!");
   return true;
 }
+// .............................................admin add ingredient................
+function validateForm9() {
+  var ingredientName = document.getElementById("ingredientName").value;
+  var ingredientType = document.getElementById("ingredientType").value;
+  var exampleRecipe = document.getElementById("exampleRecipe").value;
+
+  if (ingredientName === "" || ingredientType === "" || exampleRecipe === "") {
+      alert("Please fill out all fields!");
+      return false;
+  }
+
+  // Perform additional validation if needed
+  
+  // If validation passes
+  alert("Item added successfully!");
+  return true;
+}
