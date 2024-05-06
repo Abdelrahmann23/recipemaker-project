@@ -886,3 +886,57 @@ function validateForm9() {
   alert("Item added successfully!");
   return true;
 }
+/* --------------------------------------------------------------- */
+/* -------------------------feedback----------------------- */
+// Select all elements with the "i" tag and store them in a NodeList called "stars"
+const stars = document.querySelectorAll('.stars i');
+
+// Add a flag to check if a thank you message has been shown
+let thankYouShown = false;
+
+// Function to handle star activation and thank you message
+function handleStarClick(starIndex) {
+    // If the thank you message has already been shown, return early without doing anything
+    if (thankYouShown) {
+        return;
+    }
+
+    // Deactivate all stars before activating the chosen ones
+    stars.forEach(star => {
+        star.classList.remove('active');
+    });
+
+    // Activate the clicked star and all previous stars
+    stars.forEach((otherStar, otherIndex) => {
+        if (otherIndex <= starIndex) {
+            otherStar.classList.add('active');
+        }
+    });
+
+    // Show the thank you message with a slight delay
+    setTimeout(() => {
+      alert('Thank you for rating us 🙂  ');
+        window.location.href = 'index.html';
+    }, 300); // Adjust the delay as needed (in milliseconds)
+
+    thankYouShown = true;
+}
+
+// Loop through the "stars" NodeList
+stars.forEach((star, index) => {
+    // Add an event listener that runs a function when the "click" event is triggered
+    star.addEventListener('click', () => {
+        handleStarClick(index);
+    });
+
+    // Disable future clicks on the same star
+    star.addEventListener('click', () => {
+        star.style.pointerEvents = 'none';
+        // Replace the star's click event listener with a non-operational one
+        star.removeEventListener('click', arguments.callee);
+    });
+});
+
+/* --------------------------------------------------------------- */
+
+
