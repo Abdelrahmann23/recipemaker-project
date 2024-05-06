@@ -2614,7 +2614,8 @@ th{
 
 /* ............................................................... */
 /* .....................view ingrediants ................................ */
- /* .part{
+
+ .part{
     margin-top: 200px;
     display: flex;
 }
@@ -2655,7 +2656,7 @@ margin-top: 30px; }
     
 
 
-.dropdown2{
+.dropdowningrediants{
     min-width: 15em;
     position: relative;
     margin: 2rem;
@@ -2663,7 +2664,7 @@ margin-top: 30px; }
 
 
 } 
- .dropdown2 *{
+ .dropdowningrediants *{
     box-sizing: border-box;
 
 } 
@@ -2700,7 +2701,7 @@ background:green ;
     transform: rotate(180deg);
 
 } 
-.menu{
+.ingrediantsmenu{
 
     list-style: none;
     padding: 0.2em 0.5em;
@@ -2720,20 +2721,20 @@ background:green ;
     z-index: 1;
 
 } 
- menu li{
+.ingrediantsmenu li{
     padding: 0.7em 0.5em;
     margin: 0.3em 0;
     border-radius: 0.5em;
     cursor: pointer;
 
 }
-.menu li:hover{
+.ingrediantsmenu li:hover{
     background: green;
     border-radius: 0.5em;
 
 } 
 
- .menu-open{
+ .ingrediantsmenu-open{
     display: block;
     opacity: 1;
 }
@@ -2745,7 +2746,7 @@ img{
 }
   
 
-  .menu li {
+  .ingrediantsmenu li {
     display: flex;
     align-items: center;
 } 
@@ -2754,7 +2755,7 @@ img{
     width: 30px;
     height: 23px;
     margin-left: auto;
- } */
+ }
   
 
   /* ............................................................... */
