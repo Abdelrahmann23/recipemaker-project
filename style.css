@@ -2262,7 +2262,7 @@ padding-top: 2px;
         display: inline-block;
       }
 
-.cardss{
+.cardsuser{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -2499,7 +2499,7 @@ padding-top: 2px;
         display: inline-block;
       }
 
-.cards{
+.cardsing{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
