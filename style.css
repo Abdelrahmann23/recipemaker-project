@@ -1137,14 +1137,18 @@ padding-top: 2px;
   display: grid;
   height: 100%;
   width: 100%;
+  margin-top:200px;
   place-items: center;
   background: -webkit-linear-gradient(left,#036527, #c1c36c);
 }
 
  #lform{
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
     height: 100%;
-    width: 100%;
+    width:100%;
     place-items: center;
     background: -webkit-linear-gradient(left,#036527, #c1c36c);
   }
