@@ -815,3 +815,41 @@ document.addEventListener('DOMContentLoaded', () => {
 //     });
 // });
 
+// ........................................add js of adding users for admin...........................
+function togglePasswordVisibility(inputId) {
+  console.log("togglePasswordVisibility function called");
+  var passwordInput = document.getElementById(inputId);
+  var toggleButton = passwordInput.nextElementSibling;
+
+  if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleButton.innerHTML = '<i class="fas fa-eye-slash"></i>';
+  } else {
+      passwordInput.type = "password";
+      toggleButton.innerHTML = '<i class="fas fa-eye"></i>';
+  }
+}
+
+function validateForm() {
+  console.log("validateForm function called");
+  var fullname = document.getElementById("fullname").value;
+  var username = document.getElementById("username").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var confirm_password = document.getElementById("confirm_password").value;
+
+  if (fullname === "" || username === "" || email === "" || password === "" || confirm_password === "") {
+      alert("All fields are required!");
+      return false;
+  }
+
+  if (password !== confirm_password) {
+      alert("Passwords do not match!");
+      return false;
+  }
+
+  alert("User added successfully!"); // Add this alert message
+
+  return true;
+}
+

@@ -2711,7 +2711,170 @@ img{
 
   /* ............................................................... */
   /* ...............................................styling for adding user by admin............................... */
-  body {
+  /* body {
+    background-image: url("C:\\Users\\Habiba\\Desktop\\Main Dish\\admin photo.jpg");
+   background-size: cover;
+   filter: none; 
+ 
+ }
+ *{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ }
+ 
+  
+ 
+ nav{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     height: 70px;
+     -webkit-backdrop-filter: blur(30px);
+     backdrop-filter: blur(30px);
+     width: 100%;
+     position: fixed;
+     z-index: 10;
+    
+   }
+   .header{
+       display: flex;
+       align-items: center;
+       text-decoration: none;
+   }
+   .header i{
+       font-size: 35px;
+       color: green;
+   }
+   .header .logoo{
+       font-size: 30px;
+       color: green;
+   }
+   .header h3{
+       color: black;
+       font-size: 25px;
+   }
+   .nav a{
+       text-decoration: none;
+       color: #078435;
+       font-size: 25px;
+       font-weight: 700;
+       margin: 30px;
+       padding: 10px;
+       transition: all 0.1s ease;
+   }
+   .nav a:hover{
+       border: none;
+       background-color: #046929;
+       color: white;
+       border-radius: 50px;
+   }
+   
+   .nav ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+     }
+     
+     .navbar li {
+       float: left;
+     }
+     
+     .navbar li a {
+       display: block;
+       color: white;
+       text-align: center;
+       padding: 14px 20px;
+       text-decoration: none;
+     }
+     
+     /* Change color on hover */
+     /*  */
+     /* .home{
+        background-image: url(background1.jpeg) ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        background-attachment: fixed;
+      
+        
+    } */
+  
+ .registration-container1 {
+   position:absolute;
+   top: 56%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   background-color: rgb(137, 185, 137);
+   border-radius: 40px;
+   padding: 20px; 
+   max-width: 90%;
+ }
+ 
+ .registration-form {
+   width: 300px; /* Reduce the width of the form */
+   height: auto; /* Allow the height to adjust based on content */
+   padding: 10px; /* Reduce padding for spacing inside the box */
+   border: 1px solid #333; /* Reduce the thickness of the border */
+   border-radius: 5px; /* Reduce the radius of the border */
+ }
+ 
+ .registration-form h1 {
+   font-size: 24px; /* Reduce the font size of the heading */
+   margin: 10px 0; /* Reduce margin for the heading */
+ }
+ 
+ .registration-form p {
+   font-size: 16px; /* Reduce the font size of paragraphs */
+   margin: 10px 0; /* Reduce margin for paragraphs */
+ }
+ 
+ .registration-form input {
+   font-size: 14px; /* Reduce the font size of input fields */
+   padding: 8px; /* Reduce padding for input fields */
+   margin-bottom: 8px; /* Reduce margin below each input */
+ }
+ .registration-form {
+   width: 300px; /* Reduce the width of the form */
+   padding: 10px; /* Reduce padding for spacing inside the box */
+   border: 1px solid #333; /* Add a border around the form */
+   border-radius: 5px; /* Add rounded corners to the border */
+   position: relative; /* Add position relative to the form */
+ }
+ 
+ .password-input {
+   position: relative; /* Add position relative to the password input container */
+ }
+ 
+ .password-input input {
+   font-size: 14px; /* Reduce the font size of input fields */
+   padding-right: 30px; /* Increase right padding to accommodate the icon */
+ }
+ .toggle-password {
+   position: absolute; /* Position the icon absolutely */
+   top: 50%; /* Align the icon vertically to the middle */
+   right: 10px; /* Adjust the distance from the right */
+   transform: translateY(-50%); /* Center the icon vertically */
+   cursor: pointer; 
+ }
+ .registration-form button {
+   font-size: large;
+   font-weight: bold;
+   margin: 20px 0;
+   width: 100%; 
+   border: 0;
+   border-radius: 40px;
+   background-color: rgb(47, 150, 47);
+ }
+ 
+ .registration-form button:hover {
+   color: aliceblue;
+ }
+ /* ...................................................styling for add ingredient for admin............... */
+ body {
     background-image: url("C:\\Users\\Habiba\\Desktop\\Main Dish\\admin photo.jpg");
    background-size: cover;
    filter: none; 
@@ -2854,9 +3017,9 @@ img{
  }
  
  
- .registration-container {
+ .registration-container2 {
    position: absolute;
-   top: 65%;
+   top: 50%;
    left: 50%;
    transform: translate(-50%,-50%);
    background-color: rgb(137, 185, 137);
@@ -2924,5 +3087,223 @@ img{
  .registration-form button:hover {
    color: aliceblue;
  }
+ /* ...................................................styling for add recipe admin..................... */
+ body {
+    background-image: url("C:\\Users\\Habiba\\Desktop\\Main Dish\\admin photo.jpg");
+   background-size: cover;
+   filter: none; 
+ 
+ }
+ *{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ }
+ 
+  .home{
+     background-image: url(background1.jpeg) ;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     width: 100%;
+     height: 100vh;
+     background-attachment: fixed;
+   
+     
+ }
+ 
+ nav{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     height: 70px;
+     -webkit-backdrop-filter: blur(30px);
+     backdrop-filter: blur(30px);
+     width: 100%;
+     position: fixed;
+     z-index: 10;
+    
+   }
+   .header{
+       display: flex;
+       align-items: center;
+       text-decoration: none;
+   }
+   .header i{
+       font-size: 35px;
+       color: green;
+   }
+   .header .logoo{
+       font-size: 30px;
+       color: green;
+   }
+   .header h3{
+       color: black;
+       font-size: 25px;
+   }
+   .nav a{
+       text-decoration: none;
+       color: #078435;
+       font-size: 25px;
+       font-weight: 700;
+       margin: 30px;
+       padding: 10px;
+       transition: all 0.1s ease;
+   }
+   .nav a:hover{
+       border: none;
+       background-color: #046929;
+       color: white;
+       border-radius: 50px;
+   }
+   
+   .nav ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+     }
+     
+     .navbar li {
+       float: left;
+     }
+     
+     .navbar li a {
+       display: block;
+       color: white;
+       text-align: center;
+       padding: 14px 20px;
+       text-decoration: none;
+     }
+     
+     /* Change color on hover */
+     .navbar li a:hover {
+       border: none;
+       background-color: #046929;
+       color: white;
+       border-radius: 50px;
+     }
+     
+     /* Dropdown container */
+     .dropdown {
+       display: inline-block;
+       
+     }
+     
+     /* Dropdown button */
+     .dropbtn {
+       display: block;
+       color: white;
+       text-align: center;
+       padding: 0px;
+       text-decoration: none;
+     }
+     
+     /* Dropdown content (hidden by default) */
+     .dropdown-content {
+       display: none;
+       border-radius: 25px;
+       position: absolute;
+       background-color: rgb(207, 220, 141);
+       width: 200px;
+      max-height: 200px;
+      overflow-x: auto; 
+       z-index: 1;
+     }
+     
+     /* Links inside the dropdown */
+     .dropdown-content a {
+       color: white;
+       margin: 5px;
+       padding: 5px;
+       display: block;
+       text-align: left;
+     }
+     
+     /* Change color of dropdown links on hover */
+     .dropdown-content a:hover {
+       background-color: #046929;
+     }
+     
+     /* Show the dropdown menu on hover */
+     .dropdown:hover .dropdown-content {
+       display: inline-block;
+ }
+ 
+ 
+ .registration-container3 {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   background-color: rgb(137, 185, 137);
+   border-radius: 40px;
+   padding: 20px; 
+   max-width: 90%;
+ }
+ 
+ .registration-form {
+   width: 300px; /* Reduce the width of the form */
+   height: auto; /* Allow the height to adjust based on content */
+   padding: 10px; /* Reduce padding for spacing inside the box */
+   border: 1px solid #333; /* Reduce the thickness of the border */
+   border-radius: 5px; /* Reduce the radius of the border */
+ }
+ 
+ .registration-form h1 {
+   font-size: 24px; /* Reduce the font size of the heading */
+   margin: 10px 0; /* Reduce margin for the heading */
+ }
+ 
+ .registration-form p {
+   font-size: 16px; /* Reduce the font size of paragraphs */
+   margin: 10px 0; /* Reduce margin for paragraphs */
+ }
+ 
+ .registration-form input {
+   font-size: 14px; /* Reduce the font size of input fields */
+   padding: 8px; /* Reduce padding for input fields */
+   margin-bottom: 8px; /* Reduce margin below each input */
+ }
+ .registration-form {
+   width: 300px; /* Reduce the width of the form */
+   padding: 10px; /* Reduce padding for spacing inside the box */
+   border: 1px solid #333; /* Add a border around the form */
+   border-radius: 5px; /* Add rounded corners to the border */
+   position: relative; /* Add position relative to the form */
+ }
+ 
+ .password-input {
+   position: relative; /* Add position relative to the password input container */
+ }
+ 
+ .password-input input {
+   font-size: 14px; /* Reduce the font size of input fields */
+   padding-right: 30px; /* Increase right padding to accommodate the icon */
+ }
+ .toggle-password {
+   position: absolute; /* Position the icon absolutely */
+   top: 50%; /* Align the icon vertically to the middle */
+   right: 10px; /* Adjust the distance from the right */
+   transform: translateY(-50%); /* Center the icon vertically */
+   cursor: pointer; 
+ }
+ .registration-form button {
+   font-size: large;
+   font-weight: bold;
+   margin: 20px 0;
+   width: 100%; 
+   border: 0;
+   border-radius: 40px;
+   background-color: rgb(47, 150, 47);
+ }
+ 
+ .registration-form button:hover {
+   color: aliceblue;
+ }
+ 
+ 
+ 
+
  
  
