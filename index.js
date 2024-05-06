@@ -830,7 +830,7 @@ function togglePasswordVisibility(inputId) {
   }
 }
 
-function validateForm() {
+function validateForm1() {
   console.log("validateForm function called");
   var fullname = document.getElementById("fullname").value;
   var username = document.getElementById("username").value;
