@@ -76,79 +76,79 @@ document.addEventListener('DOMContentLoaded', function() {
       
     
     
-      // function checkInputs() {
+//       function checkInputs() {
      
        
         
       
-      //   const emailValue = email.value.trim();
-      //   const passwordValue = password.value.trim();
-      //   var smalll=document.getElementById('smalll');
-      //   var smal=document.getElementById('smal');
-      //   var emailErr=passErr =true;
+//         const emailValue = email.value.trim();
+//         const passwordValue = password.value.trim();
+//         var smalll=document.getElementById('smalll');
+//         var smal=document.getElementById('smal');
+//         var emailErr=passErr =true;
         
-      //   if(emailValue === '' ) {
-      //     setErrorFor(email, 'Email cannot be blank');
-      //     smal.style.visibility="visible";
+//         if(emailValue === '' ) {
+//           setErrorFor(email, 'Email cannot be blank');
+//           smal.style.visibility="visible";
           
-      //   } else if (!isEmaill(emailValue)) {
-      //     smal.style.visibility="visible";
-      //     setErrorFor(email, 'Not a valid email');
+//         } else if (!isEmaill(emailValue)) {
+//           smal.style.visibility="visible";
+//           setErrorFor(email, 'Not a valid email');
          
 
           
-      //   } 
-      //   else {
-      //     setSuccessFor(email);
-      //     smal.innerHTML="";
-      //    emailErr = false;
-      //   }
+//         } 
+//         else {
+//           setSuccessFor(email);
+//           smal.innerHTML="";
+//          emailErr = false;
+//         }
         
-      //   if(passwordValue === '') {
-      //     smalll.style.visibility="visible";
-      //     setErrorFor(password, 'Password cannot be blank');
-      //   } 
-      //   else if(passwordValue.length < 8) {
-      //     smalll.style.visibility="visible";
-      //     setErrorFor(password, 'Password must contain at least 8 characters');
+//         if(passwordValue === '') {
+//           smalll.style.visibility="visible";
+//           setErrorFor(password, 'Password cannot be blank');
+//         } 
+//         else if(passwordValue.length < 8) {
+//           smalll.style.visibility="visible";
+//           setErrorFor(password, 'Password must contain at least 8 characters');
           
-      //   }
-      //   else{
-      //     setSuccessFor(password);
-      //     smalll.innerHTML="";
-      //     passErr = false;
-      //   }
-      //   if (!(emailErr || passErr)) {
-      //     if (emailValue === 'mohamed2202505@miuegypt.edu.eg') {
-      //       // Redirect to a special admin page
-      //       window.location.href = "forgetpass.html";
-      //     } else {
-      //       // Redirect to the normal nav page for other users
-      //       window.location.href = "nav.html";
-      //     }
-      //     return true; // Form is valid
-      //   }
+//         }
+//         else{
+//           setSuccessFor(password);
+//           smalll.innerHTML="";
+//           passErr = false;
+//         }
+//         if (!(emailErr || passErr)) {
+//           if (emailValue === 'mohamed2202505@miuegypt.edu.eg') {
+//             // Redirect to a special admin page
+//             window.location.href = "admin.html";
+//           } else {
+//             // Redirect to the normal nav page for other users
+//             window.location.href = "index.html";
+//           }
+//           return true; // Form is valid
+//         }
       
-      //   return false; // Form is invalid
+//         return false; // Form is invalid
         
        
-      // }
+//       }
     
-      // function setErrorFor(input, message) {
-      //   const formControl = input.parentElement;
-      //   const small = formControl.querySelector('small');
-      //   formControl.className = 'form-control error';
-      //   small.innerText = message;
-      // }
+//       function setErrorFor(input, message) {
+//         const formControl = input.parentElement;
+//         const small = formControl.querySelector('small');
+//         formControl.className = 'form-control error';
+//         small.innerText = message;
+//       }
       
-      // function setSuccessFor(input) {
-      //   const formControl = input.parentElement;
-      //   formControl.className = 'form-control success';
-      // }
+//       function setSuccessFor(input) {
+//         const formControl = input.parentElement;
+//         formControl.className = 'form-control success';
+//       }
         
-      // function isEmaill(email) {
-      //   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-      // }
+//       function isEmaill(email) {
+//         return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+//       }
       
       
 //       function validate() {
@@ -816,33 +816,7 @@ dropdowns.forEach(dropdown => {
 });
 
 
-// const dropdowns1 = document.querySelectorAll('dropdowningrediants');
-// dropdowns1.forEach(dropdowningrediants => {
-//     const select1 = dropdowningrediants.querySelector('.selectt');
-//     const caret1 = dropdowningrediants.querySelector('.carett');
-//     const menu1 = dropdowningrediants.querySelector('.ingrediantsmenu');
-//     const options1 = dropdowningrediants.querySelectorAll('.ingrediantsmenu li'); 
-//     const selected1 = dropdowningrediants.querySelector('.selectedd');
 
-//     select1.addEventListener('click', () => {
-//         select1.classList.toggle('selectt-clicked');
-//         caret1.classList.toggle('carett-rotate'); 
-//         menu1.classList.toggle('ingrediantsmenu-open');
-//     });
-
-//     options1.forEach(option => { 
-//         option1.addEventListener('click', (event) => { 
-//             selected1.innerText = event.target.innerText; 
-//             options1.forEach(option => { 
-//                 option.classList.remove('active');
-//             });
-//             event1.target.classList.add('active');
-//             select1.classList.remove('selectt-clicked');
-//             caret1.classList.remove('carett-rotate');
-//             menu1.classList.remove('ingrediantsmenu-open');
-//         });
-//     });
-// });
 
 // ........................................add js of adding users for admin...........................
 function togglePasswordVisibility(inputId) {

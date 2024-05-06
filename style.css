@@ -1133,7 +1133,15 @@ padding-top: 2px;
 /* ------------------------------------------------------------ */
 /* form css */
 
-/* #form1{
+#fform{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: -webkit-linear-gradient(left,#036527, #c1c36c);
+}
+
+ #lform{
     display: grid;
     height: 100%;
     width: 100%;
@@ -1368,6 +1376,7 @@ padding-top: 2px;
     font-size: 18px;
     color: #999;
   } 
+
 /* ------------------------------------------------------------ */
 /* ------------------------ all desserts recipes' and ingrediants after generation ---------------------------- */
 
@@ -1959,7 +1968,7 @@ padding-top: 2px;
       
   }  
    
-   nav{
+   .adminnav{
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -2011,7 +2020,7 @@ padding-top: 2px;
         overflow: hidden;
       }
       
-      .navbar li {
+      /* .navbar li {
         float: left;
       }
       
@@ -2030,7 +2039,7 @@ padding-top: 2px;
         color: white;
         border-radius: 50px;
       }
-      
+       */
      
       .dropdown {
         display: inline-block;
@@ -2142,125 +2151,6 @@ padding-top: 2px;
   #deleteuser{
     background:rgb(250, 231, 207);
   }
-  nav{
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      height: 70px;
-      margin-top: 10px;
-      background-color: rgb(255, 255, 255,0,0.703);
-      -webkit-backdrop-filter: blur(30px);
-      backdrop-filter: blur(30px);
-      width: 100%;
-      position: fixed;
-      z-index: 10;
-      
-    }
-    .header{
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-    }
-    .header i{
-        font-size: 35px;
-        color: green;
-    }
-    .header .logoo{
-        font-size: 30px;
-        color: green;
-    }
-    .header h3{
-        color: black;
-        font-size: 25px;
-    }
-    .nav a{
-        text-decoration: none;
-        color: #078435;
-        font-size: 25px;
-        font-weight: 700;
-        margin: 30px;
-        padding: 10px;
-        transition: all 0.1s ease;
-    }
-    .nav a:hover{
-        border: none;
-        background-color: #046929;
-        color: white;
-        border-radius: 50px;
-    }
-    
-    .nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-      
-      .navbar li {
-        float: left;
-      }
-      
-      .navbar li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 20px;
-        text-decoration: none;
-      }  */
-      
-      /*Change color on hover */
-        .navbar li a:hover {
-        border: none;
-        background-color: #046929;
-        color: white;
-        border-radius: 50px;
-      } 
-      
-    
-      .dropdown {
-        display: inline-block;
-        
-      } 
-       
-  
-        .dropbtn {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 0px;
-        text-decoration: none;
-      }  
-    
-    
-        .dropdown-content {
-        display: none;
-        border-radius: 25px;
-        position: absolute;
-        background-color: rgb(207, 220, 141);
-        width: 200px;
-       max-height: 200px;
-       overflow-x: auto; 
-        z-index: 1;
-      } 
-       
-    
-        .dropdown-content a {
-        color: white;
-        margin: 5px;
-        padding: 5px;
-        display: block;
-        text-align: left;
-      } 
-       
-     
-        .dropdown-content a:hover {
-        background-color: #046929;
-      }  
-    
-    
-        .dropdown:hover .dropdown-content {
-        display: inline-block;
-      }
 
 .cardsuser{
     display: flex;
@@ -2378,126 +2268,6 @@ padding-top: 2px;
   #deleteing{
     background:rgb(250, 231, 207);
   }
-
-  nav{
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      height: 70px;
-      margin-top: 10px;
-      background-color: rgb(255, 255, 255,0,0.703);
-      -webkit-backdrop-filter: blur(30px);
-      backdrop-filter: blur(30px);
-      width: 100%;
-      position: fixed;
-      z-index: 10;
-      
-    }
-    .header{
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-    }
-    .header i{
-        font-size: 35px;
-        color: green;
-    }
-    .header .logoo{
-        font-size: 30px;
-        color: green;
-    }
-    .header h3{
-        color: black;
-        font-size: 25px;
-    }
-    .nav a{
-        text-decoration: none;
-        color: #078435;
-        font-size: 25px;
-        font-weight: 700;
-        margin: 30px;
-        padding: 10px;
-        transition: all 0.1s ease;
-    }
-    .nav a:hover{
-        border: none;
-        background-color: #046929;
-        color: white;
-        border-radius: 50px;
-    }
-    
-    .nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-      
-      .navbar li {
-        float: left;
-      }
-      
-      .navbar li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 20px;
-        text-decoration: none;
-      }  */
-      
-      
-        .navbar li a:hover {
-        border: none;
-        background-color: #046929;
-        color: white;
-        border-radius: 50px;
-      }  
-      
-     
-       .dropdown {
-        display: inline-block;
-        
-      }  
-      
-   
-       .dropbtn {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 0px;
-        text-decoration: none;
-      } 
-       
-     
-       .dropdown-content {
-        display: none;
-        border-radius: 25px;
-        position: absolute;
-        background-color: rgb(207, 220, 141);
-        width: 200px;
-       max-height: 200px;
-       overflow-x: auto; 
-        z-index: 1;
-      }  
-      
-    
-       .dropdown-content a {
-        color: white;
-        margin: 5px;
-        padding: 5px;
-        display: block;
-        text-align: left;
-      }  
-      
-     
-        .dropdown-content a:hover {
-        background-color: #046929;
-      }  
-      
-
-        .dropdown:hover .dropdown-content {
-        display: inline-block;
-      } 
 
 .cardsing{
     display: flex;
@@ -2624,150 +2394,6 @@ th{
 /* ............................................................... */
 /* .....................view ingrediants ................................ */
  
- /* .part{
-    margin-top: 200px;
-    display: flex;
-}
-.package{
-    display: flex;
-    justify-content: space-around;
-    margin: 30px;
-    padding: 30px;
-    flex-wrap: wrap;
-
-         
-}
-
- #viewIngrediants::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(admin\ photo.jpg);
-    background-size: cover;
-    filter: blur(3px);
-    z-index: -1;
-  } 
-
-
-   #viewIngrediants{
-    font-family: 'Poppins', sans-serif;
-    background: beige; 
-     background-image: url(admin\ photo.jpg)  ; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    margin-top: 30px; }  
-    
-
-
-.dropdowningrediants{
-    min-width: 15em;
-    position: relative;
-    margin: 2rem;
-    
-
-
-} 
- .dropdowningrediants *{
-    box-sizing: border-box;
-
-} 
- .selectt{
-    background-color: green;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px green solid;
-    border-radius: 0.5em;
-    padding: 1em;
-    cursor: pointer;
-  transition: cubic-bezier(0.3s);
-
-}
-.selectt-clicked{
-   border: 2px green solid; 
-   box-shadow: 0 0 0.3em green;
-}
-.selectt:hover{
-background:green ;
-} 
-
- .carett{
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 6px solid #fff;
-    transition: 0.3s;
-}
-.carett-rotate{
-    transform: rotate(180deg);
-
-} 
-.ingrediantsmenu{
-
-    list-style: none;
-    padding: 0.2em 0.5em;
-    background: rgb(207, 220, 141);
-    border: 1px rgb(207, 220, 141) solid;
-    box-shadow: 0 0.5em 1em rgba(0 0, 0, 0.2);
-    border-radius: 0.5em;
-    color: white;
-    position: absolute;
-    top: 3em;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%);
-    opacity: 0;
-    display: none;
-    transition: 0.2s;
-    z-index: 1;
-
-} 
-.ingrediantsmenu li{
-    padding: 0.7em 0.5em;
-    margin: 0.3em 0;
-    border-radius: 0.5em;
-    cursor: pointer;
-
-}
-.ingrediantsmenu li:hover{
-    background: green;
-    border-radius: 0.5em;
-
-} 
-
- .ingrediantsmenu-open{
-    display: block;
-    opacity: 1;
-}
-.ingrediantsmenu img{
-  max-width: 9%;
-  max-height: 10%;
-     
-}
-  
-
-  .ingrediantsmenu li {
-    display: flex;
-    align-items: center;
-} 
-
- .icon {
-  
-     size: adjust 20px; 
-    width: 30px;
-    height: 23px;
-    margin-left: auto;
- } */
-    
-
 #viewIngrediants::before {
   content: '';
   position: fixed;
@@ -2792,8 +2418,6 @@ background:green ;
   flex-wrap: wrap;
   box-sizing: border-box;
 }
-/* margin-top: 30px; }  */
-
  
 .part{
     margin-top: 200px;
@@ -2917,97 +2541,7 @@ background:green ;
 
   /* ............................................................... */
   /* ...............................................styling for adding user by admin............................... */
-  /* body {
-    background-image: url("admin photo.jpg");
-   background-size: cover;
-   filter: none; 
- 
- }
- *{
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
- }
- 
   
- 
- nav{
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     height: 70px;
-     -webkit-backdrop-filter: blur(30px);
-     backdrop-filter: blur(30px);
-     width: 100%;
-     position: fixed;
-     z-index: 10;
-    
-   }
-   .header{
-       display: flex;
-       align-items: center;
-       text-decoration: none;
-   }
-   .header i{
-       font-size: 35px;
-       color: green;
-   }
-   .header .logoo{
-       font-size: 30px;
-       color: green;
-   }
-   .header h3{
-       color: black;
-       font-size: 25px;
-   }
-   .nav a{
-       text-decoration: none;
-       color: #078435;
-       font-size: 25px;
-       font-weight: 700;
-       margin: 30px;
-       padding: 10px;
-       transition: all 0.1s ease;
-   }
-   .nav a:hover{
-       border: none;
-       background-color: #046929;
-       color: white;
-       border-radius: 50px;
-   }
-   
-   .nav ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-       overflow: hidden;
-     }
-     
-     .navbar li {
-       float: left;
-     }
-     
-     .navbar li a {
-       display: block;
-       color: white;
-       text-align: center;
-       padding: 14px 20px;
-       text-decoration: none;
-     }
-     
-     /* Change color on hover */
-     /*  */
-     /* .home{
-        background-image: url(background1.jpeg) ;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 100vh;
-        background-attachment: fixed;
-      
-        
-    } */
   
  .registration-container1 {
    position:absolute;
@@ -3080,148 +2614,6 @@ background:green ;
    color: aliceblue;
  }
  /* ...................................................styling for add ingredient for admin............... */
- /* body {
-    background-image: url(admin\ photo.jpg);
-   background-size: cover;
-   filter: none; 
- 
- }
- *{
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
- }
- 
-  .home{
-     background-image: url(admin\ photo.jpg) ;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     width: 100%;
-     height: 100vh;
-     background-attachment: fixed;
-   
-     
- }
- 
- nav{
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     height: 70px;
-     -webkit-backdrop-filter: blur(30px);
-     backdrop-filter: blur(30px);
-     width: 100%;
-     position: fixed;
-     z-index: 10;
-    
-   }
-   .header{
-       display: flex;
-       align-items: center;
-       text-decoration: none;
-   }
-   .header i{
-       font-size: 35px;
-       color: green;
-   }
-   .header .logoo{
-       font-size: 30px;
-       color: green;
-   }
-   .header h3{
-       color: black;
-       font-size: 25px;
-   }
-   .nav a{
-       text-decoration: none;
-       color: #078435;
-       font-size: 25px;
-       font-weight: 700;
-       margin: 30px;
-       padding: 10px;
-       transition: all 0.1s ease;
-   }
-   .nav a:hover{
-       border: none;
-       background-color: #046929;
-       color: white;
-       border-radius: 50px;
-   }
-   
-   .nav ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-       overflow: hidden;
-     }
-     
-     .navbar li {
-       float: left;
-     }
-     
-     .navbar li a {
-       display: block;
-       color: white;
-       text-align: center;
-       padding: 14px 20px;
-       text-decoration: none;
-     } */
-     
-     /* Change color on hover */
-     /* .navbar li a:hover {
-       border: none;
-       background-color: #046929;
-       color: white;
-       border-radius: 50px;
-     }
-     
-     /* Dropdown container */
-     /* .dropdown {
-       display: inline-block;
-       
-     }
-     
-     /* Dropdown button */
-     /* .dropbtn {
-       display: block;
-       color: white;
-       text-align: center;
-       padding: 0px;
-       text-decoration: none;
-     }
-       */
-     /* Dropdown content (hidden by default) */
-     /* .dropdown-content {
-       display: none;
-       border-radius: 25px;
-       position: absolute;
-       background-color: rgb(207, 220, 141);
-       width: 200px;
-      max-height: 200px;
-      overflow-x: auto; 
-       z-index: 1;
-     } */
-     
-     /* Links inside the dropdown */
-     /* .dropdown-content a {
-       color: white;
-       margin: 5px;
-       padding: 5px;
-       display: block;
-       text-align: left;
-     }
-      */
-     /* Change color of dropdown links on hover */
-     /* .dropdown-content a:hover {
-       background-color: #046929;
-     }
-     
-     /* Show the dropdown menu on hover */
-     /* .dropdown:hover .dropdown-content {
-       display: inline-block;
- }
-    */
  
  .registration-container9 {
    position: absolute;
@@ -3294,148 +2686,7 @@ background:green ;
    color: aliceblue;
  }
  /* ...................................................styling for add recipe admin..................... */
- /* body {
-    background-image: url(admin\ photo.jpg);
-   background-size: cover;
-   filter: none; 
  
- }
- *{
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
- }
- 
-  .home{
-     background-image: url(admin\ photo.jpg) ;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     width: 100%;
-     height: 100vh;
-     background-attachment: fixed;
-   
-     
- }
- 
- nav{
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     height: 70px;
-     -webkit-backdrop-filter: blur(30px);
-     backdrop-filter: blur(30px);
-     width: 100%;
-     position: fixed;
-     z-index: 10;
-    
-   }
-   .header{
-       display: flex;
-       align-items: center;
-       text-decoration: none;
-   }
-   .header i{
-       font-size: 35px;
-       color: green;
-   }
-   .header .logoo{
-       font-size: 30px;
-       color: green;
-   }
-   .header h3{
-       color: black;
-       font-size: 25px;
-   }
-   .nav a{
-       text-decoration: none;
-       color: #078435;
-       font-size: 25px;
-       font-weight: 700;
-       margin: 30px;
-       padding: 10px;
-       transition: all 0.1s ease;
-   }
-   .nav a:hover{
-       border: none;
-       background-color: #046929;
-       color: white;
-       border-radius: 50px;
-   }
-   
-   .nav ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-       overflow: hidden;
-     }
-     
-     .navbar li {
-       float: left;
-     }
-     
-     .navbar li a {
-       display: block;
-       color: white;
-       text-align: center;
-       padding: 14px 20px;
-       text-decoration: none;
-     } */
-     
-     /* Change color on hover */
-     /* .navbar li a:hover {
-       border: none;
-       background-color: #046929;
-       color: white;
-       border-radius: 50px;
-     }
-     
-     /* Dropdown container */
-     /* .dropdown {
-       display: inline-block;
-       
-     }  */
-     
-     /* Dropdown button */
-     /* .dropbtn {
-       display: block;
-       color: white;
-       text-align: center;
-       padding: 0px;
-       text-decoration: none;
-     }
-      */
-     /* Dropdown content (hidden by default) */
-     /* .dropdown-content {
-       display: none;
-       border-radius: 25px;
-       position: absolute;
-       background-color: rgb(207, 220, 141);
-       width: 200px;
-      max-height: 200px;
-      overflow-x: auto; 
-       z-index: 1;
-     } */
-     
-     /* Links inside the dropdown */
-     /* .dropdown-content a {
-       color: white;
-       margin: 5px;
-       padding: 5px;
-       display: block;
-       text-align: left;
-     } */
-     
-     /* Change color of dropdown links on hover */
-     /* .dropdown-content a:hover {
-       background-color: #046929;
-     } */
-     
-     /* Show the dropdown menu on hover */
-     /* .dropdown:hover .dropdown-content {
-       display: inline-block;
- }
-  */
  
  .registration-container3 {
    position: absolute;
