@@ -2129,7 +2129,7 @@ padding-top: 2px;
 /* ............................................................... */
 
 /* delete user css */
- /* .home14{
+ .home14{
       background-image: url(background1.jpeg) ;
       background-position: center;
       background-repeat: no-repeat;
@@ -2208,8 +2208,8 @@ padding-top: 2px;
         text-decoration: none;
       }  */
       
-      /* Change color on hover */
-       /* .navbar li a:hover {
+      /*Change color on hover */
+        .navbar li a:hover {
         border: none;
         background-color: #046929;
         color: white;
@@ -2221,18 +2221,18 @@ padding-top: 2px;
         display: inline-block;
         
       } 
-       */
-      /* Dropdown button */
-       /* .dropbtn {
+       
+  
+        .dropbtn {
         display: block;
         color: white;
         text-align: center;
         padding: 0px;
         text-decoration: none;
-      }  */
+      }  
     
-      /* Dropdown content (hidden by default) */
-       /* .dropdown-content {
+    
+        .dropdown-content {
         display: none;
         border-radius: 25px;
         position: absolute;
@@ -2242,23 +2242,23 @@ padding-top: 2px;
        overflow-x: auto; 
         z-index: 1;
       } 
-       */
-      /* Links inside the dropdown */
-       /* .dropdown-content a {
+       
+    
+        .dropdown-content a {
         color: white;
         margin: 5px;
         padding: 5px;
         display: block;
         text-align: left;
-      } */
+      } 
        
-      /* Change color of dropdown links on hover */
-       /* .dropdown-content a:hover {
+     
+        .dropdown-content a:hover {
         background-color: #046929;
-      }  */
-      
-      /* Show the dropdown menu on hover */
-       /* .dropdown:hover .dropdown-content {
+      }  
+    
+    
+        .dropdown:hover .dropdown-content {
         display: inline-block;
       }
 
@@ -2358,15 +2358,15 @@ padding-top: 2px;
     position: fixed;
     background: -webkit-linear-gradient(right, #036527, #c1c36c);
     color:beige;
-}  */
+} 
 
 
 /* -------------------------------------------------------------------------- */
 
 /* delete ingredient css */
 
- /* .home15{
-      background-image: url(background1.jpeg) ;
+  .home15{
+      background-image: url(add\ ingredient.html) ;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -2445,31 +2445,31 @@ padding-top: 2px;
         text-decoration: none;
       }  */
       
-      /* Change color on hover */
-       /* .navbar li a:hover {
+      
+        .navbar li a:hover {
         border: none;
         background-color: #046929;
         color: white;
         border-radius: 50px;
-      }  */
+      }  
       
-      /* Dropdown container */
-      /* .dropdown {
+     
+       .dropdown {
         display: inline-block;
         
-      }  */
+      }  
       
-      /* Dropdown button */
-      /* .dropbtn {
+   
+       .dropbtn {
         display: block;
         color: white;
         text-align: center;
         padding: 0px;
         text-decoration: none;
       } 
-       */
-      /* Dropdown content (hidden by default) */
-       /* .dropdown-content {
+       
+     
+       .dropdown-content {
         display: none;
         border-radius: 25px;
         position: absolute;
@@ -2478,26 +2478,26 @@ padding-top: 2px;
        max-height: 200px;
        overflow-x: auto; 
         z-index: 1;
-      }  */
+      }  
       
-      /* Links inside the dropdown */
-       /* .dropdown-content a {
+    
+       .dropdown-content a {
         color: white;
         margin: 5px;
         padding: 5px;
         display: block;
         text-align: left;
-      }  */
+      }  
       
-      /* Change color of dropdown links on hover */
-       /* .dropdown-content a:hover {
+     
+        .dropdown-content a:hover {
         background-color: #046929;
-      }  */
+      }  
       
-      /* Show the dropdown menu on hover */
-       /* .dropdown:hover .dropdown-content {
+
+        .dropdown:hover .dropdown-content {
         display: inline-block;
-      }
+      } 
 
 .cardsing{
     display: flex;
@@ -2576,13 +2576,13 @@ padding-top: 2px;
     position: fixed;
     background: -webkit-linear-gradient(right, #036527, #c1c36c);
     color:beige;
-}  */
+} 
 
 
 /* ............................................................... */
 
 /* --------------------------view users ------------------------------ */
-   /* #viewuser::before {
+    #viewuser::before {
     content: '';
     position: fixed;
     top: 0;
@@ -2619,7 +2619,7 @@ th{
  td:hover {
     background-color: rgb(155, 167, 94);
 
-}  
+}   
 
 /* ............................................................... */
 /* .....................view ingrediants ................................ */
