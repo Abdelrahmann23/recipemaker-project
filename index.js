@@ -852,4 +852,20 @@ function validateForm1() {
 
   return true;
 }
+// .........................................admin add recipe js..................
+function validateForm2() {
+  var recipeName = document.getElementById("recipeName").value;
+  var ingredients = document.getElementById("ingredients").value;
+  var recipe = document.getElementById("recipe").value;
 
+  if (recipeName === "" || ingredients === "" || recipe === "") {
+      alert("Please fill out all fields!");
+      return false;
+  }
+
+  // Perform additional validation if needed
+  
+  // If validation passes
+  alert("Recipe added successfully!");
+  return true;
+}

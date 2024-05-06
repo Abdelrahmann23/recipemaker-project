@@ -67,20 +67,18 @@
         </nav> 
     </section>
     <div class="registration-container3">
-    <div class="registration-form">
+        <div class="registration-form">
             <h1>New Recipe</h1>
-            <form action="#" method="post"> <!-- Removed the extra form tag and added space after "#" -->
-                 <p>Recipe Name: </p>
-                   <input type="text" id="name" name="name" placeholder="koshary"> 
-                   <p>Ingrediants: </p>
-                   <input type="text" id="name" name="name" placeholder="pasta"> 
-                    <p>Recipe:</p>
-                  <input type="text" id="name" name="name" placeholder="serve it"> 
-                 
-                  <button type="submit" onclick="return validateForm()">add recipe</button> 
-                </form>
-           
-    </div>
+            <form action="#" method="post" onsubmit="return validateForm2()">
+                <p>Recipe Name:</p>
+                <input type="text" id="recipeName" name="recipeName" placeholder="Koshary">
+                <p>Ingredients:</p>
+                <input type="text" id="ingredients" name="ingredients" placeholder="Pasta, Rice, Lentils">
+                <p>Recipe:</p>
+                <input type="text" id="recipe" name="recipe" placeholder="Serve it with tomato sauce">
+                <button type="submit">Add Recipe</button>
+            </form>
+        </div>
     </div>
     <script src="index.js"></script>
     
