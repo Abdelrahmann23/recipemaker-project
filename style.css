@@ -2156,15 +2156,137 @@ padding-top: 2px;
     background:rgb(250, 231, 207);
   }
 
+ nav{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 70px;
+      margin-top: 10px;
+      background-color: rgb(255, 255, 255,0,0.703);
+      -webkit-backdrop-filter: blur(30px);
+      backdrop-filter: blur(30px);
+      width: 100%;
+      position: fixed;
+      z-index: 10;
+      
+    }
+    .header{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    .header i{
+        font-size: 35px;
+        color: green;
+    }
+    .header .logoo{
+        font-size: 30px;
+        color: green;
+    }
+    .header h3{
+        color: black;
+        font-size: 25px;
+    }
+    .nav a{
+        text-decoration: none;
+        color: #078435;
+        font-size: 25px;
+        font-weight: 700;
+        margin: 30px;
+        padding: 10px;
+        transition: all 0.1s ease;
+    }
+    .nav a:hover{
+        border: none;
+        background-color: #046929;
+        color: white;
+        border-radius: 50px;
+    }
+    
+    .nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      
+      .navbar li {
+        float: left;
+      }
+      
+      .navbar li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+      
+      /* Change color on hover */
+      .navbar li a:hover {
+        border: none;
+        background-color: #046929;
+        color: white;
+        border-radius: 50px;
+      }
+      
+      /* Dropdown container */
+      .dropdown {
+        display: inline-block;
+        
+      }
+      
+      /* Dropdown button */
+      .dropbtn {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 0px;
+        text-decoration: none;
+      }
+      
+      /* Dropdown content (hidden by default) */
+      .dropdown-content {
+        display: none;
+        border-radius: 25px;
+        position: absolute;
+        background-color: rgb(207, 220, 141);
+        width: 200px;
+       max-height: 200px;
+       overflow-x: auto; 
+        z-index: 1;
+      }
+      
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: white;
+        /* padding:10px; */
+        margin: 5px;
+        padding: 5px;
+        display: block;
+        text-align: left;
+      }
+      
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {
+        background-color: #046929;
+      }
+      
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: inline-block;
+      }
+
 .cardsuser{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 15px;
-   transform: translate(0px,-600px);
+    padding: 20px;
+   transform: translate(00px,-500px);
 }
 .ingri{
     margin: 20px;
+    
     background: none;
     background-color: rgb(238, 213, 184);
     padding: 0;
@@ -2202,9 +2324,9 @@ padding-top: 2px;
 }
 #j{
   padding-bottom:30px ;
-} 
+}
 
- .ingri img{
+.ingri img{
     position: absolute;
     top: 95%; 
     left: 50%; 
@@ -2215,29 +2337,37 @@ padding-top: 2px;
 
 }
 
-#trashh{
-   font-size: 200px;
-   transform: translate(1139px,-480px);
-    position: fixed;
-    cursor: pointer;
-    color: #036527;
+#trashh {
+  font-size: 200px;
+  cursor: pointer;
+  color: #036527;
+  position: fixed;
+  top: 520px; /* Adjust these values to place your trash icon where needed */
+  
+  right: 80px; /* Adjust these values to place your trash icon where needed */
+  z-index: 1000; /* Ensure the trash icon is above other elements */
 }
 
-#counterr{
-    font-size: 50px;
-    background-color:#036527;
-    color: white;
-    border-radius: 50%;
-    padding: 8px;
-    position: fixed;
-    transform: translate(1285px,-520px);
-    z-index: 1000;
+#counterr {
+  font-size: 50px;
+  background-color: #036527;
+  color: white;
+  border-radius: 50%;
+  padding: 8px;
+  position: fixed; /* Ensure the element is fixed relative to the viewport */
+  top: 480px;
+  right: 70px; 
+ 
+  z-index: 1001; 
 }
 
-   
-#trashdivv{
-    transform: translate(100px,-80px);
-    position: fixed;
+#trashdivv {
+ 
+  position: fixed;
+  z-index: 1000;
+  
+  top: 0;
+  left: 0;
 }
 #trashdivv:hover{
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -2252,8 +2382,7 @@ padding-top: 2px;
     position: fixed;
     background: -webkit-linear-gradient(right, #036527, #c1c36c);
     color:beige;
-} 
-
+}
 
 /* -------------------------------------------------------------------------- */
 
@@ -2273,12 +2402,16 @@ padding-top: 2px;
     background:rgb(250, 231, 207);
   }
 
+a{
+  text-decoration: none;
+}
 .cardsing{
+  
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
-   transform: translate(0px,-500px);
+   transform: translate(0px,-580px);
 }
 .ingr{
     margin: 20px;
@@ -2303,54 +2436,207 @@ padding-top: 2px;
 }
 .ingr img{
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the image */
     max-width: 70%;
     max-height: 70%;
     transition: 0.6s ease;
 
-} 
- .ingr:hover img{
+}
+.ingr:hover img{
     transform: scale(0.45);
 }
-#trash{
-   font-size: 200px;
-    transform: translate(1139px,-443px);
-    position: fixed;
-    cursor: pointer;
-    color: #036527;
+#trash {
+  font-size: 200px;
+  cursor: pointer;
+  color: #036527;
+  position: fixed;
+  top: 520px; /* Adjust these values to place your trash icon where needed */
   
+  right: 80px; /* Adjust these values to place your trash icon where needed */
+  z-index: 1000; /* Ensure the trash icon is above other elements */
 }
 
-#counter{
-    font-size: 50px;
-    background-color:#036527;
-    color: white;
-    border-radius: 50%;
-    padding: 8px;
-    position: fixed;
-    transform: translate(1285px,-480px);
-    z-index: 1000;
+#counter {
+  font-size: 50px;
+  background-color: #036527;
+  color: white;
+  border-radius: 50%;
+  padding: 8px;
+  position: fixed; /* Ensure the element is fixed relative to the viewport */
+  top: 480px;
+  right: 70px; 
+ 
+  z-index: 1001; 
 }
 
-   
-#trashdiv{
-    transform: translate(100px,40px);
-    position: fixed;
-    
+#trashdiv {
+ 
+  position: fixed;
+  z-index: 1000;
+  
+  top: 0;
+  left: 0;
 }
 
-#removebtn{
-    cursor: pointer;
-    transform: translate(1275px,-250px);
-    border-radius: 30px;
-    padding: 14px;
-    font-size: 26px;
-    position: fixed;
-    background: -webkit-linear-gradient(right, #036527, #c1c36c);
-    color:beige;
-} 
+
+
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#028b04, #8e9e37 50%,#00842a);
+  border: 0;
+  border-radius: 30px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 50px;
+  justify-content: center;
+  line-height: 1em;
+ width: 400px;
+ height: 110px;
+  padding: 5px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transform: translate(500px,-270px);
+  text-align: center;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 60px;
+    min-width: 196px;
+  }
+}
+#bdiv{
+  transform: translate(-230px, -200px);
+  position: fixed;
+}
+.button-65 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#028b04, #8e9e37 50%,#00842a);
+  border: 0;
+  border-radius: 30px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 40px;
+  justify-content: center;
+  line-height: 1em;
+ width: 400px;
+ height: 110px;
+  padding: 5px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transform: translate(1000px,-379px);
+  text-align: center;
+}
+
+.button-65:active,
+.button-65:hover {
+  outline: 0;
+}
+
+.button-65 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-65:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-65 {
+    font-size: 60px;
+    min-width: 196px;
+  }
+}
+.button-66 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#028b04, #8e9e37 50%,#00842a);
+  border: 0;
+  border-radius: 30px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 40px;
+  justify-content: center;
+  line-height: 1em;
+ width: 400px;
+ height: 110px;
+  padding: 5px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transform: translate(750px,-270px);
+  text-align: center;
+}
+
+.button-66:active,
+.button-66:hover {
+  outline: 0;
+}
+
+.button-66 span {
+  background-color:rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-66:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-66 {
+    font-size: 60px;
+    min-width: 196px;
+  }
+}
+
 
 
 /* ............................................................... */
