@@ -1088,3 +1088,106 @@ generateButton.addEventListener('click', () => {
 });
 // ----------------------------------------------------------
 
+/* user mode trial*/
+let userIcon = document.querySelector('#dropdown-toggle');
+let dropdownMenu = document.querySelector('#user-dropdown');
+// click events on the user icon
+userIcon.addEventListener('click', function(e) {
+    e.stopPropagation(); // Prevent event bubbling
+    dropdownMenu.style.display = dropdownMenu.style.display === 'none' ? 'block' : 'none';
+});
+// clicking anywhere on the page
+document.addEventListener('click', function(event) {
+    let isClickInside = dropdownMenu.contains(event.target);
+    if (!isClickInside) {
+        dropdownMenu.style.display = 'none';
+    }
+});
+
+/*dont delete*/
+function validateForm() {
+    var emailUserEdit = document.getElementById('emailUserEdit').value;
+    var passwordUserEdit = document.getElementById('newpass').value;
+    var oldpass=document.getElementById('oldpass').value;
+    // Email validation
+    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(emailUserEdit) && emailUserEdit!=="") {
+        document.getElementById('emailError').innerHTML = "Please enter a valid email address";
+        return false;
+    } else {
+    document.getElementById('emailError').innerHTML = "";
+    }
+    
+    if (passwordUserEdit.length < 8) {
+        document.getElementById('passwordError').innerHTML = "Password must be at least 8 characters long";
+        return false;
+    } 
+    if(oldpass==passwordUserEdit){
+        document.getElementById('passwordError').innerHTML="New password can't be the same as Old one.";
+        return false;
+    }else {
+    document.getElementById('passwordError').innerHTML = "";
+    
+    }
+    
+    return true;
+
+}
+
+/* EDIT USERS FOR ADMIN*/
+document.addEventListener("DOMContentLoaded", function() {
+    const userList = document.getElementById("userList");
+    const selectedUser = document.getElementById("selecteduser");
+    const editUserForm = document.getElementById("editUserFormAdmin");
+    const submitMessage = document.getElementById("submitMessage");
+
+    // Event listener for when a user is clicked(not workinggggg)
+    userList.addEventListener("click", function(e) {
+        if (e.target.tagName === "LI") {
+            const username = e.target.dataset.username;
+            selectedUser.textContent = username;
+            document.getElementById("username").value = username;
+            document.getElementById("emailUserEdit").value = ""; // Clear email input
+            submitMessage.textContent = ""; // Clear any previous submit message
+        }
+    });
+
+    // Event listener for form submission
+    editUserForm.addEventListener("submit", function(e) {
+        e.preventDefault(); // Prevent default form submission behavior
+        
+        // Perform form validation
+        if (validateForm()) {
+            // If validation passes, show submit message
+            submitMessage.textContent = "Thank you for submitting!";
+        }
+    });
+});
+
+/*ingredient admin edit*/
+function validateIngredientForm() {
+    var ingredientNameEdit = document.getElementById('ingredientNameEdit').value.trim();
+    var ingredientNewName = document.getElementById('ingredientNewName').value.trim();
+
+    // Check if the old name is in the list
+    var ingredientList = Array.from(document.querySelectorAll('#ingredientList li')).map(li => li.textContent.trim());
+    if (!ingredientList.includes(ingredientNameEdit)) {
+        document.getElementById('oldIngNameError').innerHTML = "No such ingredient";
+        return false;
+    } else {
+        document.getElementById('oldIngNameError').innerHTML = "";
+    }
+
+    // Check if the new name is already in the list
+    if (ingredientList.includes(ingredientNewName)) {
+        document.getElementById('NewIngNameError').innerHTML = "Ingredient already exists";
+        return false;
+    } else {
+        document.getElementById('NewIngNameError').innerHTML = "";
+    }
+    
+
+    document.getElementById('ingredientImageError').innerHTML = "";
+
+    return true;
+}
