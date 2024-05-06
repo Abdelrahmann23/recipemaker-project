@@ -3554,6 +3554,136 @@ background:green ;
 
   /* ...................................................................... */
  
+/* -------------list card --------------------- */
+.card-conatiner{
+    
+  width:1000px;
+  margin: auto;
+  transition: 0.5s;
+}
+.card-header{
+  position: fixed;
+  z-index: 300;
+  transform:translate(400px,500px);
+}
+.card-header .shopping{
+position: relative;
+text-align: right;
+}
+.card-header .shopping i{
+color: green;
+font-size: 50px;
+margin-left: 400px;
+}
+.card-header .shopping span{
+background-color: black;
+color: white;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: -5px;
+left: 99%;
+padding: 3px 10px;
+}
 
+.card-shopping{
+position: fixed;
+z-index: 301;
+top: 0;
+/* right: 0; */
+ left: 100%; 
+width: 300px;
+height: 100vh;
+background-color:rgb(245, 244, 244);
+transition: 0.5s;
+border-top-left-radius: 50px;
+}
+
+.img{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.img img{
+display: flex;
+align-items: center;
+background: transparent;
+height: 100px;
+}
+.card-shopping .checkout .generate{
+position: absolute;
+bottom: 0;
+width: 100%;
+background-color: rgb(12, 255, 16);
+font-size: 25px;
+font-weight: bold;
+height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+cursor: pointer;
+}
+.card-shopping .checkout .generate:hover{
+background-color: rgb(6, 192, 9);
+}
+.card-shopping .checkout .close{
+position: absolute;
+top: 0;
+left: 0;
+cursor: pointer;
+}
+
+.card-shopping .checkout .close img{
+width: 40px;
+margin-top: 20px;
+margin-left: 5px;
+}
+.card-shopping .checkout .close img:hover{
+transform: scale(1.2);
+}
+.card-shopping .listcard :nth-child(even){
+background-color: rgb(26, 158, 11);
+color: azure;
+}
+.active .card-shopping{
+left: calc(100% - 300px);
+}
+.active .conatiner{
+transform: translateX(-200px);
+}
+.listcard{
+list-style: none;
+font-weight: bold;
+font-size: 30px;
+margin-top: 20px;
+padding: 5px;
+max-height: 70vh; /* Adjust the maximum height as needed */
+overflow-y: auto;
+}
+
+.listcard li{
+padding: 10px;
+}
+.delete-icon{
+padding: 10px;
+}
+
+
+/* Design scroll bar */
+.listcard::-webkit-scrollbar {
+width: 12px; 
+}
+.listcard::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+.listcard::-webkit-scrollbar-thumb {
+background: #04b115; 
+}
+.listcard::-webkit-scrollbar-thumb:hover {
+background: #066a09;
+}
  
- 
+/* ---------------------------------------------------- */

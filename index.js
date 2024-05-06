@@ -968,4 +968,149 @@ stars.forEach((star, index) => {
 
 /* --------------------------------------------------------------- */
 
+// cart items
+let openshopping = document.querySelector('.shopping');
+let closeshopping = document.querySelector('.close');
+let listcard = document.querySelector('.listcard');
+let generate = document.querySelector('.generate');
+let quantity = document.querySelector('.quantity');
+let body = document.querySelector('body');
+
+openshopping.addEventListener('click', () => {
+    body.classList.add('active');
+});
+
+closeshopping.addEventListener('click', () => {
+    body.classList.remove('active');
+});
+
+const buttons = document.querySelectorAll('.ingredient');
+const countSpan = document.getElementById('countt');
+const list = document.querySelector('.listcard');
+
+let totalCount = 0;
+let cartItems = [];
+
+// Check if there are any existing items in localStorage
+if (localStorage.getItem('cartItems')) {
+
+    cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    totalCount = cartItems.length;
+
+    renderCartItems();
+}
+
+
+function renderCartItems() {
+
+    listcard.innerHTML = '';
+
+    cartItems.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = item;
+
+        const deleteIcon = document.createElement('i');
+        deleteIcon.classList.add('ri-delete-bin-line');
+        deleteIcon.classList.add('delete-icon');
+  
+        listItem.appendChild(deleteIcon);
+       
+        listcard.appendChild(listItem);
+        
+        deleteIcon.addEventListener('click', handleDelete);
+    });
+ 
+    countSpan.textContent = totalCount;
+}
+
+// Function to handle the delete action
+function handleDelete(event) {
+    const listItem = event.target.parentElement;
+    const itemText = listItem.textContent;
+
+    const index = cartItems.indexOf(itemText);
+    if (index !== -1) {
+        cartItems.splice(index, 1);
+
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }
+    listItem.remove();
+    totalCount--;
+    countSpan.textContent = totalCount;
+    const correspondingButton = Array.from(buttons).find(button => button.textContent.trim() === itemText);
+
+
+    if (correspondingButton) {
+        correspondingButton.disabled = false;
+    }
+}
+
+
+buttons.forEach(button => {
+
+    button.addEventListener('click', () => {
+        const ingredientText = button.textContent.trim();
+
+          if (!cartItems.includes(ingredientText)) {
+            cartItems.push(ingredientText);
+            totalCount++;
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            renderCartItems();
+          
+          button.disabled = true;
+        } 
+          
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+       
+        renderCartItems();
+    });
+});
+
+// Loop through each ingredient button
+buttons.forEach(button => {
+
+    button.addEventListener('click', () => {
+        const ingredientText = button.textContent.trim();
+
+        if (!cartItems.includes(ingredientText)) {
+            cartItems.push(ingredientText);
+            totalCount++;
+           
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            renderCartItems();
+           
+            button.disabled = true;
+        }
+
+        
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        
+        renderCartItems();
+    });
+});
+
+// Select generate button
+const generateButton = document.getElementById('generateBtn');
+
+
+generateButton.addEventListener('click', () => {
+    
+    const currentPagePath = window.location.pathname;
+
+    
+    if (currentPagePath.includes('appetizer1.html')) {
+        window.location.href = 'const recipee.html';
+    } else if (currentPagePath.includes('dessert.html')) {
+       
+        window.location.href = 'recipe.html';
+    } else if (currentPagePath.includes('MainDishes.html')) {
+       
+        window.location.href = 'recipesFound.html';
+    } else {
+       
+        window.location.href = 'default.html';
+    }
+});
+// ----------------------------------------------------------
 
