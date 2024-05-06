@@ -1937,20 +1937,21 @@ padding-top: 2px;
 
 /* ...........................................admin home page ....................... */
 
+
   
-   /* #admin{
+     #admin{
       background-image: url(background1.jpeg) ;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
       height: 100vh;
-      background-attachment: fixed;
+      background-attachment: fixed; 
     
       
-  }
-   */
-  /* nav{
+  }  
+   
+   nav{
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -2066,12 +2067,12 @@ padding-top: 2px;
      
       .dropdown:hover .dropdown-content {
         display: inline-block;
-      }    */
+      }   
 
           
 .img-conatianeradmin1 img{
     width: 100%; 
-    min-height: 100%;
+    /* min-height: 100%; */
     object-fit: cover;
   }
   
@@ -2097,11 +2098,6 @@ padding-top: 2px;
     word-spacing: 1px;
     color: rgb(0, 0, 0);
     text-shadow: 2px 2px 4px rgb(25, 100, 25), -2px -2px 4px rgba(255, 255, 255, 1);
-  
-  }
-  
-  .img-containeradmin1 {
-    position: relative;
   
   }
   
