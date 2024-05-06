@@ -1940,7 +1940,6 @@ padding-top: 2px;
 
   
      #admin{
-      background-image: url(background1.jpeg) ;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -2104,6 +2103,7 @@ padding-top: 2px;
   .backgroundd{
     width: 100%;
     height: 100vh;
+   
   }
   
   
@@ -2760,7 +2760,7 @@ img{
   /* ............................................................... */
   /* ...............................................styling for adding user by admin............................... */
   /* body {
-    background-image: url("C:\\Users\\Habiba\\Desktop\\Main Dish\\admin photo.jpg");
+    background-image: url("admin photo.jpg");
    background-size: cover;
    filter: none; 
  
@@ -2923,7 +2923,7 @@ img{
  }
  /* ...................................................styling for add ingredient for admin............... */
  body {
-    background-image: url("C:\\Users\\Habiba\\Desktop\\Main Dish\\admin photo.jpg");
+    background-image: url(admin\ photo.jpg);
    background-size: cover;
    filter: none; 
  
@@ -2935,7 +2935,7 @@ img{
  }
  
   .home{
-     background-image: url(background1.jpeg) ;
+     background-image: url(admin\ photo.jpg) ;
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
@@ -3137,7 +3137,7 @@ img{
  }
  /* ...................................................styling for add recipe admin..................... */
  body {
-    background-image: url("C:\\Users\\Habiba\\Desktop\\Main Dish\\admin photo.jpg");
+    background-image: url(admin\ photo.jpg);
    background-size: cover;
    filter: none; 
  
@@ -3149,7 +3149,7 @@ img{
  }
  
   .home{
-     background-image: url(background1.jpeg) ;
+     background-image: url(admin\ photo.jpg) ;
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
