@@ -2922,7 +2922,7 @@ img{
    color: aliceblue;
  }
  /* ...................................................styling for add ingredient for admin............... */
- body {
+ /* body {
     background-image: url(admin\ photo.jpg);
    background-size: cover;
    filter: none; 
@@ -3008,10 +3008,10 @@ img{
        text-align: center;
        padding: 14px 20px;
        text-decoration: none;
-     }
+     } */
      
      /* Change color on hover */
-     .navbar li a:hover {
+     /* .navbar li a:hover {
        border: none;
        background-color: #046929;
        color: white;
@@ -3019,22 +3019,22 @@ img{
      }
      
      /* Dropdown container */
-     .dropdown {
+     /* .dropdown {
        display: inline-block;
        
      }
      
      /* Dropdown button */
-     .dropbtn {
+     /* .dropbtn {
        display: block;
        color: white;
        text-align: center;
        padding: 0px;
        text-decoration: none;
      }
-     
+       */
      /* Dropdown content (hidden by default) */
-     .dropdown-content {
+     /* .dropdown-content {
        display: none;
        border-radius: 25px;
        position: absolute;
@@ -3043,27 +3043,27 @@ img{
       max-height: 200px;
       overflow-x: auto; 
        z-index: 1;
-     }
+     } */
      
      /* Links inside the dropdown */
-     .dropdown-content a {
+     /* .dropdown-content a {
        color: white;
        margin: 5px;
        padding: 5px;
        display: block;
        text-align: left;
      }
-     
+      */
      /* Change color of dropdown links on hover */
-     .dropdown-content a:hover {
+     /* .dropdown-content a:hover {
        background-color: #046929;
      }
      
      /* Show the dropdown menu on hover */
-     .dropdown:hover .dropdown-content {
+     /* .dropdown:hover .dropdown-content {
        display: inline-block;
  }
- 
+    */
  
  .registration-container2 {
    position: absolute;
@@ -3136,7 +3136,7 @@ img{
    color: aliceblue;
  }
  /* ...................................................styling for add recipe admin..................... */
- body {
+ /* body {
     background-image: url(admin\ photo.jpg);
    background-size: cover;
    filter: none; 
@@ -3222,10 +3222,10 @@ img{
        text-align: center;
        padding: 14px 20px;
        text-decoration: none;
-     }
+     } */
      
      /* Change color on hover */
-     .navbar li a:hover {
+     /* .navbar li a:hover {
        border: none;
        background-color: #046929;
        color: white;
@@ -3233,22 +3233,22 @@ img{
      }
      
      /* Dropdown container */
-     .dropdown {
+     /* .dropdown {
        display: inline-block;
        
-     }
+     }  */
      
      /* Dropdown button */
-     .dropbtn {
+     /* .dropbtn {
        display: block;
        color: white;
        text-align: center;
        padding: 0px;
        text-decoration: none;
      }
-     
+      */
      /* Dropdown content (hidden by default) */
-     .dropdown-content {
+     /* .dropdown-content {
        display: none;
        border-radius: 25px;
        position: absolute;
@@ -3257,27 +3257,27 @@ img{
       max-height: 200px;
       overflow-x: auto; 
        z-index: 1;
-     }
+     } */
      
      /* Links inside the dropdown */
-     .dropdown-content a {
+     /* .dropdown-content a {
        color: white;
        margin: 5px;
        padding: 5px;
        display: block;
        text-align: left;
-     }
+     } */
      
      /* Change color of dropdown links on hover */
-     .dropdown-content a:hover {
+     /* .dropdown-content a:hover {
        background-color: #046929;
-     }
+     } */
      
      /* Show the dropdown menu on hover */
-     .dropdown:hover .dropdown-content {
+     /* .dropdown:hover .dropdown-content {
        display: inline-block;
  }
- 
+  */
  
  .registration-container3 {
    position: absolute;
