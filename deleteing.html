@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="deleteing.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
    
     <title>Document</title>
 </head>
 
-<body id="deleteing">
+<body>
     
-    <section class="home15" id="Home">
+    <section class="home" id="Home">
         <nav>
             <a href="" class="header">
                 <i class="ri-restaurant-2-fill"></i>
@@ -35,9 +36,8 @@
 
                         <a href="#" class="dropbtn">Add</a>
                         <div class="dropdown-content">
-                            <a href="sign up.html">Users</a>
-                            <a href="add ingredient.html">Ingrediants</a>
-                            <a href="addd recipe.html">Recipe</a>
+                            <a href="#">Users</a>
+                            <a href="#">Ingrediants</a>
                         </div>
                     </li>
                     <li class="dropdown">
@@ -51,10 +51,6 @@
                         <a href="#" class="dropbtn">Delete</a>
                         <div class="dropdown-content">
                             <a href="deleteuser.html">Users </a>
-                            <a href="deleteing.html">Ingrediants </a>
-
-                            
-
                             
                         </div>
                     </li>
@@ -73,24 +69,13 @@
             
         </nav>
     </section>
-    
-    
-        <div class="cardsing">
-            <button id="f" class="ingr"><img src="https://cdn-icons-png.flaticon.com/128/1471/1471289.png"  draggable="true" >Soy Sauce</button>
-            <button id="s" class="ingr"><img src="https://cdn-icons-png.flaticon.com/128/4327/4327194.png" draggable="true" >Chicken Breast</button>
-            <button id="a" class="ingr"><img src="https://cdn-icons-png.flaticon.com/128/2518/2518152.png" draggable="true" >Bell Peppers</button>
-            <button id="q" class="ingr"><img src="https://cdn-icons-png.flaticon.com/128/2346/2346952.png" draggable="true">Broccoli</button>
-            <button class="ingr"><img src="https://cdn-icons-png.flaticon.com/128/1041/1041355.png" draggable="true">Carrots</button>
-            <button class="ingr"><img src="https://cdn-icons-png.flaticon.com/128/7315/7315544.png" draggable="true">Snap Peas</button>
-            <button class="ingr"><img src="https://cdn-icons-png.flaticon.com/128/5346/5346654.png" draggable="true">Garlic</button>
+    <div id="bdiv">
+        <a href="maincoursedelete.html"><button  class="button-64" role="button"><span class="text">Main Dish</span></button>
+        </a>
+       <a href="dessertdelete.html"><button class="button-65" role="button"><span class="text">Dessert </span></button></a> 
+      <a href="appetizerdelete.html"><button class="button-66" role="button"><span class="text">Appetizer</span></button></a>  
+    </div>
 
-        </div>
-        <div id="trashdiv">
-           <i  id="trash" class="fas fa-trash"></i>
-                <span id="counter">0</span>
-                
-        </div>
-        
 </body>
-<script src="index.js"></script>
+<script src="deleteing.js"></script>
 </html>
