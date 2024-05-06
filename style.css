@@ -170,7 +170,7 @@ nav{
     text-shadow: #fff4d5;
 } 
 
-.icon {
+.iconlogo {
     display: flex;
     justify-content: center;
    font-size: 25px; 
@@ -2573,7 +2573,7 @@ padding-top: 2px;
 /* ............................................................... */
 
 /* --------------------------view users ------------------------------ */
-   #viewuser::before {
+   /* #viewuser::before {
     content: '';
     position: fixed;
     top: 0;
@@ -2615,7 +2615,7 @@ th{
 /* ............................................................... */
 /* .....................view ingrediants ................................ */
  
- .part{
+ /* .part{
     margin-top: 200px;
     display: flex;
 }
@@ -2738,10 +2738,9 @@ background:green ;
     display: block;
     opacity: 1;
 }
-img{
-    max-width: 9%;
-    max-height: 10%;
-     size: adjust 20px; 
+.ingrediantsmenu img{
+  max-width: 9%;
+  max-height: 10%;
      
 }
   
@@ -2751,12 +2750,161 @@ img{
     align-items: center;
 } 
 
-.icon {
+ .icon {
+  
+     size: adjust 20px; 
     width: 30px;
     height: 23px;
     margin-left: auto;
- }
+ } */
+    
+
+#viewIngrediants::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(admin\ photo.jpg);
+  background-size: cover;
+  filter: blur(3px);
+  z-index: -1;
+} 
+
+
+#viewIngrediants{
+  font-family: 'Poppins', sans-serif;
+  background: beige; 
+   background-image: url(admin\ photo.jpg)  ; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+/* margin-top: 30px; }  */
+
+ 
+.part{
+    margin-top: 200px;
+    display: flex;
+}
+.package{
+    display: flex;
+    justify-content: space-around;
+    /* margin:80px; */
+    margin: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+
+         
+}
+
+  
+.dropdowningrediants{
+    min-width: 15em;
+    position: relative;
+    margin: 2rem;
+    /* padding: 10px; */
+
+
+} 
+ .dropdowningrediants *{
+    box-sizing: border-box;
+
+} 
+ .selectt{
+    background-color: green;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px green solid;
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+  transition: cubic-bezier(0.3s);
+
+}
+.selectt-clicked{
+   border: 2px green solid; 
+   box-shadow: 0 0 0.3em green;
+}
+.selectt:hover{
+background:green ;
+} 
+
+ .carett{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+.carett-rotate{
+    transform: rotate(180deg);
+
+} 
+.ingrediantsmenu{
+
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: rgb(207, 220, 141);
+    border: 1px rgb(207, 220, 141) solid;
+    box-shadow: 0 0.5em 1em rgba(0 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: white;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+
+} 
+.ingrediantsmenu li{
+    /* padding: 0.7em 0.5em;
+    margin: 0.3em 0; */
+    padding: 1px;
+    margin: 1px;
+    border-radius: 0.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+}
+.ingrediantsmenu li:hover{
+    background: green;
+    border-radius: 0.5em;
+
+} 
+ 
+ .ingrediantsmenu-open{
+    display: block;
+    opacity: 1;
+}
+.ingrediantsmenu img{
+    max-width: 9%;
+    max-height: 10%;
+     size: adjust 20px; 
      
+}
+  
+
+.icon {
+    width: 30px;
+    height: 20px;
+    margin-left: auto;
+ }
+  
+
+   
+
 
   /* ............................................................... */
   /* ...............................................styling for adding user by admin............................... */
