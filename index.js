@@ -177,10 +177,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if (image.src.includes("ChickVegSkewIng.jpg")) {
             image.style.opacity=0;
             setTimeout(function(){
-                image.src = "ChickenVegSkew.jpg";
+                image.src = "Chicken and Vegetable Skewers(2).jpg";
                 image.style.opacity=1;
             },200);
-        } else if(image.src.includes("ChickenVegSkew.jpg")){
+        } else if(image.src.includes("Chicken and Vegetable Skewers(2).jpg")){
             image.style.opacity=0;
             setTimeout(function(){
                 image.src = "ChickVegSkewIng.jpg";   
@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function() {
   overlay.addEventListener("click", function() {
       // Toggle between two images
       if (image.src.includes("bruschetaa1.png")) {
-          image.src = "bruschetta.jpg";
+          image.src = "Bruscheta(2).jpg";
       } else {
           image.src = "bruschetaa1.png";
       }
@@ -283,14 +283,14 @@ document.addEventListener("DOMContentLoaded", function() {
       if (image.src.includes("Chocolate-Lava-Cake-Ingredients.jpg")) {
           image.style.opacity=0;
           setTimeout(function(){
-              image.src="Molten Lava Cake for Two [Video].jpg"
+              image.src="Molten-Cake(2).jpg"
               // image.src = "";
               image.style.opacity=1;
           },200);
       } else {
           image.style.opacity=0;
           setTimeout(function(){
-              image.src = "Chocolate-Lava-Cake-Ingredients.jpg";   
+              image.src = "Molten-Cake(2).jpg";   
               image.style.opacity=1;
           },200);
       }
