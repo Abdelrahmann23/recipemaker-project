@@ -76,9 +76,9 @@ const loginText = document.querySelector(".title-text .login");
           if (emailValue === 'mohamed2202505@miuegypt.edu.eg') {
             // Redirect to a special admin page
             window.location.href = "admin.html";
-          } else {
+          } else if(emailValue==='mohamed@gmail.com') {
             // Redirect to the normal nav page for other users
-            window.location.href = "index.html";
+            window.location.href = "viewUserProfile.html";
           }
           return true; // Form is valid
         }
