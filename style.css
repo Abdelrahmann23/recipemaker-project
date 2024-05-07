@@ -2024,26 +2024,7 @@ padding-top: 2px;
         overflow: hidden;
       }
       
-      /* .navbar li {
-        float: left;
-      }
       
-      .navbar li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 20px;
-        text-decoration: none;
-      }
-      
-   
-      .navbar li a:hover {
-        border: none;
-        background-color: #046929;
-        color: white;
-        border-radius: 50px;
-      }
-       */
      
       .dropdown {
         display: inline-block;
@@ -2156,127 +2137,6 @@ padding-top: 2px;
     background:rgb(250, 231, 207);
   }
 
- nav{
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      height: 70px;
-      margin-top: 10px;
-      background-color: rgb(255, 255, 255,0,0.703);
-      -webkit-backdrop-filter: blur(30px);
-      backdrop-filter: blur(30px);
-      width: 100%;
-      position: fixed;
-      z-index: 10;
-      
-    }
-    .header{
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-    }
-    .header i{
-        font-size: 35px;
-        color: green;
-    }
-    .header .logoo{
-        font-size: 30px;
-        color: green;
-    }
-    .header h3{
-        color: black;
-        font-size: 25px;
-    }
-    .nav a{
-        text-decoration: none;
-        color: #078435;
-        font-size: 25px;
-        font-weight: 700;
-        margin: 30px;
-        padding: 10px;
-        transition: all 0.1s ease;
-    }
-    .nav a:hover{
-        border: none;
-        background-color: #046929;
-        color: white;
-        border-radius: 50px;
-    }
-    
-    .nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-      
-      .navbar li {
-        float: left;
-      }
-      
-      .navbar li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 20px;
-        text-decoration: none;
-      }
-      
-      /* Change color on hover */
-      .navbar li a:hover {
-        border: none;
-        background-color: #046929;
-        color: white;
-        border-radius: 50px;
-      }
-      
-      /* Dropdown container */
-      .dropdown {
-        display: inline-block;
-        
-      }
-      
-      /* Dropdown button */
-      .dropbtn {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 0px;
-        text-decoration: none;
-      }
-      
-      /* Dropdown content (hidden by default) */
-      .dropdown-content {
-        display: none;
-        border-radius: 25px;
-        position: absolute;
-        background-color: rgb(207, 220, 141);
-        width: 200px;
-       max-height: 200px;
-       overflow-x: auto; 
-        z-index: 1;
-      }
-      
-      /* Links inside the dropdown */
-      .dropdown-content a {
-        color: white;
-        /* padding:10px; */
-        margin: 5px;
-        padding: 5px;
-        display: block;
-        text-align: left;
-      }
-      
-      /* Change color of dropdown links on hover */
-      .dropdown-content a:hover {
-        background-color: #046929;
-      }
-      
-      /* Show the dropdown menu on hover */
-      .dropdown:hover .dropdown-content {
-        display: inline-block;
-      }
-
 .cardsuser{
     display: flex;
     justify-content: center;
@@ -2365,7 +2225,6 @@ padding-top: 2px;
  
   position: fixed;
   z-index: 1000;
-  
   top: 0;
   left: 0;
 }
@@ -2388,17 +2247,18 @@ padding-top: 2px;
 
 /* delete ingredient css */
 
-  .home15{
-      background-image: url(add\ ingredient.html) ;
+  .homed{
+      background-color: beige;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
-      height: 100vh;
-      background-attachment: fixed;
-      
+      height: 100vh;    
   }
+  
   #deleteing{
+    padding: 0;
+    margin: 0;
     background:rgb(250, 231, 207);
   }
 
@@ -2409,9 +2269,11 @@ a{
   
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     padding: 20px;
-   transform: translate(0px,-580px);
+    margin-top: 40px;
+   /* transform: translate(0px,-580px); */
 }
 .ingr{
     margin: 20px;
@@ -2452,7 +2314,7 @@ a{
   cursor: pointer;
   color: #036527;
   position: fixed;
-  top: 520px; /* Adjust these values to place your trash icon where needed */
+  top: 540px; /* Adjust these values to place your trash icon where needed */
   
   right: 80px; /* Adjust these values to place your trash icon where needed */
   z-index: 1000; /* Ensure the trash icon is above other elements */
@@ -2465,7 +2327,7 @@ a{
   border-radius: 50%;
   padding: 8px;
   position: fixed; /* Ensure the element is fixed relative to the viewport */
-  top: 480px;
+  top: 500px;
   right: 70px; 
  
   z-index: 1001; 
