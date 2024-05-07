@@ -75,10 +75,10 @@ const loginText = document.querySelector(".title-text .login");
         if (!(emailErr || passErr)) {
           if (emailValue === 'mohamed2202505@miuegypt.edu.eg') {
             // Redirect to a special admin page
-            window.location.href = "forgetpass.html";
+            window.location.href = "admin.html";
           } else {
             // Redirect to the normal nav page for other users
-            window.location.href = "nav.html";
+            window.location.href = "index.html";
           }
           return true; // Form is valid
         }
@@ -260,4 +260,47 @@ btn2.addEventListener("click", () => {
   }
 });
 
-      
+let userIcon = document.querySelector('#dropdown-toggle');
+let dropdownMenu = document.querySelector('#user-dropdown');
+
+// Function to toggle the visibility of the dropdown menu
+userIcon.addEventListener('click', function(e) {
+    e.preventDefault(); // Prevents the default action
+    dropdownMenu.style.display = dropdownMenu.style.display === 'none' ? 'block' : 'none';
+});
+
+// Closes the dropdown menu when clicking outside
+document.addEventListener('click', function(event) {
+    let isClickInside = dropdownMenu.contains(event.target);
+    if (!isClickInside) {
+        dropdownMenu.style.display = 'none';
+    }
+});
+function validateForm() {
+  var emailUserEdit = document.getElementById('emailUserEdit').value;
+  var passwordUserEdit = document.getElementById('newpass').value;
+  var oldpass=document.getElementById('oldpass').value;
+  // Email validation
+  var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!emailRegex.test(emailUserEdit) && emailUserEdit!=="") {
+      document.getElementById('emailError').innerHTML = "Please enter a valid email address";
+      return false;
+  } else {
+  document.getElementById('emailError').innerHTML = "";
+  }
+  
+  if (passwordUserEdit.length < 8) {
+      document.getElementById('passwordError').innerHTML = "Password must be at least 8 characters long";
+      return false;
+  } 
+  if(oldpass==passwordUserEdit){
+      document.getElementById('passwordError').innerHTML="New password can't be the same as Old one.";
+      return false;
+  }else {
+  document.getElementById('passwordError').innerHTML = "";
+  
+  }
+  
+  return true;
+
+}

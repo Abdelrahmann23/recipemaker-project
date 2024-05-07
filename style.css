@@ -141,15 +141,19 @@ nav{
 /* Design scroll bar */
 ::-webkit-scrollbar {
     width: 15px; 
+    border-radius: 30px;
 }
 
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #dddddd;
+    border-radius: 30px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #04b115; 
+    background: #24842e; 
+    border-radius: 30px;
+
 }
 
 
@@ -1594,13 +1598,13 @@ padding-top: 2px;
 
 /* ------------------------------------------------------------ */
 /*Chicken stir fry recipe */
-#chickStirFryIng,#beef,#VegStuffedPasta,#VegetableQuesadillasRecipe {
-    font-family: Arial, sans-serif;
+#chickStirFryIng,#beef,#VegStuffedPasta,#VegetableQuesadillasRecipe,#ChickVegSkewRecipe {
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding-left: 23px;
     background-color: #fff4d5;
 }
-.home6,.home7,.home12,.home14{
+.home6,.home7,.home12,.home14,.home19{
     background-color: #fff4d5;
     background-position: center;
     background-repeat: no-repeat;
@@ -1618,6 +1622,7 @@ padding-top: 2px;
 }
 .RecipeBold{
     color: #033717;
+    padding-bottom: 10px;
 }
 .RecipePreparation{
     color: #16552c;
@@ -1636,11 +1641,12 @@ padding-top: 2px;
     color: #0c351c;
     padding-top: 20px;
     width: fit-content;
+    padding-bottom: 10px;
     display: block;
     margin-top: 20px;
 }
 
-.image-container6,.image-container11,.image-container12,.image-container14 {
+.image-container6,.image-container11,.image-container12,.image-container14,.image-container19 {
     position: absolute; 
     top: 20%; 
     right: 40px; 
@@ -1653,15 +1659,17 @@ padding-top: 2px;
     cursor: pointer;
 }
 
-
-.image-container6 img,.image-container11 img,.image-container12 img,.image-container14 img {
+#ChickVegSkew,#BeefVegCurry,#VegQuesadillas{
+  transform: translate(-1%);
+}
+.image-container6 img,.image-container11 img,.image-container12 img,.image-container14 img,.image-container19 img {
     max-width: 100%;
     border-radius: 40px;
     height: auto;
     transition: 0.3s ease;
 }
 
-.overlay6,.overlay11,.overlay12,.overlay14 {
+.overlay6,.overlay11,.overlay12,.overlay14,.overlay19 {
     position: absolute;
     top: 0;
     left: 0;
@@ -1678,7 +1686,7 @@ padding-top: 2px;
     border-radius:40px ;
 }
 
-.overlay6:hover,.overlay11:hover,.overlay12:hover,.overlay14:hover {
+.overlay6:hover,.overlay11:hover,.overlay12:hover,.overlay14:hover,.overlay19:hover {
     opacity: 1;
 } 
 /* ------------------------------------------------------------
@@ -2999,9 +3007,10 @@ top: 0;
  left: 100%; 
 width: 300px;
 height: 100vh;
-background-color:rgb(245, 244, 244);
+background-color:rgba(242, 241, 241, 0.91);
 transition: 0.5s;
-border-top-left-radius: 50px;
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
 }
 
 .img{
@@ -3019,9 +3028,10 @@ height: 100px;
 position: absolute;
 bottom: 0;
 width: 100%;
-background-color: rgb(12, 255, 16);
+background-color: rgb(26, 158, 11);
 font-size: 25px;
 font-weight: bold;
+border-radius: 50px;
 height: 70px;
 display: flex;
 justify-content: center;
@@ -3030,7 +3040,7 @@ font-weight: bold;
 cursor: pointer;
 }
 .card-shopping .checkout .generate:hover{
-background-color: rgb(6, 192, 9);
+background-color: rgb(47, 130, 48);
 }
 .card-shopping .checkout .close{
 position: absolute;
@@ -3050,6 +3060,7 @@ transform: scale(1.2);
 .card-shopping .listcard :nth-child(even){
 background-color: rgb(26, 158, 11);
 color: azure;
+border-radius: 50px;
 }
 .active .card-shopping{
 left: calc(100% - 300px);
@@ -3059,8 +3070,8 @@ transform: translateX(-200px);
 }
 .listcard{
 list-style: none;
-font-weight: bold;
-font-size: 30px;
+font-weight: 300;
+font-size: 20px;
 margin-top: 20px;
 padding: 5px;
 max-height: 70vh; /* Adjust the maximum height as needed */
@@ -3186,7 +3197,32 @@ background: #066a09;
     max-height: 700px;
     font-size: larger;
 }
-
+.navuserr{
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(255, 255, 255,0,0.703);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    width: 100%;
+    padding-top: 10px;
+}
+.navuserr a{
+  text-decoration: none;
+    color: #078435;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 30px;
+    padding: 10px;
+    transition: all 0.1s ease;
+}
+.navuserr a:hover{
+  border: none;
+    background-color: #046929;
+    color: white;
+    border-radius: 50px;
+}
 .usereditprofile h2 {
     text-align: center;
     color: #13480b;
@@ -3249,8 +3285,8 @@ position: relative;
     left: 50%;
     transform: translate(-50%, -45%);
     background: -webkit-linear-gradient(bottom, #a8c799, #c6f7b8);
-    border-radius: 30px; /* Rounded edges */
-    padding: 40px 80px; /* Padding around content */
+    border-radius: 50px; /* Rounded edges */
+    padding: 30px 30px; /* Padding around content */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.329); /* Box shadow for depth */
     max-width: 800px; /* Maximum width */
     max-height: 800px;
@@ -3269,6 +3305,8 @@ position: relative;
   }
   .adminEditUserLeft ul{
     list-style-type:decimal-leading-zero;
+    padding-left: 40px;
+    padding-top: 15px;
 
   }
   .adminEditUserLeft ul li{
