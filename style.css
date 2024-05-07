@@ -3525,17 +3525,17 @@ position: relative;
     box-shadow: 10px 10px 0 #0d6e04;
 }
 
-.cta span:nth-child(2) {
+.cta #done:nth-child(2) {
     transition: 0.5s;
     margin-right: 0px;
 }
 
-.cta:hover  span:nth-child(2) {
+.cta:hover  #done:nth-child(2) {
     transition: 0.5s;
     margin-right: 45px;
 }
 
-  span {
+  #done {
     transform: skewX(15deg) 
   }
 #sahm{
@@ -3624,7 +3624,7 @@ path.two {
     margin-right: 45px;
 }
 
-  #done {
+  #donee {
     transform: skewX(15deg) 
   }
 #sahmm{
