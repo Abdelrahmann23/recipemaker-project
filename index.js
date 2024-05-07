@@ -283,14 +283,14 @@ document.addEventListener("DOMContentLoaded", function() {
       if (image.src.includes("Chocolate-Lava-Cake-Ingredients.jpg")) {
           image.style.opacity=0;
           setTimeout(function(){
-              image.src="Molten-Cake(2).jpg"
+              image.src="lava-cake.jpg"
               // image.src = "";
               image.style.opacity=1;
           },200);
       } else {
           image.style.opacity=0;
           setTimeout(function(){
-              image.src = "Molten-Cake(2).jpg";   
+              image.src = "Chocolate-Lava-Cake-Ingredients.jpg";   
               image.style.opacity=1;
           },200);
       }
@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (image.src.includes("creme-brulee-ingredients-.jpg")) {
           image.style.opacity=0;
           setTimeout(function(){
-              image.src="Creme-Brulee-Recipe.jpg"
+              image.src="cream brule new.jpg"
               // image.src = "";
               image.style.opacity=1;
           },200);
@@ -332,17 +332,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
   overlay.addEventListener("click", function() {
       // Toggle between two images
-      if (image.src.includes("Tiramisu-Ingredients-for-Tiramisu.jpg")) {
+      if (image.src.includes("Tiramisu-Ingredients(2).jpg")) {
           image.style.opacity=0;
           setTimeout(function(){
-              image.src="homemade-tiramisu-2.jpg"
+              image.src="Tiramisu-horizontal-1024x683.jpg"
 
               image.style.opacity=1;
           },200);
       } else {
           image.style.opacity=0;
           setTimeout(function(){
-              image.src = "Tiramisu-Ingredients-for-Tiramisu.jpg";   
+              image.src = "Tiramisu-Ingredients(2).jpg";   
               image.style.opacity=1;
           },200);
       }
@@ -360,7 +360,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (image.src.includes("creamy-baked-cheesecake-.jpg")) {
           image.style.opacity=0;
           setTimeout(function(){
-              image.src="The Best New York-Style Cheesecake - Baker by Nature.jpg"
+              image.src="cheesecake new.jpg"
               
               image.style.opacity=1;
           },200);
