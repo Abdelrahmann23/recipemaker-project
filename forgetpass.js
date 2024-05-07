@@ -75,10 +75,10 @@ const loginText = document.querySelector(".title-text .login");
         if (!(emailErr || passErr)) {
           if (emailValue === 'mohamed2202505@miuegypt.edu.eg') {
             // Redirect to a special admin page
-            window.location.href = "forgetpass.html";
+            window.location.href = "admin.html";
           } else {
             // Redirect to the normal nav page for other users
-            window.location.href = "nav.html";
+            window.location.href = "index.html";
           }
           return true; // Form is valid
         }
