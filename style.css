@@ -3614,17 +3614,17 @@ path.two {
     box-shadow: 10px 10px 0 #0d6e04;
 }
 
-.ctaa span:nth-child(2) {
+.ctaa #done:nth-child(2) {
     transition: 0.5s;
     margin-right: 0px;
 }
 
-.ctaa:hover  span:nth-child(2) {
+.ctaa:hover  #done:nth-child(2) {
     transition: 0.5s;
     margin-right: 45px;
 }
 
-  span {
+  #done {
     transform: skewX(15deg) 
   }
 #sahmm{
