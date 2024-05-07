@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //--------------------------------------------------------------
-// login validation
+// forget password  validation
 const loginText = document.querySelector(".title-text .login");
 const loginForm = document.querySelector("form.login");
 const loginBtn = document.querySelector("label.login");
