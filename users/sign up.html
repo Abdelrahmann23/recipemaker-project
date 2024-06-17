@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    
+    <title>Register a new User</title>
+   
+</head>
+<body>
+    <section class="home" id="Home">
+        <!-- <div class="welcome">
+            <h1>Welcome Admin</h1>
+        </div> -->
+        <nav>
+            <a href="" class="header">
+                <i class="ri-restaurant-2-fill"></i>
+                <h3><span class="logoo">R</span>ecipe<span class="logoo">M</span>aker</h3>
+            </a>
+            <div class="nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="admin.html" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropbtn">Add</a>
+                        <div class="dropdown-content">
+                            <a href="add ingredient.html">Ingredients</a>
+                            <a href="addd recipe.html">Recipe</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Edit</a>
+                        <div class="dropdown-content">
+                            <a href="editUserAdmin.html">Users </a>
+                            <a href="AdmineditiIng.html">Ingredients</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Delete</a>
+                        <div class="dropdown-content">
+                            <a href="deleteuser.html">Users </a>
+                            <a href="deleteing.html">Ingredients</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">View</a>
+                        <div class="dropdown-content">
+                            <a href="viewUsers.html">Users </a>
+                            <a href="viewIngrediants.html">Ingrediants</a>
+                        </div>
+                    </li>
+                </ul>
+            </div> 
+        </nav> 
+    </section>
+    <div class="registration-container1">
+    <div class="registration-form">
+            <h1>Registration Form</h1>
+            <form action="admin.html" method="post"> <!-- Removed the extra form tag and added space after "#" -->
+                 <p>Full Name: </p>
+                   <input type="text" id="fullname" name="fullname" placeholder="Habiba Amr"> <!-- Added id="fullname" -->
+                   <p>User Name: </p>
+                   <input type="text" id="username" name="username" placeholder="Habiba20"> <!-- Added id="username" -->
+                    <p>Email:</p>
+                  <input type="email" id="email" name="email" placeholder="Habiba2206403@miuegypt.edu.eg"> <!-- Added id="email" -->
+                  <p>Password:</p>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" placeholder="Password">
+                        <span class="toggle-password" onclick="togglePasswordVisibility('password')">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <p>Confirm password:</p>
+                    <div class="password-input">
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
+                        <span class="toggle-password" onclick="togglePasswordVisibility('confirm_password')">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                  <button type="submit" onclick="return validateForm1()">Register</button> <!-- Added onclick="return validateForm()" -->
+                </form>
+           
+    </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
