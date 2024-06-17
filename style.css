@@ -3390,6 +3390,23 @@ position: relative;
     max-height: 700px;
     font-size: larger;
 }
+.adminEditIngredientContainer2{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  background: -webkit-linear-gradient(bottom, #a8c799, #c6f7b8);
+  border-radius: 30px; /* Rounded edges */
+  padding: 40px 80px; /* Padding around content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.329); /* Box shadow for depth */
+  max-width: 500px; /* Maximum width */
+  max-height: 700px;
+  font-size: larger;
+}
 
 .adminEditIngredientLeft {
     flex: 1;
@@ -3481,6 +3498,15 @@ position: relative;
     height: 20px; */
     margin-left: auto;
     padding-right: 8px;
+}
+.ingredientIcon2{
+  max-width: 20%;
+  max-height: 15%;
+  size: adjust 20px;
+  /* width: 30px;
+  height: 20px; */
+  margin-left: auto;
+  padding-right: 6px;
 }
 #ingredientList li {
     display: flex;
