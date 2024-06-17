@@ -14,7 +14,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: url("IntroPic.jpg");
+    background-image: url("/public/images/IntroPic.jpg");
     background-position: center;
     background-size: 100%;
     transition: 1s;
@@ -51,7 +51,7 @@
 /* ----------------------------------------------- */
 /* style of home page and navigation bar */
 .home{
-    background-image: url(homee.jpeg);
+    background-image: url(/public/images/homee.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2132,7 +2132,7 @@ padding-top: 2px;
 
 /* delete user css */
  .home14{
-      background-image: url(background1.jpeg) ;
+      background-image: url(/public/images/background1.jpeg) ;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -2519,7 +2519,7 @@ a{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(homee.jpeg);
+    background-image: url(/public/images/homee.jpeg);
     background-size: cover;
     z-index: -1;
   } 
@@ -2561,7 +2561,7 @@ th{
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(admin\ photo.jpg);
+  background-image: url(/public/images/photo.jpg);
   background-size: cover;
   filter: blur(3px);
   z-index: -1;
@@ -2571,7 +2571,7 @@ th{
 #viewIngrediants{
   font-family: 'Poppins', sans-serif;
   background: beige; 
-   background-image: url(admin\ photo.jpg)  ; 
+   background-image: url(/public/images/photo.jpg)  ; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2928,7 +2928,7 @@ background:green ;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(admin\ photo.jpg); 
+  background-image: url(/public/images/photo.jpg); 
  } 
    
 
