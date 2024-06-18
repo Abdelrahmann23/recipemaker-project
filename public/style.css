@@ -404,7 +404,7 @@ nav{
 
 }
 .ingredients1{
-    margin-top: 60px;
+    margin-top: 10px;
 }
 .ingredients1 h1{
     display: flex;
@@ -480,7 +480,53 @@ nav{
 #MainDishBody{
     background-color:#fff4d5;
 }
+.add-fav {
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: -webkit-linear-gradient( top,#ffffff,#c9dac8) #ddd;
+  position: relative;
+  transition: all .5s ease;
+  border-radius: 30px;
+  box-shadow: inset 0 -1px 1px #eee;
+  transform: translate3d(620%,10%,1px);
+  
+  
+  &:hover {
+    background: -webkit-linear-gradient( top,#ffffff,#ece1ce) #ddd;
+  }
 
+  .icon-heart {
+    font-size: 24px;
+    color: #66666698;
+    position: relative;
+    transition: all .5s ease-in-out;
+  }
+  .icon-plus-sign {
+    font-size: 10px;
+    color: #333;
+    background: #fff;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    height: 11px;
+    width: 11px;
+    line-height: 11px;
+    text-align: center;
+    transition: all 1s ease-in-out;
+  }
+  input[type="checkbox"] { 
+    position: absolute;
+    opacity: 0;
+    &:checked + .icon-heart {
+      color: red;
+      .icon-plus-sign {
+display:none;      }
+    }
+  }
+}
 /* ------------------------------------------------------------ */
 
 /*--------------------dessert page css (ingrediants page)---------------------------------*/
@@ -494,11 +540,11 @@ nav{
 }
 
 .ingredients1{
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 .ingrediants1 h1{
-    margin-top: 70px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -732,7 +778,7 @@ nav{
 
 }
 .ingredients1{
-    margin-top: 60px;
+    margin-top: 10px;
 }
 .ingrediants1 h1{
     display: flex;
@@ -2847,79 +2893,97 @@ background:green ;
  }
  /* ...................................................styling for add recipe admin..................... */
  
- 
  .registration-container3 {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%,-50%);
-   background-color: rgb(137, 185, 137);
-   border-radius: 40px;
-   padding: 20px; 
-   max-width: 90%;
- }
- 
- .registration-form {
-   width: 300px; /* Reduce the width of the form */
-   height: auto; /* Allow the height to adjust based on content */
-   padding: 10px; /* Reduce padding for spacing inside the box */
-   border: 1px solid #333; /* Reduce the thickness of the border */
-   border-radius: 5px; /* Reduce the radius of the border */
- }
- 
- .registration-form h1 {
-   font-size: 24px; /* Reduce the font size of the heading */
-   margin: 10px 0; /* Reduce margin for the heading */
- }
- 
- .registration-form p {
-   font-size: 16px; /* Reduce the font size of paragraphs */
-   margin: 10px 0; /* Reduce margin for paragraphs */
- }
- 
- .registration-form input {
-   font-size: 14px; /* Reduce the font size of input fields */
-   padding: 8px; /* Reduce padding for input fields */
-   margin-bottom: 8px; /* Reduce margin below each input */
- }
- .registration-form {
-   width: 300px; /* Reduce the width of the form */
-   padding: 10px; /* Reduce padding for spacing inside the box */
-   border: 1px solid #333; /* Add a border around the form */
-   border-radius: 5px; /* Add rounded corners to the border */
-   position: relative; /* Add position relative to the form */
- }
- 
- .password-input {
-   position: relative; /* Add position relative to the password input container */
- }
- 
- .password-input input {
-   font-size: 14px; /* Reduce the font size of input fields */
-   padding-right: 30px; /* Increase right padding to accommodate the icon */
- }
- .toggle-password {
-   position: absolute; /* Position the icon absolutely */
-   top: 50%; /* Align the icon vertically to the middle */
-   right: 10px; /* Adjust the distance from the right */
-   transform: translateY(-50%); /* Center the icon vertically */
-   cursor: pointer; 
- }
- .registration-form button {
-   font-size: large;
-   font-weight: bold;
-   margin: 20px 0;
-   width: 100%; 
-   border: 0;
-   border-radius: 40px;
-   background-color: rgb(47, 150, 47);
- }
- 
- .registration-form button:hover {
-   color: aliceblue;
- }
- 
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  background: -webkit-linear-gradient(bottom, #a8c799, #c6f7b8);
+  border-radius: 50px; /* Rounded edges */
+  padding: 30px 30px; /* Padding around content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.329); /* Box shadow for depth */
+  max-width: 800px; /* Maximum width */
+  max-height: 800px;
+  font-size: larger;
+}
 
+.registration-form {
+  flex: 1;
+  background-color: #f1f3dea9;
+  padding: 20px;
+  display: block;
+  position: relative;
+  border-radius: 30px;
+}
+
+.registration-form h1 {
+  text-align: center;
+}
+
+.registration-form p {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="file"] {
+  padding: 12px; /* Increase padding for larger input fields */
+  width: calc(100% - 40px); /* Adjust width minus the button width */
+  margin-bottom: 20px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.registration-form .ingredients-container {
+  margin-bottom: 20px;
+}
+
+.registration-form .ingredient-input {
+  display: flex;
+  align-items: center;
+}
+
+.registration-form .ingredient-input input[type="text"] {
+  flex: 1;
+  padding: 10px; /* Adjust padding for input field */
+  margin-right: 10px; /* Space between input and button */
+}
+
+.registration-form .ingredient-input button[type="button"] {
+  width: 30px; /* Width of the plus button */
+  height: 30px; /* Height of the plus button */
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Make it round */
+  cursor: pointer;
+  font-size: 16px; /* Font size for plus sign */
+}
+
+.registration-form button[type="submit"] {
+  padding: 12px 24px; /* Increase padding for larger button */
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.registration-form button[type="submit"]:hover,
+.registration-form .ingredient-input button[type="button"]:hover {
+  opacity: 0.8;
+}
+
+.registration-form small {
+  color: red;
+  display: block;
+  margin-bottom: 20px;
+}
   /* ............................................................... */
  /* .................................feedback................................. */
 

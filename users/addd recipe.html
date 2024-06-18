@@ -10,9 +10,6 @@
 </head>
 <body>
     <section class="home" id="Home">
-        <!-- <div class="welcome">
-            <h1>Welcome Admin</h1>
-        </div> -->
         <nav>
             <a href="" class="header">
                 <i class="ri-restaurant-2-fill"></i>
@@ -22,60 +19,65 @@
                 <ul>
                     <li class="dropdown">
                         <a href="admin.html" class="dropbtn">Home</a>
-                        <div class="dropdown-content">
-                        </div>
+                        <div class="dropdown-content"></div>
                     </li>
                     <li class="dropdown">
-
                         <a href="#" class="dropbtn">Add</a>
                         <div class="dropdown-content">
-                            <a href="sign up.html">Users</a>
-                            <a href="add ingredient.html">Ingredients</a>
-                            <!-- <a href="addd recipe.html">Recipe</a> -->
+                            <a href="sign-up.html">Users</a>
+                            <a href="add-ingredient.html">Ingredients</a>
+                            <!-- <a href="add-recipe.html">Recipe</a> -->
                         </div>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropbtn">Edit</a>
                         <div class="dropdown-content">
-                            <a href="editUserAdmin.html">Users </a>
+                            <a href="editUserAdmin.html">Users</a>
                             <a href="AdmineditiIng.html">Ingredients</a>
                         </div>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropbtn">Delete</a>
                         <div class="dropdown-content">
-                            <a href="deleteuser.html">Users </a>
+                            <a href="deleteuser.html">Users</a>
                             <a href="deleteing.html">Ingredients</a>
-                          
-
                         </div>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropbtn">View</a>
                         <div class="dropdown-content">
-                            <a href="viewUsers.html">Users </a>
+                            <a href="viewUsers.html">Users</a>
                             <a href="viewIngrediants.html">Ingredients</a>
                         </div>
                     </li>
                 </ul>
-            </div> 
-        </nav> 
+            </div>
+        </nav>
     </section>
     <div class="registration-container3">
         <div class="registration-form">
             <h1>New Recipe</h1>
-            <form action="admin.html" method="post" onsubmit="return validateForm2()">
+            <form id="recipeForm" action="admin.html" method="post" onsubmit="return validateForm2()">
                 <p>Recipe Name:</p>
                 <input type="text" id="recipeName" name="recipeName" placeholder="Koshary">
                 <p>Ingredients:</p>
-                <input type="text" id="ingredients" name="ingredients" placeholder="Pasta, Rice, Lentils">
+                <div class="ingredients-container">
+                    <div class="ingredient-input">
+                        <input type="text" id="newIngredient" name="newIngredient" placeholder="Add Ingredient">
+                        <button type="button" onclick="addIngredient()">+</button>
+                    </div>
+                    <div id="ingredientList">
+                        <!-- Ingredients will be dynamically added here -->
+                    </div>
+                </div>
                 <p>Recipe:</p>
                 <input type="text" id="recipe" name="recipe" placeholder="Serve it with tomato sauce">
+                <p>Recipe Image:</p>
+                <input type="file" id="recipeImage" name="recipeImage" accept="image/*">
                 <button type="submit">Add Recipe</button>
             </form>
         </div>
     </div>
     <script src="../public/index.js"></script>
-    
 </body>
 </html>
