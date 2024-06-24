@@ -604,38 +604,217 @@ function validateForm1() {
   return true;
 }
 // .........................................admin add recipe js..................
+document.getElementById('recipeForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if (validateForm2()) {
+        const ingredients = Array.from(document.querySelectorAll('#ingredientList input')).map(input => input.value);
+        const data = {
+            recipeName: document.getElementById("recipeName").value,
+            ingredients: ingredients,
+            recipe: document.getElementById("recipe").value
+        };
+
+        fetch('/add-recipe', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(result => {
+            if (result.error) {
+                alert(result.error); // Display error message in alert
+            } else {
+                alert(result.successMessage); // Display success message in alert
+                // Redirect or perform additional actions if needed
+            }
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+            alert('An error occurred while adding the recipe.');
+        });
+    }
+});
+
 function validateForm2() {
-  var recipeName = document.getElementById("recipeName").value;
-  var ingredients = document.getElementById("ingredients").value;
-  var recipe = document.getElementById("recipe").value;
+    const recipeName = document.getElementById("recipeName");
+    const recipeNameSmall = document.getElementById("recipeNameSmall");
+    const ingredients = document.getElementById("ingredientList");
+    const ingredientsSmall = document.getElementById("ingredientsSmall");
+    const recipe = document.getElementById("recipe");
+    const recipeSmall = document.getElementById("recipeSmall");
+    const recipeImage = document.getElementById("recipeImage");
 
-  if (recipeName === "" || ingredients === "" || recipe === "") {
-      alert("Please fill out all fields!");
-      return false;
-  }
+    let rnr = ir = rr = true;
 
-  // Perform additional validation if needed
-  
-  // If validation passes
-  alert("Recipe added successfully!");
-  return true;
+    // Validate recipe name
+    if (recipeName.value.trim() === "") {
+        setErrorFor(recipeNameSmall, 'Recipe name cannot be blank');
+    } else {
+        setSuccessFor(recipeNameSmall);
+        rnr = false;
+    }
+
+    // Validate ingredients
+    if (ingredients.querySelectorAll('input').length === 0) {
+        setErrorFor(ingredientsSmall, 'At least one ingredient must be added');
+    } else {
+        setSuccessFor(ingredientsSmall);
+        ir = false;
+    }
+
+    // Validate recipe instructions
+    if (recipe.value.trim() === "") {
+        setErrorFor(recipeSmall, 'Recipe instructions cannot be blank');
+    } else {
+        setSuccessFor(recipeSmall);
+        rr = false;
+    }
+
+    // Validate recipe image
+    if (recipeImage.files.length === 0) {
+        alert("Please upload a recipe image.");
+        return false;
+    }
+
+    // Return true if all validations pass
+    return !(rnr || ir || rr);
+}
+
+function setErrorFor(element, message) {
+    element.innerText = message;
+    element.style.color = 'red';
+    element.style.visibility = 'visible';
+}
+
+function setSuccessFor(element) {
+    element.style.visibility = 'hidden';
+}
+
+function addIngredient() {
+    const newIngredient = document.getElementById("newIngredient");
+    if (newIngredient.value.trim() !== "") {
+        const ingredientList = document.getElementById("ingredientList");
+        const ingredientDiv = document.createElement("div");
+        ingredientDiv.className = "ingredient-item";
+        const ingredientInput = document.createElement("input");
+        ingredientInput.type = "text";
+        ingredientInput.value = newIngredient.value;
+        ingredientInput.readOnly = true;
+        const removeButton = document.createElement("button");
+        removeButton.type = "button";
+        removeButton.innerText = "x";
+        removeButton.onclick = function() {
+            ingredientList.removeChild(ingredientDiv);
+        };
+        ingredientDiv.appendChild(ingredientInput);
+        ingredientDiv.appendChild(removeButton);
+        ingredientList.appendChild(ingredientDiv);
+        newIngredient.value = "";
+    } else {
+        alert("Ingredient cannot be blank");
+    }
 }
 // .............................................admin add ingredient................
+// .............................................admin add ingredient................
+document.getElementById('ingredientForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if (validateForm9()) {
+        const data = {
+            ingredientName: document.getElementById("ingredientName").value,
+            ingredientType: document.getElementById("ingredientType").value,
+            exampleRecipe: document.getElementById("exampleRecipe").value
+        };
+
+        fetch('/add-ingredient', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(result => {
+            if (result.error) {
+                alert(result.error); // Display error message in alert
+            } else {
+                alert(result.successMessage); // Display success message in alert
+                // Redirect or perform additional actions if needed
+            }
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+            alert('An error occurred while adding the ingredient.');
+        });
+    }
+});
+
 function validateForm9() {
-  var ingredientName = document.getElementById("ingredientName").value;
-  var ingredientType = document.getElementById("ingredientType").value;
-  var exampleRecipe = document.getElementById("exampleRecipe").value;
+    const ingredientName = document.getElementById("ingredientName");
+    const ingredientNameSmall = document.getElementById("ingredientNameSmall");
+    const ingredientType = document.getElementById("ingredientType");
+    const ingredientTypeSmall = document.getElementById("ingredientTypeSmall");
+    const exampleRecipe = document.getElementById("exampleRecipe");
+    const exampleRecipeSmall = document.getElementById("exampleRecipeSmall");
+    const ingredientImage = document.getElementById("ingredientImage");
 
-  if (ingredientName === "" || ingredientType === "" || exampleRecipe === "") {
-      alert("Please fill out all fields!");
-      return false;
-  }
+    let inr = itr = err = true;
 
-  // Perform additional validation if needed
-  
-  // If validation passes
-  alert("Item added successfully!");
-  return true;
+    // Validate ingredient name
+    if (ingredientName.value.trim() === "") {
+        setErrorFor(ingredientNameSmall, 'Ingredient name cannot be blank');
+    } else {
+        setSuccessFor(ingredientNameSmall);
+        inr = false;
+    }
+
+    // Validate ingredient type
+    if (ingredientType.value.trim() === "") {
+        setErrorFor(ingredientTypeSmall, 'Ingredient type cannot be blank');
+    } else {
+        setSuccessFor(ingredientTypeSmall);
+        itr = false;
+    }
+
+    // Validate example recipe
+    if (exampleRecipe.value.trim() === "") {
+        setErrorFor(exampleRecipeSmall, 'Example recipe cannot be blank');
+    } else {
+        setSuccessFor(exampleRecipeSmall);
+        err = false;
+    }
+
+    // Validate ingredient image
+    if (ingredientImage.files.length === 0) {
+        alert("Please upload an ingredient image.");
+        return false;
+    }
+
+    // Return true if all validations pass
+    return !(inr || itr || err);
+}
+
+function setErrorFor(element, message) {
+    element.innerText = message;
+    element.style.color = 'red';
+    element.style.visibility = 'visible';
+}
+
+function setSuccessFor(element) {
+    element.style.visibility = 'hidden';
 }
 /* --------------------------------------------------------------- */
 /* -------------------------feedback----------------------- */
@@ -938,4 +1117,127 @@ function validateIngredientForm() {
     document.getElementById('ingredientImageError').innerHTML = "";
 
     return true;
+}
+document.getElementById('recipeForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if (validateForm3()) {
+        const formData = new FormData();
+        formData.append('recipeName', document.getElementById("recipeName").value);
+        formData.append('ingredients', getIngredients());
+        formData.append('recipe', document.getElementById("recipe").value);
+        formData.append('recipeImage', document.getElementById("recipeImage").files[0]);
+
+        fetch('/add-recipe', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(result => {
+            if (result.error) {
+                alert(result.error); // Display error message in alert
+            } else {
+                alert(result.successMessage); // Display success message in alert
+                // Redirect or perform additional actions if needed
+            }
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+            alert('An error occurred while adding the recipe.');
+        });
+    }
+});
+
+function validateForm3() {
+    const recipeName = document.getElementById("recipeName");
+    const recipeNameSmall = document.getElementById("recipeNameSmall");
+    const ingredients = document.getElementById("ingredientList");
+    const ingredientsSmall = document.getElementById("ingredientsSmall");
+    const recipe = document.getElementById("recipe");
+    const recipeSmall = document.getElementById("recipeSmall");
+    const recipeImage = document.getElementById("recipeImage");
+    const recipeImageSmall = document.getElementById("recipeImageSmall");
+
+    let isValid = true;
+
+    // Validate recipe name
+    if (recipeName.value.trim() === "") {
+        setErrorFor(recipeNameSmall, 'Recipe name cannot be blank');
+        isValid = false;
+    } else {
+        setSuccessFor(recipeNameSmall);
+    }
+
+    // Validate ingredients
+    if (ingredients.querySelectorAll('.ingredient-item').length === 0) {
+        setErrorFor(ingredientsSmall, 'At least one ingredient must be added');
+        isValid = false;
+    } else {
+        setSuccessFor(ingredientsSmall);
+    }
+
+    // Validate recipe instructions
+    if (recipe.value.trim() === "") {
+        setErrorFor(recipeSmall, 'Recipe instructions cannot be blank');
+        isValid = false;
+    } else {
+        setSuccessFor(recipeSmall);
+    }
+
+    // Validate recipe image
+    if (!recipeImage.files[0]) {
+        setErrorFor(recipeImageSmall, 'Please upload a recipe image');
+        isValid = false;
+    } else {
+        setSuccessFor(recipeImageSmall);
+    }
+
+    return isValid;
+}
+
+function setErrorFor(element, message) {
+    element.innerText = message;
+    element.style.color = 'red';
+    element.style.visibility = 'visible';
+}
+
+function setSuccessFor(element) {
+    element.innerText = '';
+    element.style.visibility = 'hidden';
+}
+
+function addIngredient() {
+    const newIngredient = document.getElementById("newIngredient");
+    if (newIngredient.value.trim() !== "") {
+        const ingredientList = document.getElementById("ingredientList");
+        const ingredientDiv = document.createElement("div");
+        ingredientDiv.className = "ingredient-item";
+        const ingredientInput = document.createElement("input");
+        ingredientInput.type = "text";
+        ingredientInput.value = newIngredient.value;
+        ingredientInput.readOnly = true;
+        const removeButton = document.createElement("button");
+        removeButton.type = "button";
+        removeButton.innerText = "x";
+        removeButton.onclick = function() {
+            ingredientList.removeChild(ingredientDiv);
+        };
+        ingredientDiv.appendChild(ingredientInput);
+        ingredientDiv.appendChild(removeButton);
+        ingredientList.appendChild(ingredientDiv);
+        newIngredient.value = "";
+        setSuccessFor(document.getElementById("ingredientsSmall")); // Clear any previous error
+    } else {
+        alert("Ingredient cannot be blank");
+    }
+}
+
+function getIngredients() {
+    const ingredients = Array.from(document.querySelectorAll('.ingredient-item input')).map(input => input.value);
+    return JSON.stringify(ingredients);
 }

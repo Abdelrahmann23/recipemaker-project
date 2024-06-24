@@ -10,9 +10,6 @@
 </head>
 <body>
     <section class="home" id="Home">
-        <!-- <div class="welcome">
-            <h1>Welcome Admin</h1>
-        </div> -->
         <nav>
             <a href="" class="header">
                 <i class="ri-restaurant-2-fill"></i>
@@ -22,66 +19,59 @@
                 <ul>
                     <li class="dropdown">
                         <a href="admin.html" class="dropbtn">Home</a>
-                        <div class="dropdown-content">
-                        </div>
+                        <div class="dropdown-content"></div>
                     </li>
                     <li class="dropdown">
-
                         <a href="#" class="dropbtn">Add</a>
                         <div class="dropdown-content">
                             <a href="sign up.html">Users</a>
-                            <!-- <a href="add ingredient.html">Ingrediants</a> -->
                             <a href="addd recipe.html">Recipe</a>
                         </div>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropbtn">Edit</a>
                         <div class="dropdown-content">
-                            <a href="sign up.html">Users </a>
-                            <a href="AdmineditiIng.html">Ingrediants</a>
+                            <a href="sign up.html">Users</a>
+                            <a href="AdmineditiIng.html">Ingredients</a>
                         </div>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropbtn">Delete</a>
                         <div class="dropdown-content">
-                            <a href="deleteuser.html">Users </a>
-                            <a href="deleteing.html">Ingrediants</a>
-                          
-
+                            <a href="deleteuser.html">Users</a>
+                            <a href="deleteing.html">Ingredients</a>
                         </div>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropbtn">View</a>
                         <div class="dropdown-content">
-                            <a href="viewUsers.html">Users </a>
-                            <a href="viewIngrediants.html">Ingrediants</a>
+                            <a href="viewUsers.html">Users</a>
+                            <a href="viewIngrediants.html">Ingredients</a>
                         </div>
                     </li>
                 </ul>
-            </div> 
-        </nav> 
+            </div>
+        </nav>
     </section>
     <div class="registration-container9">
         <div class="registration-form">
-            <h1>Add ingredient</h1>
-            <form action="admin.html" method="post" onsubmit="return validateForm9()">
-                <p>Ingredient name:</p>
+            <h1>Add Ingredient</h1>
+            <form id="ingredientForm" action="admin.html" method="post" onsubmit="return validateForm9()">
+                <p>Ingredient Name:</p>
                 <input type="text" id="ingredientName" name="ingredientName" placeholder="Beef">
-                <p>Ingredient type:</p>
+                <small id="ingredientNameSmall"></small>
+                <p>Ingredient Type:</p>
                 <input type="text" id="ingredientType" name="ingredientType" placeholder="Protein">
-                <p>Recipe used in:</p>
-                <input type="text" id="Recipe" name="Recipe used in" placeholder="Steak">
-                <p>Recipe type:</p>
-                <input type="text" id="Recipe type" name="Recipe type" placeholder="appetizer"> 
-                <p>Image for ingredient:</p>
+                <small id="ingredientTypeSmall"></small>
+                <p>Example for a Recipe:</p>
+                <input type="text" id="exampleRecipe" name="exampleRecipe" placeholder="Steak">
+                <small id="exampleRecipeSmall"></small>
+                <p>Ingredient Image:</p>
                 <input type="file" id="ingredientImage" name="ingredientImage" accept="image/*">
-
-
                 <button type="submit">Add Ingredient</button>
             </form>
         </div>
     </div>
     <script src="../public/index.js"></script>
-    
 </body>
 </html>

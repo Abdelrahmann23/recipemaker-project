@@ -26,7 +26,7 @@
                         <div class="dropdown-content">
                             <a href="sign up.html">Users</a>
                             <a href="add ingredient.html">Ingredients</a>
-                            <!-- <a href="add-recipe.html">Recipe</a> -->
+                            <a href="add-recipe.html">Recipe</a> <!-- Added link to current page -->
                         </div>
                     </li>
                     <li class="dropdown">
@@ -57,9 +57,11 @@
     <div class="registration-container3">
         <div class="registration-form">
             <h1>New Recipe</h1>
-            <form id="recipeForm" action="admin.html" method="post" onsubmit="return validateForm2()">
+            <form id="recipeForm" action="admin.html" method="post">
                 <p>Recipe Name:</p>
-                <input type="text" id="recipeName" name="recipeName" placeholder="Koshary">
+                <input type="text" id="recipeName" name="recipeName" placeholder="Enter recipe name">
+                <small id="recipeNameSmall"></small> <!-- Error message placeholder -->
+                
                 <p>Ingredients:</p>
                 <div class="ingredients-container">
                     <div class="ingredient-input">
@@ -69,11 +71,17 @@
                     <div id="ingredientList">
                         <!-- Ingredients will be dynamically added here -->
                     </div>
+                    <small id="ingredientsSmall"></small> <!-- Error message placeholder -->
                 </div>
+                
                 <p>Recipe:</p>
-                <input type="text" id="recipe" name="recipe" placeholder="Serve it with tomato sauce">
+                <input type="text" id="recipe" name="recipe" placeholder="Enter recipe instructions">
+                <small id="recipeSmall"></small> <!-- Error message placeholder -->
+
                 <p>Recipe Image:</p>
                 <input type="file" id="recipeImage" name="recipeImage" accept="image/*">
+                <small id="recipeImageSmall"></small> <!-- Error message placeholder -->
+
                 <button type="submit">Add Recipe</button>
             </form>
         </div>
