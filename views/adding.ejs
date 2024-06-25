@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <title>Add Ingredient</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="home" id="Home">
+        <nav>
+            <a href="" class="header">
+                <i class="ri-restaurant-2-fill"></i>
+                <h3><span class="logoo">R</span>ecipe<span class="logoo">M</span>aker</h3>
+            </a>
+            <div class="nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="/admin" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropbtn">Add</a>
+                        <div class="dropdown-content">
+                          <a href="/signup">Users</a>
+                            <a href="/addingrediant">Ingredients</a>
+                            <a href="/addrecipe">Recipe</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Edit</a>
+                        <div class="dropdown-content">
+                            <a href="/editUsers">Users </a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Delete</a>
+                        <div class="dropdown-content">
+                            <a href="/deleteUsers">Users </a>
+                            <a href="/deleteingrediants">Ingredients</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">View</a>
+                        <div class="dropdown-content">
+                            <a href="/viewUsers">Users </a>
+                            <a href="/viewingrediant">Ingrediants</a>
+                        </div>
+                    </li>
+                </ul>
+            </div> 
+        </nav> 
+    </section>
+    <div class="registration-container9">
+        <div class="registration-form">
+            <h1>Add Ingredient</h1>
+            <form id="ingredientForm" enctype="multipart/form-data">
+                <p>Ingredient name:</p>
+                <input type="text" id="ingredientName" name="ingredientName" placeholder="Beef" required>
+                <p>Recipe type:</p>
+                <input list="options" id="dropdownnn" name="dropdownnn" required>
+                <datalist id="options">
+                    <option value="appetizer">
+                    <option value="main Dish">
+                    <option value="dessert">
+                </datalist>
+                <p>Image for ingredient:</p>
+                <input type="file" id="ingredientImage" name="ingredientImage" accept="image/*" required>
+                <button type="submit">Add Ingredient</button>
+            </form>
+        </div>
+    </div>
+  <script src="index.js"></script>
+    <script>
+    document.getElementById('ingredientForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        
+        try {
+            const response = await fetch('/', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+            if (!response.ok) {
+                if (result.message && result.message.includes('Ingredient already exists')) {
+                    alert('This ingredient already exists.');
+                } else {
+                    throw new Error(result.message || 'Failed to submit form');
+                }
+            } else {
+                alert('Ingredient added successfully!');
+                window.location.href = result.redirectUrl;
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('There was an error adding the ingredient.');
+        }
+    });
+    </script>
+</body>
+</html>

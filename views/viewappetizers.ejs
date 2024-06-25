@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="home" id="Home">
+        <nav id="AdminNavBar">
+            <a href="" class="header">
+                <i class="ri-restaurant-2-fill"></i>
+                <h3><span class="logoo">R</span>ecipe<span class="logoo">M</span>aker</h3>
+            </a>
+            <div class="nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="admin.html" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropbtn">Add</a>
+                        <div class="dropdown-content">
+                            <a href="sign up.html">Users</a>
+                            <a href="add ingredient.html">Ingrediants</a>
+                            <a href="addd recipe.html">Recipe</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Edit</a>
+                        <div class="dropdown-content">
+                            <a href="editUserAdmin.html">Users </a>
+                            <!-- <a href="#">Ingredients</a> -->
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Delete</a>
+                        <div class="dropdown-content">
+                            <a href="deleteuser.html">Users </a>
+                            <a href="deleteing.html">Ingredients</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">View</a>
+                        <div class="dropdown-content">
+                            <a href="viewUsers.html">Users </a>
+                            <a href="viewIngrediants.html">Ingredients</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="adminEditIngredientContainer">
+            <div class="adminEditIngredientLeft">
+                <h1> Appetizer Ingredients</h1>
+                <hr class="line">
+                <ul id="ingredientList" class="scrollable">
+
+                    <% arrayI.forEach(ingredient=> { %>
+                      <% if (ingredient.dropdownnn === 'appetizer') { %>
+                        <li>
+                            <%= ingredient.ingredientName %> <img class="ingredientIcon"  src="/uploads/<%= ingredient.ingredientImage %>"></li>
+                            <% } %>
+                        <% }) %>
+                </ul>
+               
+ <script src="index.js"></script>
+</body>
+
+</html>

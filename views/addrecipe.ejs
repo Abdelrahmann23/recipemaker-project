@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href=" style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <title>Add Recipe</title>
+</head>
+<body id="addrecipe">
+    <section class="home" id="Home">
+        <nav>
+            <a href="" class="header">
+                <i class="ri-restaurant-2-fill"></i>
+                <h3><span class="logoo">R</span>ecipe<span class="logoo">M</span>aker</h3>
+            </a>
+            <div class="nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="/admin" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropbtn">Add</a>
+                        <div class="dropdown-content">
+                          <a href="/signup">Users</a>
+                            <a href="/addingrediant">Ingredients</a>
+                            <a href="/addrecipe">Recipe</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Edit</a>
+                        <div class="dropdown-content">
+                            <a href="/deleteingrediants">Users </a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Delete</a>
+                        <div class="dropdown-content">
+                            <a href="/deleteUsers">Users </a>
+                            <a href="deleteing.html">Ingredients</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">View</a>
+                        <div class="dropdown-content">
+                            <a href="/viewUsers">Users </a>
+                            <a href="/viewingrediant">Ingrediants</a>
+                        </div>
+                    </li>
+                </ul>
+            </div> 
+        </nav> 
+    </section>
+    <div class="registration-container3">
+        <div class="registration-form">
+            <h1>New Recipe</h1>
+            <form id="recipeForm" action="/" enctype="multipart/form-data" method="post">
+                
+                <p>Recipe Name:</p>
+                <input type="text" id="recipeName" name="recipeName" placeholder="Koshary">
+                <p>Recipe Type</p>
+                <input list="options" id="dropdownnn" name="dropdownnnr" required>
+                <datalist id="options">
+                    <option value="Appetizer">
+                    <option value="Main Dish">
+                    <option value="Dessert">
+                </datalist>
+                <p>Ingredients:</p>
+                <div class="ingredients-container">
+                    <div class="ingredient-input">
+                        <input type="text" id="newIngredient" name="newIngredient" placeholder="write Ingredients">
+                    </div>
+                    <div id="ingredientList">
+                        <!-- Ingredients will be dynamically added here -->
+                    </div>
+                </div>
+                <p>Recipe:</p>
+                <input type="text" id="recipe" name="recipe" placeholder="Serve it with tomato sauce">
+                <p>Recipe Image:</p>
+                <input type="file" id="recipeImage" name="recipeImage" accept="image/*">
+                <button type="submit">Add Recipe</button>
+            </form>
+     
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('recipeForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            console.log('Submitting form data'); // Debugging line
+            
+            try {
+                const response = await fetch('/', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    if (errorText.includes('Recipe already exists')) {
+                        alert('This recipe already exists.');
+                    } else {
+                        throw new Error('Failed to submit form');
+                    }
+                } else {
+                    const result = await response.text();
+                    console.log('Server response:', result);
+                    alert('Recipe added successfully!');
+                    window.location.href = '/';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error adding the recipe.');
+            }
+        });
+    
+    </script>
+
+
+</body>
+</html>

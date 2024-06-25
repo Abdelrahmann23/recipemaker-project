@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <section class="home" id="Home">
+    
+        <nav>
+            <a href="" class="header">
+                <i class="ri-restaurant-2-fill"></i>
+                <h3><span class="logoo">R</span>ecipe<span class="logoo">M</span>aker</h3>
+            </a>
+            <div class="nav">
+                <a href="/Home">Home</a>
+                <a href="/categories">categories</a>
+                <a href="/About">About</a>
+                <a href="/Footer">Contact</a>
+                <a href="#" class="user" id="dropdown-toggle">
+                    <i class="fa-solid fa-user-large"></i></a>
+                    <div class="dropdown-menu" id="user-dropdown">
+                        <a href="editUserProfile.html">View Profile</a>
+                        <a href="index.html">Logout</a>
+
+                    </div>
+            </div>
+        </nav>
+        <div class="userViewProfile">
+            <h2><i class="fa-solid fa-user-large"></i> Your profile </i></h2>
+            <hr class="lineprofile">
+            <ul id="userinfo">
+                <li><strong>Username:&nbsp</strong> AliaAshraff </li>
+                <li><strong>Email:&nbsp</strong> alia2206234@miuegypt.edu.eg</li>
+                
+            </ul>
+           
+        </div>
+    </section>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Fetch the user info from the server
+    fetch('/profile', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Failed to fetch user profile');
+        }
+    })
+    .then(data => {
+        // Populate user info in the profile section
+        document.getElementById('userinfo').innerHTML = `
+            <li><strong>Username:&nbsp</strong> ${data.username}</li>
+            <li><strong>Email:&nbsp</strong> ${data.email}</li>
+        `;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const removeAccountLink = document.querySelector('#user-dropdown a[href="index.html"]');
+    
+    removeAccountLink.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // Send a DELETE request to the server to remove the account
+        fetch('/delete-account', {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Failed to delete account');
+            }
+        })
+        .then(data => {
+            if (data.success) {
+                // Redirect to the form page after successful deletion
+                window.location.href = 'form';
+            } else {
+                console.error('Error:', data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+});
+   </script>
+</body>
+</html>

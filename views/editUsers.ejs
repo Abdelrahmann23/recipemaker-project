@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Edit User - Admin Panel</title>
+    <style>
+        /* Additional styles specific to this page can go here */
+    </style>
+</head>
+
+<body class="alia">
+    <!-- Navigation Section -->
+    <section class="home" id="Home">
+        <nav>
+            <a href="" class="header">
+                <i class="ri-restaurant-2-fill"></i>
+                <h3><span class="logoo">R</span>ecipe<span class="logoo">M</span>aker</h3>
+            </a>
+            <div class="nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="/admin" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropbtn">Add</a>
+                        <div class="dropdown-content">
+                          <a href="/signup">Users</a>
+                            <a href="/addingrediant">Ingredients</a>
+                            <a href="/addrecipe">Recipe</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Edit</a>
+                        <div class="dropdown-content">
+                            <a href="/editUsers">Users </a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Delete</a>
+                        <div class="dropdown-content">
+                            <a href="/deleteUsers">Users </a>
+                            <a href="/deleteingrediants">Ingredients</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">View</a>
+                        <div class="dropdown-content">
+                            <a href="/viewUsers">Users </a>
+                            <a href="/viewingrediant">Ingrediants</a>
+                        </div>
+                    </li>
+                </ul>
+            </div> 
+        </nav> 
+
+        <!-- Admin Edit User Container -->
+        <div class="adminEditUserContainer">
+            <!-- Left Section: User List -->
+            <div class="adminEditUserLeft">
+                <h1>Users</h1>
+                <hr class="line">
+                <ul id="userList">
+                    <!-- User list items will be populated dynamically -->
+                </ul>
+            </div>
+
+            <!-- Right Section: Edit User Form -->
+            <div class="adminEditUserRight">
+                <h1><i class="fa-solid fa-user-large"></i> Edit User</h1>
+                <hr class="line">
+                <h4 id="selecteduser"></h4>
+                <form id="editUserFormAdmin">
+                    <label for="username"><strong>Username:</strong> </label>
+                    <input type="text" name="username" id="usernameEdit" placeholder="Username" required disabled>
+                    <label for="email"><strong>Email:</strong></label>
+                    <input type="email" name="email" id="emailUserEdit" placeholder="Email">
+                    <small id="emailError" class="error">&nbsp;</small>
+                    <label for="oldpass"><strong>Old Password:</strong></label>
+                    <input type="password" name="oldpass" id="oldpass" placeholder="Old Password">
+                    <label for="newpass"><strong>New Password:</strong></label>
+                    <input type="password" name="newpass" id="newpass" placeholder="New Password">
+                    <small id="passwordError" class="error">&nbsp;</small>
+                </form>
+                <div id="submitMessage"></div>
+                <button onclick="updateUser()" type="button" id="submitEditUser">Save Changes</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function validateForm() {
+            var emailUserEdit = document.getElementById('emailUserEdit').value;
+            var newpass = document.getElementById('newpass').value;
+            var oldpass = document.getElementById('oldpass').value;
+
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (emailUserEdit && !emailRegex.test(emailUserEdit)) {
+                document.getElementById('emailError').innerHTML = "Please enter a valid email address";
+                return false;
+            } else {
+                document.getElementById('emailError').innerHTML = "";
+            }
+
+            if (newpass && newpass.length < 8) {
+                document.getElementById('passwordError').innerHTML = "Password must be at least 8 characters long";
+                return false;
+            }
+            if (newpass && oldpass === newpass) {
+                document.getElementById('passwordError').innerHTML = "New password can't be the same as old password";
+                return false;
+            } else {
+                document.getElementById('passwordError').innerHTML = "";
+            }
+
+            return true;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const userList = document.getElementById("userList");
+            const selectedUser = document.getElementById("selecteduser");
+            const submitMessage = document.getElementById("submitMessage");
+
+            function fetchUsers() {
+                fetch('/api/users')
+                    .then(response => response.json())
+                    .then(users => {
+                        userList.innerHTML = '';
+                        users.forEach(user => {
+                            const li = document.createElement('li');
+                            li.textContent = user.usernames;
+                            li.setAttribute('data-username', user.usernames);
+                            userList.appendChild(li);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error fetching user data:', error);
+                    });
+            }
+
+            fetchUsers();
+
+            userList.addEventListener("click", function(e) {
+                if (e.target.tagName === "LI") {
+                    const username = e.target.dataset.username;
+                    selectedUser.textContent = username;
+                    document.getElementById("usernameEdit").value = username;
+
+                    fetch(`/api/users/${username}`)
+                        .then(response => response.json())
+                        .then(user => {
+                            document.getElementById("emailUserEdit").value = user.emails;
+                        })
+                        .catch(error => {
+                            console.error('Error fetching user data:', error);
+                        });
+
+                    document.getElementById("oldpass").value = "";
+                    document.getElementById("newpass").value = "";
+                    document.getElementById("emailError").textContent = "";
+                    document.getElementById("passwordError").textContent = "";
+                    submitMessage.textContent = "";
+                }
+            });
+
+            document.getElementById("submitEditUser").addEventListener("click", function() {
+                updateUser();
+            });
+        });
+
+        function updateUser() {
+            const username = document.getElementById("usernameEdit").value;
+            const email = document.getElementById("emailUserEdit").value;
+            const oldpass = document.getElementById("oldpass").value;
+            const newpass = document.getElementById("newpass").value;
+
+            if (!validateForm()) {
+                return;
+            }
+
+            const userData = {
+                emails: email,
+                oldpass: oldpass,
+                newpass: newpass
+            };
+
+            fetch(`/api/users/${username}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(userData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    submitMessage.textContent = "User details updated successfully!";
+                } else {
+                    submitMessage.textContent = data.message;
+                }
+            })
+            .catch(error => {
+                console.error('Error updating user details:', error);
+                submitMessage.textContent = "Failed to update user details. Please try again.";
+            });
+        }
+    </script>
+</body>
+
+</html>

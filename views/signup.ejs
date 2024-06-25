@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    
+    <title>Register a new User</title>
+   
+</head>
+<body>
+    <style>.registration-container1 {
+        position:absolute;
+        top: 56%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgb(137, 185, 137);
+        border-radius: 40px;
+        padding: 20px; 
+        max-width: 90%;
+      }
+      
+      .registration-form {
+        width: 300px; /* Reduce the width of the form */
+        height: auto; /* Allow the height to adjust based on content */
+        padding: 10px; /* Reduce padding for spacing inside the box */
+        border: 1px solid #333; /* Reduce the thickness of the border */
+        border-radius: 30px; /* Reduce the radius of the border */
+      }
+      
+      .registration-form h1 {
+        font-size: 24px; /* Reduce the font size of the heading */
+        margin: 10px 0; /* Reduce margin for the heading */
+      }
+      
+      .registration-form p {
+        font-size: 16px; /* Reduce the font size of paragraphs */
+        margin: 10px 0; /* Reduce margin for paragraphs */
+      }
+      
+      .registration-form input {
+        font-size: 14px; /* Reduce the font size of input fields */
+        padding: 8px; /* Reduce padding for input fields */
+        margin-bottom: 8px; /* Reduce margin below each input */
+      }
+      .registration-form {
+        width: 300px; /* Reduce the width of the form */
+        padding: 10px; /* Reduce padding for spacing inside the box */
+        border: 1px solid #333; /* Add a border around the form */
+        border-radius: 30px; /* Add rounded corners to the border */
+        position: relative; /* Add position relative to the form */
+      }
+      
+      .password-input {
+        position: relative; /* Add position relative to the password input container */
+      }
+      
+      .password-input input {
+        font-size: 14px; /* Reduce the font size of input fields */
+        padding-right: 30px; /* Increase right padding to accommodate the icon */
+      }
+      .toggle-password {
+        position: absolute; /* Position the icon absolutely */
+        top: 50%; /* Align the icon vertically to the middle */
+        right: 30px; /* Adjust the distance from the right */
+        transform: translateY(-50%); /* Center the icon vertically */
+        cursor: pointer; 
+      }
+      .registration-form button {
+        font-size: large;
+        font-weight: bold;
+        margin: 20px 0;
+        width: 100%; 
+        border: 0;
+        border-radius: 40px;
+        background-color: rgb(47, 150, 47);
+      }
+      
+      .registration-form button:hover {
+        color: aliceblue;
+      }
+      #dropp {
+        border-radius: 30px;
+        width: 30%;
+        height: 20%;
+        font-size: 18px;
+    
+        color: #999;
+      }
+      small {
+        color: red;
+      }
+    
+    
+      .registration-form input[type="text"],
+    .registration-form input[type="email"],
+    .registration-form input[type="password"],
+    .registration-form select {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 30px;
+        border: 1px solid #ccc;
+        outline: none;
+        box-sizing: border-box;
+    }</style>
+    <section class="home" id="Home">
+        <!-- <div class="welcome">
+            <h1>Welcome Admin</h1>
+        </div> -->
+        <nav>
+            <a href="" class="header">
+                <i class="ri-restaurant-2-fill"></i>
+                <h3><span class="logoo">R</span>ecipe<span class="logoo">M</span>aker</h3>
+            </a>
+            <div class="nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="/admin" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropbtn">Add</a>
+                        <div class="dropdown-content">
+                          <a href="/signup">Users</a>
+                            <a href="/addingrediant">Ingredients</a>
+                            <a href="/addrecipe">Recipe</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Edit</a>
+                        <div class="dropdown-content">
+                            <a href="/editUsers">Users </a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Delete</a>
+                        <div class="dropdown-content">
+                            <a href="/deleteUsers">Users </a>
+                            <a href="/deleteingrediants">Ingredients</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">View</a>
+                        <div class="dropdown-content">
+                            <a href="/viewUsers">Users </a>
+                            <a href="/viewingrediant">Ingrediants</a>
+                        </div>
+                    </li>
+                </ul>
+            </div> 
+        </nav> 
+    </section>
+    <div class="registration-container1">
+    <div class="registration-form">
+            <h1>Registration Form</h1>
+            <form action="/signupp" method="post"> <!-- Removed the extra form tag and added space after "#" -->
+                 
+                   <input type="text" id="fullname" name="names" placeholder="Habiba Amr"> <!-- Added id="fullname" -->
+                   <br>
+                   <small id="fullnamesmall" ></small>
+                   
+                   <input type="text" id="username" name="usernames" placeholder="Username"> <!-- Added id="username" -->
+                    <br>
+                   <small id="usernamesmall" ></small>
+                    
+                  <input type="email" id="email" name="emails" placeholder="Habiba2206403@miuegypt.edu.eg"> <!-- Added id="email" -->
+                  <br>
+                  <small id="emailsmall"></small>
+                 
+                    <div class="password-input">
+                        <input type="password" id="password" name="passwords" placeholder="Password">
+                        <span class="toggle-password" onclick="togglePasswordVisibility('password')">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        <br>
+                        <small id="passsmall"></small>
+                    </div>
+                   
+                    <div class="password-input">
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
+                        <span class="toggle-password" onclick="togglePasswordVisibility('confirm_password')">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        <br>
+                        <small id="confsmall"></small>
+                    </div>
+                    <input type="text" id="secure" name="security" placeholder="what is the name of your pet?"> <!-- Added id="email" -->
+                  <br>
+                  <small id="securesmall"></small>
+                  <br>
+                    <select name="drop" id="dropp">
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                    </select>
+                  <button type="submit" onclick="return validateForm1()">Register</button> <!-- Added onclick="return validateForm()" -->
+                </form>
+           
+    </div>
+    </div>
+    <% if (error) { %>
+        <script>
+            window.onload = function () {
+                alert('<%= error %>');
+            };
+        </script>
+        <% } %>
+    <script src="signupadmin.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Delete Users</title>
+    
+</head>
+<body class="alia" id="viewuser">
+    
+    <section class="home16" id="Home">
+        <nav>
+            <a href="" class="header">
+                <i class="ri-restaurant-2-fill"></i>
+                <h3><span class="logoo">R</span>ecipe<span class="logoo">M</span>aker</h3>
+            </a>
+            <div class="nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="/admin" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropbtn">Add</a>
+                        <div class="dropdown-content">
+                          <a href="/signup">Users</a>
+                            <a href="/addingrediant">Ingredients</a>
+                            <a href="/addrecipe">Recipe</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Edit</a>
+                        <div class="dropdown-content">
+                            <a href="/editUsers">Users </a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Delete</a>
+                        <div class="dropdown-content">
+                            <a href="/deleteUsers">Users </a>
+                            <a href="/deleteingrediants">Ingredients</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">View</a>
+                        <div class="dropdown-content">
+                            <a href="/viewUsers">Users </a>
+                            <a href="/viewingrediant">Ingrediants</a>
+                        </div>
+                    </li>
+                </ul>
+            </div> 
+        </nav> 
+        <div class="newtable">
+            <table id="usersTable">
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User rows will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    fetch('/api/users')
+        .then(response => response.json())
+        .then(users => {
+            const usersTable = document.getElementById('usersTable').getElementsByTagName('tbody')[0];
+            users.forEach((user, index) => {
+                const row = usersTable.insertRow();
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${user.usernames}</td>
+                    <td>${user.emails}</td>
+                    <td>${user.drop}</td>
+                    <td><i class="fa fa-trash delete-icon" data-username="${user.usernames}"></i></td>
+                `;
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching users:', error);
+        });
+
+    document.getElementById('usersTable').addEventListener('click', function(e) {
+        if (e.target.classList.contains('delete-icon')) {
+            const username = e.target.dataset.username;
+            if (confirm(`Are you sure you want to delete user ${username}?`)) {
+                fetch(`/api/users/${username}`, {
+                    method: 'DELETE'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        e.target.closest('tr').remove();
+                    } else {
+                        alert('Failed to delete user');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error deleting user:', error);
+                    alert('Failed to delete user');
+                });
+            }
+        }
+    });
+});
+    </script>
+</body>
+</html>
